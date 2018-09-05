@@ -1,0 +1,2239 @@
+% cl-imports multidim_space_dim/definitions/eq_dim.clif
+fof(sos10,axiom,( ! [X12] : ! [X11] : ( (gt(X12, X11)) <=> (lt(X11, X12)) )) ).
+fof(sos20,axiom,( ! [X22] : ! [X21] : ( (geq(X22, X21)) <=> (leq(X21, X22)) )) ).
+fof(sos30,axiom,( ! [X32] : ! [X31] : ( (lt(X32, X31)) <=> ((leq(X32, X31) & ~ (eqdim(X32, X31)))) )) ).
+% cl-imports multidim_space_dim/dim_prime_linear_unbounded.clif
+% cl-imports multidim_space_dim/definitions/min_max_dim.clif
+fof(sos40,axiom,( ? [X41] : mindim(X41)) ).
+% cl-imports multidim_space_codi/codi_basic.clif
+% cl-imports multidim_space_codi/definitions/ep.clif
+fof(sos50,axiom,( ! [X52] : ! [X51] : ( (pp(X52, X51)) <=> ((p(X52, X51) & ~ ((X52=X51)))) )) ).
+fof(sos60,axiom,( ! [X61] : ( ((s(X61) & ~ (zex(X61)))) <=> (cont(X61, X61)) )) ).
+fof(sos70,axiom,( ! [X72] : ! [X71] : ( ((cont(X72, X71) & cont(X71, X72))) => ((X72=X71)) )) ).
+fof(sos80,axiom,( ! [X82] : ! [X81] : ! [X83] : ( ((cont(X82, X81) & cont(X81, X83))) => (cont(X82, X83)) )) ).
+fof(sos90,axiom,( ! [X92] : ! [X91] : ( (zex(X92)) => ((s(X92) & ~ (cont(X91, X92)) & ~ (cont(X92, X91)))) )) ).
+fof(sos100,axiom,( ! [X102] : ! [X101] : ( ((zex(X102) & zex(X101))) => ((X102=X101)) )) ).
+% cl-imports multidim_space_dim/dim_prime_linear_unbounded.clif
+fof(sos110,axiom,( ! [X112] : ( (maxdim(X112)) <=> ((s(X112) & ~ (zex(X112)) & ( ! [X111] : ( (s(X111)) => (leq(X111, X112)) )) )) )) ).
+fof(sos120,axiom,( ! [X122] : ( (mindim(X122)) <=> ((s(X122) & ~ (zex(X122)) & ( ! [X121] : ( ((s(X121) & ~ (zex(X121)))) => (leq(X122, X121)) )) )) )) ).
+fof(sos130,axiom,( ! [X132] : ! [X131] : ( (leq(X132, X131)) => (s(X132)) )) ).
+fof(sos140,axiom,( ! [X142] : ! [X141] : ( (leq(X142, X141)) => (s(X141)) )) ).
+fof(sos150,axiom,( ! [X151] : ( (zex(X151)) => (s(X151)) )) ).
+fof(sos160,axiom,( ! [X161] : ( (s(X161)) => (leq(X161, X161)) )) ).
+fof(sos170,axiom,( ! [X172] : ! [X171] : ! [X173] : ( ((leq(X172, X171) & leq(X171, X173))) => (leq(X172, X173)) )) ).
+fof(sos180,axiom,( ! [X182] : ! [X181] : ( ((zex(X182) & zex(X181))) => ((X182=X181)) )) ).
+fof(sos190,axiom,( ! [X192] : ! [X191] : ( ((zex(X192) & s(X191))) => (leq(X192, X191)) )) ).
+% cl-imports multidim_space_codi/codi_basic.clif
+% cl-imports multidim_space_dim/definitions/min_max_dim.clif
+fof(sos200,axiom,( ! [X202] : ( (point(X202)) <=> ((s(X202) & mindim(X202) & ( ! [X201] : ( (cont(X201, X202)) => ((X201=X202)) )) )) )) ).
+% cl-imports multidim_space_codi/definitions/areal_region.clif
+% cl-imports multidim_space_codi/definitions/curve.clif
+% cl-imports multidim_space_codi/definitions/point.clif
+% cl-imports multidim_space_codi/definitions/point_region.clif
+% cl-imports multidim_space_codi/definitions/ep.clif
+% cl-imports multidim_space_codi/definitions/epp.clif
+% cl-imports multidim_space_cont/definitions/c.clif
+fof(sos210,axiom,arealregion(androscoggincounty)).
+fof(sos220,axiom,curve(i495seg1)).
+fof(sos230,axiom,arealregion(machias)).
+fof(sos240,axiom,arealregion(cumberlandcounty)).
+fof(sos250,axiom,arealregion(adamspond1)).
+fof(sos260,axiom,point(bucksport)).
+fof(sos270,axiom,curve(millriver)).
+fof(sos280,axiom,curve(lakeleonard)).
+fof(sos290,axiom,curve(statehighway1seg4)).
+fof(sos300,axiom,arealregion(damariscottariver)).
+fof(sos310,axiom,arealregion(androscogginriver2)).
+fof(sos320,axiom,arealregion(bethel)).
+fof(sos330,axiom,arealregion(cwaldocounty)).
+fof(sos340,axiom,arealregion(southberwick)).
+fof(sos350,axiom,curve(statehighway6seg2)).
+fof(sos360,axiom,curve(statehighway6)).
+fof(sos370,axiom,arealregion(penobscotcounty)).
+fof(sos380,axiom,arealregion(sagadahoccounty)).
+fof(sos390,axiom,arealregion(oxfordcounty)).
+fof(sos400,axiom,arealregion(alagashpond)).
+fof(sos410,axiom,arealregion(portland)).
+fof(sos420,axiom,arealregion(cwashingtoncounty)).
+fof(sos430,axiom,curve(rusroute2seg2)).
+fof(sos440,axiom,arealregion(mattawamkeag)).
+fof(sos450,axiom,curve(rusroute2seg1)).
+fof(sos460,axiom,point(lynx2)).
+fof(sos470,axiom,curve(dennysriver)).
+fof(sos480,axiom,point(orrington)).
+fof(sos490,axiom,arealregion(kennebeccounty)).
+fof(sos500,axiom,curve(rusroute1seg7)).
+fof(sos510,axiom,curve(i295)).
+fof(sos520,axiom,curve(stateroute5)).
+fof(sos530,axiom,curve(i95)).
+fof(sos540,axiom,curve(androscogginriverseg1)).
+fof(sos550,axiom,point(dayton)).
+fof(sos560,axiom,curve(stateroute5seg2)).
+fof(sos570,axiom,point(mooselookmegunticlake)).
+fof(sos580,axiom,curve(eastbranchoysterriver)).
+fof(sos590,axiom,curve(rusroute1)).
+fof(sos600,axiom,curve(meduxnekeagriver)).
+fof(sos610,axiom,point(arundel)).
+fof(sos620,axiom,arealregion(knoxcounty)).
+fof(sos630,axiom,point(rockwood)).
+fof(sos640,axiom,curve(passagassawakeagriver)).
+fof(sos650,axiom,arealregion(franklincounty)).
+fof(sos660,axiom,curve(mattawamkeagriverseg1)).
+fof(sos670,axiom,arealregion(grahamlake)).
+fof(sos680,axiom,curve(i95seg1)).
+fof(sos690,axiom,point(hampden)).
+fof(sos700,axiom,curve(i95seg3)).
+fof(sos710,axiom,curve(stateroute9seg8)).
+fof(sos720,axiom,arealregion(houlton)).
+fof(sos730,axiom,pointregion(lynxobservations)).
+fof(sos740,axiom,point(martinpointbridge)).
+fof(sos750,axiom,curve(passagassawakeagriverseg1)).
+fof(sos760,axiom,curve(rusroute2seg5)).
+fof(sos770,axiom,point(machiasbay)).
+fof(sos780,axiom,curve(rusroute1seg4)).
+fof(sos790,axiom,curve(rwestbranchoysterriver)).
+fof(sos800,axiom,curve(stgeorgeriver)).
+fof(sos810,axiom,(( ? [X811] : (cont(X811, aroostookcounty) & cont(X811, piscataquiscounty)))  & ( ! [X811] : ( ((cont(X811, aroostookcounty) & cont(X811, piscataquiscounty))) => ((lt(X811, aroostookcounty) & lt(X811, piscataquiscounty))) )) )).
+fof(sos820,axiom,(( ? [X821] : (cont(X821, aroostookcounty) & cont(X821, penobscotcounty)))  & ( ! [X821] : ( ((cont(X821, aroostookcounty) & cont(X821, penobscotcounty))) => ((lt(X821, aroostookcounty) & lt(X821, penobscotcounty))) )) )).
+fof(sos830,axiom,(( ? [X831] : (cont(X831, aroostookcounty) & cont(X831, somersetcounty)))  & ( ! [X831] : ( ((cont(X831, aroostookcounty) & cont(X831, somersetcounty))) => ((lt(X831, aroostookcounty) & lt(X831, somersetcounty))) )) )).
+fof(sos840,axiom,(( ? [X841] : (cont(X841, aroostookcounty) & cont(X841, cwashingtoncounty)))  & ( ! [X841] : ( ((cont(X841, aroostookcounty) & cont(X841, cwashingtoncounty))) => ((lt(X841, aroostookcounty) & lt(X841, cwashingtoncounty))) )) )).
+fof(sos850,axiom,(( ? [X851] : (cont(X851, somersetcounty) & cont(X851, franklincounty)))  & ( ! [X851] : ( ((cont(X851, somersetcounty) & cont(X851, franklincounty))) => ((lt(X851, somersetcounty) & lt(X851, franklincounty))) )) )).
+fof(sos860,axiom,(( ? [X861] : (cont(X861, somersetcounty) & cont(X861, piscataquiscounty)))  & ( ! [X861] : ( ((cont(X861, somersetcounty) & cont(X861, piscataquiscounty))) => ((lt(X861, somersetcounty) & lt(X861, piscataquiscounty))) )) )).
+fof(sos870,axiom,(( ? [X871] : (cont(X871, somersetcounty) & cont(X871, kennebeccounty)))  & ( ! [X871] : ( ((cont(X871, somersetcounty) & cont(X871, kennebeccounty))) => ((lt(X871, somersetcounty) & lt(X871, kennebeccounty))) )) )).
+fof(sos880,axiom,(( ? [X881] : (cont(X881, somersetcounty) & cont(X881, penobscotcounty)))  & ( ! [X881] : ( ((cont(X881, somersetcounty) & cont(X881, penobscotcounty))) => ((lt(X881, somersetcounty) & lt(X881, penobscotcounty))) )) )).
+fof(sos890,axiom,(( ? [X891] : (cont(X891, somersetcounty) & cont(X891, cwaldocounty)))  & ( ! [X891] : ( ((cont(X891, somersetcounty) & cont(X891, cwaldocounty))) => ((lt(X891, somersetcounty) & lt(X891, cwaldocounty))) )) )).
+fof(sos900,axiom,(( ? [X901] : (cont(X901, piscataquiscounty) & cont(X901, penobscotcounty)))  & ( ! [X901] : ( ((cont(X901, piscataquiscounty) & cont(X901, penobscotcounty))) => ((lt(X901, piscataquiscounty) & lt(X901, penobscotcounty))) )) )).
+fof(sos910,axiom,(( ? [X911] : (cont(X911, penobscotcounty) & cont(X911, cwashingtoncounty)))  & ( ! [X911] : ( ((cont(X911, penobscotcounty) & cont(X911, cwashingtoncounty))) => ((lt(X911, penobscotcounty) & lt(X911, cwashingtoncounty))) )) )).
+fof(sos920,axiom,(( ? [X921] : (cont(X921, penobscotcounty) & cont(X921, cwaldocounty)))  & ( ! [X921] : ( ((cont(X921, penobscotcounty) & cont(X921, cwaldocounty))) => ((lt(X921, penobscotcounty) & lt(X921, cwaldocounty))) )) )).
+fof(sos930,axiom,(( ? [X931] : (cont(X931, penobscotcounty) & cont(X931, hancockcounty)))  & ( ! [X931] : ( ((cont(X931, penobscotcounty) & cont(X931, hancockcounty))) => ((lt(X931, penobscotcounty) & lt(X931, hancockcounty))) )) )).
+fof(sos940,axiom,(( ? [X941] : (cont(X941, franklincounty) & cont(X941, kennebeccounty)))  & ( ! [X941] : ( ((cont(X941, franklincounty) & cont(X941, kennebeccounty))) => ((lt(X941, franklincounty) & lt(X941, kennebeccounty))) )) )).
+fof(sos950,axiom,(( ? [X951] : (cont(X951, franklincounty) & cont(X951, oxfordcounty)))  & ( ! [X951] : ( ((cont(X951, franklincounty) & cont(X951, oxfordcounty))) => ((lt(X951, franklincounty) & lt(X951, oxfordcounty))) )) )).
+fof(sos960,axiom,(( ? [X961] : (cont(X961, franklincounty) & cont(X961, androscoggincounty)))  & ( ! [X961] : ( ((cont(X961, franklincounty) & cont(X961, androscoggincounty))) => ((lt(X961, franklincounty) & lt(X961, androscoggincounty))) )) )).
+fof(sos970,axiom,(( ? [X971] : (cont(X971, kennebeccounty) & cont(X971, androscoggincounty)))  & ( ! [X971] : ( ((cont(X971, kennebeccounty) & cont(X971, androscoggincounty))) => ((lt(X971, kennebeccounty) & lt(X971, androscoggincounty))) )) )).
+fof(sos980,axiom,(( ? [X981] : (cont(X981, kennebeccounty) & cont(X981, sagadahoccounty)))  & ( ! [X981] : ( ((cont(X981, kennebeccounty) & cont(X981, sagadahoccounty))) => ((lt(X981, kennebeccounty) & lt(X981, sagadahoccounty))) )) )).
+fof(sos990,axiom,(( ? [X991] : (cont(X991, kennebeccounty) & cont(X991, lincolncounty)))  & ( ! [X991] : ( ((cont(X991, kennebeccounty) & cont(X991, lincolncounty))) => ((lt(X991, kennebeccounty) & lt(X991, lincolncounty))) )) )).
+fof(sos1000,axiom,(( ? [X1001] : (cont(X1001, kennebeccounty) & cont(X1001, cwaldocounty)))  & ( ! [X1001] : ( ((cont(X1001, kennebeccounty) & cont(X1001, cwaldocounty))) => ((lt(X1001, kennebeccounty) & lt(X1001, cwaldocounty))) )) )).
+fof(sos1010,axiom,(( ? [X1011] : (cont(X1011, hancockcounty) & cont(X1011, cwashingtoncounty)))  & ( ! [X1011] : ( ((cont(X1011, hancockcounty) & cont(X1011, cwashingtoncounty))) => ((lt(X1011, hancockcounty) & lt(X1011, cwashingtoncounty))) )) )).
+fof(sos1020,axiom,(( ? [X1021] : (cont(X1021, cwaldocounty) & cont(X1021, lincolncounty)))  & ( ! [X1021] : ( ((cont(X1021, cwaldocounty) & cont(X1021, lincolncounty))) => ((lt(X1021, cwaldocounty) & lt(X1021, lincolncounty))) )) )).
+fof(sos1030,axiom,(( ? [X1031] : (cont(X1031, cwaldocounty) & cont(X1031, knoxcounty)))  & ( ! [X1031] : ( ((cont(X1031, cwaldocounty) & cont(X1031, knoxcounty))) => ((lt(X1031, cwaldocounty) & lt(X1031, knoxcounty))) )) )).
+fof(sos1040,axiom,(( ? [X1041] : (cont(X1041, oxfordcounty) & cont(X1041, cyorkcounty)))  & ( ! [X1041] : ( ((cont(X1041, oxfordcounty) & cont(X1041, cyorkcounty))) => ((lt(X1041, oxfordcounty) & lt(X1041, cyorkcounty))) )) )).
+fof(sos1050,axiom,(( ? [X1051] : (cont(X1051, oxfordcounty) & cont(X1051, cumberlandcounty)))  & ( ! [X1051] : ( ((cont(X1051, oxfordcounty) & cont(X1051, cumberlandcounty))) => ((lt(X1051, oxfordcounty) & lt(X1051, cumberlandcounty))) )) )).
+fof(sos1060,axiom,(( ? [X1061] : (cont(X1061, oxfordcounty) & cont(X1061, androscoggincounty)))  & ( ! [X1061] : ( ((cont(X1061, oxfordcounty) & cont(X1061, androscoggincounty))) => ((lt(X1061, oxfordcounty) & lt(X1061, androscoggincounty))) )) )).
+fof(sos1070,axiom,(( ? [X1071] : (cont(X1071, androscoggincounty) & cont(X1071, cumberlandcounty)))  & ( ! [X1071] : ( ((cont(X1071, androscoggincounty) & cont(X1071, cumberlandcounty))) => ((lt(X1071, androscoggincounty) & lt(X1071, cumberlandcounty))) )) )).
+fof(sos1080,axiom,(( ? [X1081] : (cont(X1081, androscoggincounty) & cont(X1081, sagadahoccounty)))  & ( ! [X1081] : ( ((cont(X1081, androscoggincounty) & cont(X1081, sagadahoccounty))) => ((lt(X1081, androscoggincounty) & lt(X1081, sagadahoccounty))) )) )).
+fof(sos1090,axiom,(( ? [X1091] : (cont(X1091, sagadahoccounty) & cont(X1091, lincolncounty)))  & ( ! [X1091] : ( ((cont(X1091, sagadahoccounty) & cont(X1091, lincolncounty))) => ((lt(X1091, sagadahoccounty) & lt(X1091, lincolncounty))) )) )).
+fof(sos1100,axiom,(( ? [X1101] : (cont(X1101, sagadahoccounty) & cont(X1101, cumberlandcounty)))  & ( ! [X1101] : ( ((cont(X1101, sagadahoccounty) & cont(X1101, cumberlandcounty))) => ((lt(X1101, sagadahoccounty) & lt(X1101, cumberlandcounty))) )) )).
+fof(sos1110,axiom,(( ? [X1111] : (cont(X1111, lincolncounty) & cont(X1111, knoxcounty)))  & ( ! [X1111] : ( ((cont(X1111, lincolncounty) & cont(X1111, knoxcounty))) => ((lt(X1111, lincolncounty) & lt(X1111, knoxcounty))) )) )).
+fof(sos1120,axiom,(( ? [X1121] : (cont(X1121, cumberlandcounty) & cont(X1121, cyorkcounty)))  & ( ! [X1121] : ( ((cont(X1121, cumberlandcounty) & cont(X1121, cyorkcounty))) => ((lt(X1121, cumberlandcounty) & lt(X1121, cyorkcounty))) )) )).
+fof(sos1130,axiom,pp(passagassawakeagriverseg1, passagassawakeagriver)).
+fof(sos1140,axiom,( ? [X1141] : (p(X1141, mattawamkeag) & p(X1141, penobscotcounty))) ).
+fof(sos1150,axiom,( ? [X1151] : (p(X1151, bethel) & p(X1151, oxfordcounty))) ).
+fof(sos1160,axiom,(( ? [X1161] : (lt(X1161, androscogginriverseg1) & cont(X1161, androscogginriverseg1) & p(X1161, bethel)))  | ( ? [X1161] : (lt(X1161, bethel) & cont(X1161, bethel) & p(X1161, androscogginriverseg1))) )).
+fof(sos1170,axiom,( ? [X1171] : (p(X1171, portland) & p(X1171, cumberlandcounty))) ).
+fof(sos1180,axiom,(( ? [X1181] : (lt(X1181, i495seg1) & cont(X1181, i495seg1) & p(X1181, portland)))  | ( ? [X1181] : (lt(X1181, portland) & cont(X1181, portland) & p(X1181, i495seg1))) )).
+fof(sos1190,axiom,p(i495seg1, i95)).
+fof(sos1200,axiom,(( ? [X1201] : (lt(X1201, stateroute9seg8) & cont(X1201, stateroute9seg8) & p(X1201, cwashingtoncounty)))  | ( ? [X1201] : (lt(X1201, cwashingtoncounty) & cont(X1201, cwashingtoncounty) & p(X1201, stateroute9seg8))) )).
+fof(sos1210,axiom,pp(i95seg1, i95)).
+fof(sos1220,axiom,pp(i95seg3, i95)).
+fof(sos1230,axiom,(( ? [X1231] : (lt(X1231, i95seg1) & cont(X1231, i95seg1) & p(X1231, penobscotcounty)))  | ( ? [X1231] : (lt(X1231, penobscotcounty) & cont(X1231, penobscotcounty) & p(X1231, i95seg1))) )).
+fof(sos1240,axiom,pp(statehighway6seg2, statehighway6)).
+fof(sos1250,axiom,~ ((( ? [X1251] : (lt(X1251, statehighway6) & cont(X1251, statehighway6) & p(X1251, penobscotcounty)))  | ( ? [X1251] : (lt(X1251, penobscotcounty) & cont(X1251, penobscotcounty) & p(X1251, statehighway6))) ))).
+fof(sos1260,axiom,(( ? [X1261] : (lt(X1261, rockwood) & cont(X1261, rockwood) & p(X1261, statehighway6seg2)))  | ( ? [X1261] : (lt(X1261, statehighway6seg2) & cont(X1261, statehighway6seg2) & p(X1261, rockwood))) )).
+fof(sos1270,axiom,pp(lynx2, lynxobservations)).
+fof(sos1280,axiom,(( ? [X1281] : (lt(X1281, lynx2) & cont(X1281, lynx2) & p(X1281, penobscotcounty)))  | ( ? [X1281] : (lt(X1281, penobscotcounty) & cont(X1281, penobscotcounty) & p(X1281, lynx2))) )).
+fof(sos1290,axiom,~ ((( ? [X1291] : (lt(X1291, rockwood) & cont(X1291, rockwood) & p(X1291, penobscotcounty)))  | ( ? [X1291] : (lt(X1291, penobscotcounty) & cont(X1291, penobscotcounty) & p(X1291, rockwood))) ))).
+fof(sos1300,axiom,~ (( ? [X1301] : (p(X1301, i95) & p(X1301, statehighway6))) )).
+fof(sos1310,axiom,pp(stateroute5seg2, stateroute5)).
+fof(sos1320,axiom,(( ? [X1321] : (lt(X1321, stateroute5seg2) & cont(X1321, stateroute5seg2) & p(X1321, cumberlandcounty)))  | ( ? [X1321] : (lt(X1321, cumberlandcounty) & cont(X1321, cumberlandcounty) & p(X1321, stateroute5seg2))) )).
+fof(sos1330,axiom,( ? [X1331] : (p(X1331, androscogginriver2) & p(X1331, oxfordcounty))) ).
+fof(sos1340,axiom,pp(rusroute1seg4, rusroute1)).
+fof(sos1350,axiom,pp(rusroute1seg7, rusroute1)).
+fof(sos1360,axiom,(( ? [X1361] : (lt(X1361, rusroute2seg1) & cont(X1361, rusroute2seg1) & p(X1361, oxfordcounty)))  | ( ? [X1361] : (lt(X1361, oxfordcounty) & cont(X1361, oxfordcounty) & p(X1361, rusroute2seg1))) )).
+fof(sos1370,axiom,(( ? [X1371] : (lt(X1371, rusroute2seg2) & cont(X1371, rusroute2seg2) & p(X1371, franklincounty)))  | ( ? [X1371] : (lt(X1371, franklincounty) & cont(X1371, franklincounty) & p(X1371, rusroute2seg2))) )).
+fof(sos1380,axiom,(( ? [X1381] : (lt(X1381, dennysriver) & cont(X1381, dennysriver) & p(X1381, cwashingtoncounty)))  | ( ? [X1381] : (lt(X1381, cwashingtoncounty) & cont(X1381, cwashingtoncounty) & p(X1381, dennysriver))) )).
+fof(sos1390,axiom,(( ? [X1391] : (lt(X1391, hampden) & cont(X1391, hampden) & p(X1391, penobscotcounty)))  | ( ? [X1391] : (lt(X1391, penobscotcounty) & cont(X1391, penobscotcounty) & p(X1391, hampden))) )).
+fof(sos1400,axiom,(( ? [X1401] : (lt(X1401, orrington) & cont(X1401, orrington) & p(X1401, penobscotcounty)))  | ( ? [X1401] : (lt(X1401, penobscotcounty) & cont(X1401, penobscotcounty) & p(X1401, orrington))) )).
+fof(sos1410,axiom,~ (( ? [X1411] : (p(X1411, cumberlandcounty) & p(X1411, sagadahoccounty))) )).
+fof(sos1420,axiom,~ (( ? [X1421] : (p(X1421, cumberlandcounty) & p(X1421, knoxcounty))) )).
+fof(sos1430,axiom,~ (( ? [X1431] : (p(X1431, cumberlandcounty) & p(X1431, oxfordcounty))) )).
+fof(sos1440,axiom,~ (( ? [X1441] : (p(X1441, cumberlandcounty) & p(X1441, franklincounty))) )).
+fof(sos1450,axiom,~ (( ? [X1451] : (p(X1451, cumberlandcounty) & p(X1451, penobscotcounty))) )).
+fof(sos1460,axiom,~ (( ? [X1461] : (p(X1461, cumberlandcounty) & p(X1461, kennebeccounty))) )).
+fof(sos1470,axiom,~ (( ? [X1471] : (p(X1471, cumberlandcounty) & p(X1471, androscoggincounty))) )).
+fof(sos1480,axiom,~ (( ? [X1481] : (p(X1481, sagadahoccounty) & p(X1481, knoxcounty))) )).
+fof(sos1490,axiom,~ (( ? [X1491] : (p(X1491, sagadahoccounty) & p(X1491, oxfordcounty))) )).
+fof(sos1500,axiom,~ (( ? [X1501] : (p(X1501, sagadahoccounty) & p(X1501, franklincounty))) )).
+fof(sos1510,axiom,~ (( ? [X1511] : (p(X1511, sagadahoccounty) & p(X1511, penobscotcounty))) )).
+fof(sos1520,axiom,~ (( ? [X1521] : (p(X1521, sagadahoccounty) & p(X1521, cumberlandcounty))) )).
+fof(sos1530,axiom,~ (( ? [X1531] : (p(X1531, sagadahoccounty) & p(X1531, kennebeccounty))) )).
+fof(sos1540,axiom,~ (( ? [X1541] : (p(X1541, sagadahoccounty) & p(X1541, androscoggincounty))) )).
+fof(sos1550,axiom,~ (( ? [X1551] : (p(X1551, knoxcounty) & p(X1551, oxfordcounty))) )).
+fof(sos1560,axiom,~ (( ? [X1561] : (p(X1561, knoxcounty) & p(X1561, franklincounty))) )).
+fof(sos1570,axiom,~ (( ? [X1571] : (p(X1571, knoxcounty) & p(X1571, penobscotcounty))) )).
+fof(sos1580,axiom,~ (( ? [X1581] : (p(X1581, knoxcounty) & p(X1581, cumberlandcounty))) )).
+fof(sos1590,axiom,~ (( ? [X1591] : (p(X1591, knoxcounty) & p(X1591, kennebeccounty))) )).
+fof(sos1600,axiom,~ (( ? [X1601] : (p(X1601, knoxcounty) & p(X1601, androscoggincounty))) )).
+fof(sos1610,axiom,~ (( ? [X1611] : (p(X1611, oxfordcounty) & p(X1611, franklincounty))) )).
+fof(sos1620,axiom,~ (( ? [X1621] : (p(X1621, oxfordcounty) & p(X1621, penobscotcounty))) )).
+fof(sos1630,axiom,~ (( ? [X1631] : (p(X1631, oxfordcounty) & p(X1631, cumberlandcounty))) )).
+fof(sos1640,axiom,~ (( ? [X1641] : (p(X1641, oxfordcounty) & p(X1641, kennebeccounty))) )).
+fof(sos1650,axiom,~ (( ? [X1651] : (p(X1651, oxfordcounty) & p(X1651, androscoggincounty))) )).
+fof(sos1660,axiom,~ (( ? [X1661] : (p(X1661, franklincounty) & p(X1661, penobscotcounty))) )).
+fof(sos1670,axiom,~ (( ? [X1671] : (p(X1671, franklincounty) & p(X1671, cumberlandcounty))) )).
+fof(sos1680,axiom,~ (( ? [X1681] : (p(X1681, franklincounty) & p(X1681, kennebeccounty))) )).
+fof(sos1690,axiom,~ (( ? [X1691] : (p(X1691, franklincounty) & p(X1691, androscoggincounty))) )).
+fof(sos1700,axiom,~ (( ? [X1701] : (p(X1701, penobscotcounty) & p(X1701, cumberlandcounty))) )).
+fof(sos1710,axiom,~ (( ? [X1711] : (p(X1711, penobscotcounty) & p(X1711, kennebeccounty))) )).
+fof(sos1720,axiom,~ (( ? [X1721] : (p(X1721, penobscotcounty) & p(X1721, androscoggincounty))) )).
+fof(sos1730,axiom,~ (( ? [X1731] : (p(X1731, cumberlandcounty) & p(X1731, kennebeccounty))) )).
+fof(sos1740,axiom,~ (( ? [X1741] : (p(X1741, cumberlandcounty) & p(X1741, androscoggincounty))) )).
+fof(sos1750,axiom,~ (( ? [X1751] : (p(X1751, kennebeccounty) & p(X1751, androscoggincounty))) )).
+fof(sos1760,axiom,~ (( ? [X1761] : (p(X1761, houlton) & p(X1761, bethel))) )).
+fof(sos1770,axiom,~ (( ? [X1771] : (p(X1771, houlton) & p(X1771, portland))) )).
+fof(sos1780,axiom,~ (( ? [X1781] : (p(X1781, houlton) & p(X1781, southberwick))) )).
+fof(sos1790,axiom,~ (( ? [X1791] : (p(X1791, houlton) & p(X1791, adamspond1))) )).
+fof(sos1800,axiom,~ (( ? [X1801] : (p(X1801, houlton) & p(X1801, alagashpond))) )).
+fof(sos1810,axiom,~ (( ? [X1811] : (p(X1811, houlton) & p(X1811, damariscottariver))) )).
+fof(sos1820,axiom,~ (( ? [X1821] : (p(X1821, houlton) & p(X1821, machias))) )).
+fof(sos1830,axiom,~ (( ? [X1831] : (p(X1831, houlton) & p(X1831, grahamlake))) )).
+fof(sos1840,axiom,~ (( ? [X1841] : (p(X1841, bethel) & p(X1841, portland))) )).
+fof(sos1850,axiom,~ (( ? [X1851] : (p(X1851, bethel) & p(X1851, southberwick))) )).
+fof(sos1860,axiom,~ (( ? [X1861] : (p(X1861, bethel) & p(X1861, adamspond1))) )).
+fof(sos1870,axiom,~ (( ? [X1871] : (p(X1871, bethel) & p(X1871, alagashpond))) )).
+fof(sos1880,axiom,~ (( ? [X1881] : (p(X1881, bethel) & p(X1881, damariscottariver))) )).
+fof(sos1890,axiom,~ (( ? [X1891] : (p(X1891, bethel) & p(X1891, machias))) )).
+fof(sos1900,axiom,~ (( ? [X1901] : (p(X1901, bethel) & p(X1901, grahamlake))) )).
+fof(sos1910,axiom,~ (( ? [X1911] : (p(X1911, portland) & p(X1911, southberwick))) )).
+fof(sos1920,axiom,~ (( ? [X1921] : (p(X1921, portland) & p(X1921, adamspond1))) )).
+fof(sos1930,axiom,~ (( ? [X1931] : (p(X1931, portland) & p(X1931, alagashpond))) )).
+fof(sos1940,axiom,~ (( ? [X1941] : (p(X1941, portland) & p(X1941, damariscottariver))) )).
+fof(sos1950,axiom,~ (( ? [X1951] : (p(X1951, portland) & p(X1951, machias))) )).
+fof(sos1960,axiom,~ (( ? [X1961] : (p(X1961, portland) & p(X1961, grahamlake))) )).
+fof(sos1970,axiom,~ (( ? [X1971] : (p(X1971, southberwick) & p(X1971, adamspond1))) )).
+fof(sos1980,axiom,~ (( ? [X1981] : (p(X1981, southberwick) & p(X1981, alagashpond))) )).
+fof(sos1990,axiom,~ (( ? [X1991] : (p(X1991, southberwick) & p(X1991, damariscottariver))) )).
+fof(sos2000,axiom,~ (( ? [X2001] : (p(X2001, southberwick) & p(X2001, machias))) )).
+fof(sos2010,axiom,~ (( ? [X2011] : (p(X2011, southberwick) & p(X2011, grahamlake))) )).
+fof(sos2020,axiom,~ (( ? [X2021] : (p(X2021, adamspond1) & p(X2021, alagashpond))) )).
+fof(sos2030,axiom,~ (( ? [X2031] : (p(X2031, adamspond1) & p(X2031, damariscottariver))) )).
+fof(sos2040,axiom,~ (( ? [X2041] : (p(X2041, adamspond1) & p(X2041, machias))) )).
+fof(sos2050,axiom,~ (( ? [X2051] : (p(X2051, adamspond1) & p(X2051, grahamlake))) )).
+fof(sos2060,axiom,~ (( ? [X2061] : (p(X2061, alagashpond) & p(X2061, damariscottariver))) )).
+fof(sos2070,axiom,~ (( ? [X2071] : (p(X2071, alagashpond) & p(X2071, machias))) )).
+fof(sos2080,axiom,~ (( ? [X2081] : (p(X2081, alagashpond) & p(X2081, grahamlake))) )).
+fof(sos2090,axiom,~ (( ? [X2091] : (p(X2091, damariscottariver) & p(X2091, machias))) )).
+fof(sos2100,axiom,~ (( ? [X2101] : (p(X2101, damariscottariver) & p(X2101, grahamlake))) )).
+fof(sos2110,axiom,~ (( ? [X2111] : (p(X2111, machias) & p(X2111, grahamlake))) )).
+fof(sos2120,axiom,~ (( ? [X2121] : (p(X2121, statehighway1seg4) & p(X2121, androscogginriverseg1))) )).
+fof(sos2130,axiom,~ (( ? [X2131] : (p(X2131, statehighway1seg4) & p(X2131, i495seg1))) )).
+fof(sos2140,axiom,~ (( ? [X2141] : (p(X2141, statehighway1seg4) & p(X2141, i295))) )).
+fof(sos2150,axiom,~ (( ? [X2151] : (p(X2151, statehighway1seg4) & p(X2151, stateroute9seg8))) )).
+fof(sos2160,axiom,~ (( ? [X2161] : (p(X2161, statehighway1seg4) & p(X2161, i95seg1))) )).
+fof(sos2170,axiom,~ (( ? [X2171] : (p(X2171, statehighway1seg4) & p(X2171, i95seg3))) )).
+fof(sos2180,axiom,~ (( ? [X2181] : (p(X2181, statehighway1seg4) & p(X2181, statehighway6seg2))) )).
+fof(sos2190,axiom,~ (( ? [X2191] : (p(X2191, statehighway1seg4) & p(X2191, stateroute5seg2))) )).
+fof(sos2200,axiom,~ (( ? [X2201] : (p(X2201, statehighway1seg4) & p(X2201, rusroute1seg4))) )).
+fof(sos2210,axiom,~ (( ? [X2211] : (p(X2211, statehighway1seg4) & p(X2211, rusroute1seg7))) )).
+fof(sos2220,axiom,~ (( ? [X2221] : (p(X2221, statehighway1seg4) & p(X2221, rusroute2seg1))) )).
+fof(sos2230,axiom,~ (( ? [X2231] : (p(X2231, statehighway1seg4) & p(X2231, rusroute2seg2))) )).
+fof(sos2240,axiom,~ (( ? [X2241] : (p(X2241, statehighway1seg4) & p(X2241, rusroute2seg5))) )).
+fof(sos2250,axiom,~ (( ? [X2251] : (p(X2251, statehighway1seg4) & p(X2251, dennysriver))) )).
+fof(sos2260,axiom,~ (( ? [X2261] : (p(X2261, statehighway1seg4) & p(X2261, lakeleonard))) )).
+fof(sos2270,axiom,~ (( ? [X2271] : (p(X2271, statehighway1seg4) & p(X2271, stgeorgeriver))) )).
+fof(sos2280,axiom,~ (( ? [X2281] : (p(X2281, statehighway1seg4) & p(X2281, rwestbranchoysterriver))) )).
+fof(sos2290,axiom,~ (( ? [X2291] : (p(X2291, statehighway1seg4) & p(X2291, eastbranchoysterriver))) )).
+fof(sos2300,axiom,~ (( ? [X2301] : (p(X2301, statehighway1seg4) & p(X2301, millriver))) )).
+fof(sos2310,axiom,~ (( ? [X2311] : (p(X2311, androscogginriverseg1) & p(X2311, i495seg1))) )).
+fof(sos2320,axiom,~ (( ? [X2321] : (p(X2321, androscogginriverseg1) & p(X2321, i295))) )).
+fof(sos2330,axiom,~ (( ? [X2331] : (p(X2331, androscogginriverseg1) & p(X2331, stateroute9seg8))) )).
+fof(sos2340,axiom,~ (( ? [X2341] : (p(X2341, androscogginriverseg1) & p(X2341, i95seg1))) )).
+fof(sos2350,axiom,~ (( ? [X2351] : (p(X2351, androscogginriverseg1) & p(X2351, i95seg3))) )).
+fof(sos2360,axiom,~ (( ? [X2361] : (p(X2361, androscogginriverseg1) & p(X2361, statehighway6seg2))) )).
+fof(sos2370,axiom,~ (( ? [X2371] : (p(X2371, androscogginriverseg1) & p(X2371, stateroute5seg2))) )).
+fof(sos2380,axiom,~ (( ? [X2381] : (p(X2381, androscogginriverseg1) & p(X2381, rusroute1seg4))) )).
+fof(sos2390,axiom,~ (( ? [X2391] : (p(X2391, androscogginriverseg1) & p(X2391, rusroute1seg7))) )).
+fof(sos2400,axiom,~ (( ? [X2401] : (p(X2401, androscogginriverseg1) & p(X2401, rusroute2seg1))) )).
+fof(sos2410,axiom,~ (( ? [X2411] : (p(X2411, androscogginriverseg1) & p(X2411, rusroute2seg2))) )).
+fof(sos2420,axiom,~ (( ? [X2421] : (p(X2421, androscogginriverseg1) & p(X2421, rusroute2seg5))) )).
+fof(sos2430,axiom,~ (( ? [X2431] : (p(X2431, androscogginriverseg1) & p(X2431, dennysriver))) )).
+fof(sos2440,axiom,~ (( ? [X2441] : (p(X2441, androscogginriverseg1) & p(X2441, lakeleonard))) )).
+fof(sos2450,axiom,~ (( ? [X2451] : (p(X2451, androscogginriverseg1) & p(X2451, stgeorgeriver))) )).
+fof(sos2460,axiom,~ (( ? [X2461] : (p(X2461, androscogginriverseg1) & p(X2461, rwestbranchoysterriver))) )).
+fof(sos2470,axiom,~ (( ? [X2471] : (p(X2471, androscogginriverseg1) & p(X2471, eastbranchoysterriver))) )).
+fof(sos2480,axiom,~ (( ? [X2481] : (p(X2481, androscogginriverseg1) & p(X2481, millriver))) )).
+fof(sos2490,axiom,~ (( ? [X2491] : (p(X2491, i495seg1) & p(X2491, i295))) )).
+fof(sos2500,axiom,~ (( ? [X2501] : (p(X2501, i495seg1) & p(X2501, stateroute9seg8))) )).
+fof(sos2510,axiom,~ (( ? [X2511] : (p(X2511, i495seg1) & p(X2511, statehighway6seg2))) )).
+fof(sos2520,axiom,~ (( ? [X2521] : (p(X2521, i495seg1) & p(X2521, stateroute5seg2))) )).
+fof(sos2530,axiom,~ (( ? [X2531] : (p(X2531, i495seg1) & p(X2531, rusroute1seg4))) )).
+fof(sos2540,axiom,~ (( ? [X2541] : (p(X2541, i495seg1) & p(X2541, rusroute1seg7))) )).
+fof(sos2550,axiom,~ (( ? [X2551] : (p(X2551, i495seg1) & p(X2551, rusroute2seg1))) )).
+fof(sos2560,axiom,~ (( ? [X2561] : (p(X2561, i495seg1) & p(X2561, rusroute2seg2))) )).
+fof(sos2570,axiom,~ (( ? [X2571] : (p(X2571, i495seg1) & p(X2571, rusroute2seg5))) )).
+fof(sos2580,axiom,~ (( ? [X2581] : (p(X2581, i495seg1) & p(X2581, dennysriver))) )).
+fof(sos2590,axiom,~ (( ? [X2591] : (p(X2591, i495seg1) & p(X2591, lakeleonard))) )).
+fof(sos2600,axiom,~ (( ? [X2601] : (p(X2601, i495seg1) & p(X2601, stgeorgeriver))) )).
+fof(sos2610,axiom,~ (( ? [X2611] : (p(X2611, i495seg1) & p(X2611, rwestbranchoysterriver))) )).
+fof(sos2620,axiom,~ (( ? [X2621] : (p(X2621, i495seg1) & p(X2621, eastbranchoysterriver))) )).
+fof(sos2630,axiom,~ (( ? [X2631] : (p(X2631, i495seg1) & p(X2631, millriver))) )).
+fof(sos2640,axiom,~ (( ? [X2641] : (p(X2641, i295) & p(X2641, stateroute9seg8))) )).
+fof(sos2650,axiom,~ (( ? [X2651] : (p(X2651, i295) & p(X2651, i95seg1))) )).
+fof(sos2660,axiom,~ (( ? [X2661] : (p(X2661, i295) & p(X2661, i95seg3))) )).
+fof(sos2670,axiom,~ (( ? [X2671] : (p(X2671, i295) & p(X2671, statehighway6seg2))) )).
+fof(sos2680,axiom,~ (( ? [X2681] : (p(X2681, i295) & p(X2681, stateroute5seg2))) )).
+fof(sos2690,axiom,~ (( ? [X2691] : (p(X2691, i295) & p(X2691, rusroute1seg4))) )).
+fof(sos2700,axiom,~ (( ? [X2701] : (p(X2701, i295) & p(X2701, rusroute1seg7))) )).
+fof(sos2710,axiom,~ (( ? [X2711] : (p(X2711, i295) & p(X2711, rusroute2seg1))) )).
+fof(sos2720,axiom,~ (( ? [X2721] : (p(X2721, i295) & p(X2721, rusroute2seg2))) )).
+fof(sos2730,axiom,~ (( ? [X2731] : (p(X2731, i295) & p(X2731, rusroute2seg5))) )).
+fof(sos2740,axiom,~ (( ? [X2741] : (p(X2741, i295) & p(X2741, dennysriver))) )).
+fof(sos2750,axiom,~ (( ? [X2751] : (p(X2751, i295) & p(X2751, lakeleonard))) )).
+fof(sos2760,axiom,~ (( ? [X2761] : (p(X2761, i295) & p(X2761, stgeorgeriver))) )).
+fof(sos2770,axiom,~ (( ? [X2771] : (p(X2771, i295) & p(X2771, rwestbranchoysterriver))) )).
+fof(sos2780,axiom,~ (( ? [X2781] : (p(X2781, i295) & p(X2781, eastbranchoysterriver))) )).
+fof(sos2790,axiom,~ (( ? [X2791] : (p(X2791, i295) & p(X2791, millriver))) )).
+fof(sos2800,axiom,~ (( ? [X2801] : (p(X2801, stateroute9seg8) & p(X2801, i95seg1))) )).
+fof(sos2810,axiom,~ (( ? [X2811] : (p(X2811, stateroute9seg8) & p(X2811, i95seg3))) )).
+fof(sos2820,axiom,~ (( ? [X2821] : (p(X2821, stateroute9seg8) & p(X2821, statehighway6seg2))) )).
+fof(sos2830,axiom,~ (( ? [X2831] : (p(X2831, stateroute9seg8) & p(X2831, stateroute5seg2))) )).
+fof(sos2840,axiom,~ (( ? [X2841] : (p(X2841, stateroute9seg8) & p(X2841, rusroute1seg4))) )).
+fof(sos2850,axiom,~ (( ? [X2851] : (p(X2851, stateroute9seg8) & p(X2851, rusroute1seg7))) )).
+fof(sos2860,axiom,~ (( ? [X2861] : (p(X2861, stateroute9seg8) & p(X2861, rusroute2seg1))) )).
+fof(sos2870,axiom,~ (( ? [X2871] : (p(X2871, stateroute9seg8) & p(X2871, rusroute2seg2))) )).
+fof(sos2880,axiom,~ (( ? [X2881] : (p(X2881, stateroute9seg8) & p(X2881, rusroute2seg5))) )).
+fof(sos2890,axiom,~ (( ? [X2891] : (p(X2891, stateroute9seg8) & p(X2891, dennysriver))) )).
+fof(sos2900,axiom,~ (( ? [X2901] : (p(X2901, stateroute9seg8) & p(X2901, lakeleonard))) )).
+fof(sos2910,axiom,~ (( ? [X2911] : (p(X2911, stateroute9seg8) & p(X2911, stgeorgeriver))) )).
+fof(sos2920,axiom,~ (( ? [X2921] : (p(X2921, stateroute9seg8) & p(X2921, rwestbranchoysterriver))) )).
+fof(sos2930,axiom,~ (( ? [X2931] : (p(X2931, stateroute9seg8) & p(X2931, eastbranchoysterriver))) )).
+fof(sos2940,axiom,~ (( ? [X2941] : (p(X2941, stateroute9seg8) & p(X2941, millriver))) )).
+fof(sos2950,axiom,~ (( ? [X2951] : (p(X2951, i95seg1) & p(X2951, i95seg3))) )).
+fof(sos2960,axiom,~ (( ? [X2961] : (p(X2961, i95seg1) & p(X2961, statehighway6seg2))) )).
+fof(sos2970,axiom,~ (( ? [X2971] : (p(X2971, i95seg1) & p(X2971, stateroute5seg2))) )).
+fof(sos2980,axiom,~ (( ? [X2981] : (p(X2981, i95seg1) & p(X2981, rusroute1seg4))) )).
+fof(sos2990,axiom,~ (( ? [X2991] : (p(X2991, i95seg1) & p(X2991, rusroute1seg7))) )).
+fof(sos3000,axiom,~ (( ? [X3001] : (p(X3001, i95seg1) & p(X3001, rusroute2seg1))) )).
+fof(sos3010,axiom,~ (( ? [X3011] : (p(X3011, i95seg1) & p(X3011, rusroute2seg2))) )).
+fof(sos3020,axiom,~ (( ? [X3021] : (p(X3021, i95seg1) & p(X3021, rusroute2seg5))) )).
+fof(sos3030,axiom,~ (( ? [X3031] : (p(X3031, i95seg1) & p(X3031, dennysriver))) )).
+fof(sos3040,axiom,~ (( ? [X3041] : (p(X3041, i95seg1) & p(X3041, lakeleonard))) )).
+fof(sos3050,axiom,~ (( ? [X3051] : (p(X3051, i95seg1) & p(X3051, stgeorgeriver))) )).
+fof(sos3060,axiom,~ (( ? [X3061] : (p(X3061, i95seg1) & p(X3061, rwestbranchoysterriver))) )).
+fof(sos3070,axiom,~ (( ? [X3071] : (p(X3071, i95seg1) & p(X3071, eastbranchoysterriver))) )).
+fof(sos3080,axiom,~ (( ? [X3081] : (p(X3081, i95seg1) & p(X3081, millriver))) )).
+fof(sos3090,axiom,~ (( ? [X3091] : (p(X3091, i95seg3) & p(X3091, statehighway6seg2))) )).
+fof(sos3100,axiom,~ (( ? [X3101] : (p(X3101, i95seg3) & p(X3101, stateroute5seg2))) )).
+fof(sos3110,axiom,~ (( ? [X3111] : (p(X3111, i95seg3) & p(X3111, rusroute1seg4))) )).
+fof(sos3120,axiom,~ (( ? [X3121] : (p(X3121, i95seg3) & p(X3121, rusroute1seg7))) )).
+fof(sos3130,axiom,~ (( ? [X3131] : (p(X3131, i95seg3) & p(X3131, rusroute2seg1))) )).
+fof(sos3140,axiom,~ (( ? [X3141] : (p(X3141, i95seg3) & p(X3141, rusroute2seg2))) )).
+fof(sos3150,axiom,~ (( ? [X3151] : (p(X3151, i95seg3) & p(X3151, rusroute2seg5))) )).
+fof(sos3160,axiom,~ (( ? [X3161] : (p(X3161, i95seg3) & p(X3161, dennysriver))) )).
+fof(sos3170,axiom,~ (( ? [X3171] : (p(X3171, i95seg3) & p(X3171, lakeleonard))) )).
+fof(sos3180,axiom,~ (( ? [X3181] : (p(X3181, i95seg3) & p(X3181, stgeorgeriver))) )).
+fof(sos3190,axiom,~ (( ? [X3191] : (p(X3191, i95seg3) & p(X3191, rwestbranchoysterriver))) )).
+fof(sos3200,axiom,~ (( ? [X3201] : (p(X3201, i95seg3) & p(X3201, eastbranchoysterriver))) )).
+fof(sos3210,axiom,~ (( ? [X3211] : (p(X3211, i95seg3) & p(X3211, millriver))) )).
+fof(sos3220,axiom,~ (( ? [X3221] : (p(X3221, statehighway6seg2) & p(X3221, stateroute5seg2))) )).
+fof(sos3230,axiom,~ (( ? [X3231] : (p(X3231, statehighway6seg2) & p(X3231, rusroute1seg4))) )).
+fof(sos3240,axiom,~ (( ? [X3241] : (p(X3241, statehighway6seg2) & p(X3241, rusroute1seg7))) )).
+fof(sos3250,axiom,~ (( ? [X3251] : (p(X3251, statehighway6seg2) & p(X3251, rusroute2seg1))) )).
+fof(sos3260,axiom,~ (( ? [X3261] : (p(X3261, statehighway6seg2) & p(X3261, rusroute2seg2))) )).
+fof(sos3270,axiom,~ (( ? [X3271] : (p(X3271, statehighway6seg2) & p(X3271, rusroute2seg5))) )).
+fof(sos3280,axiom,~ (( ? [X3281] : (p(X3281, statehighway6seg2) & p(X3281, dennysriver))) )).
+fof(sos3290,axiom,~ (( ? [X3291] : (p(X3291, statehighway6seg2) & p(X3291, lakeleonard))) )).
+fof(sos3300,axiom,~ (( ? [X3301] : (p(X3301, statehighway6seg2) & p(X3301, stgeorgeriver))) )).
+fof(sos3310,axiom,~ (( ? [X3311] : (p(X3311, statehighway6seg2) & p(X3311, rwestbranchoysterriver))) )).
+fof(sos3320,axiom,~ (( ? [X3321] : (p(X3321, statehighway6seg2) & p(X3321, eastbranchoysterriver))) )).
+fof(sos3330,axiom,~ (( ? [X3331] : (p(X3331, statehighway6seg2) & p(X3331, millriver))) )).
+fof(sos3340,axiom,~ (( ? [X3341] : (p(X3341, stateroute5seg2) & p(X3341, rusroute1seg4))) )).
+fof(sos3350,axiom,~ (( ? [X3351] : (p(X3351, stateroute5seg2) & p(X3351, rusroute1seg7))) )).
+fof(sos3360,axiom,~ (( ? [X3361] : (p(X3361, stateroute5seg2) & p(X3361, rusroute2seg1))) )).
+fof(sos3370,axiom,~ (( ? [X3371] : (p(X3371, stateroute5seg2) & p(X3371, rusroute2seg2))) )).
+fof(sos3380,axiom,~ (( ? [X3381] : (p(X3381, stateroute5seg2) & p(X3381, rusroute2seg5))) )).
+fof(sos3390,axiom,~ (( ? [X3391] : (p(X3391, stateroute5seg2) & p(X3391, dennysriver))) )).
+fof(sos3400,axiom,~ (( ? [X3401] : (p(X3401, stateroute5seg2) & p(X3401, lakeleonard))) )).
+fof(sos3410,axiom,~ (( ? [X3411] : (p(X3411, stateroute5seg2) & p(X3411, stgeorgeriver))) )).
+fof(sos3420,axiom,~ (( ? [X3421] : (p(X3421, stateroute5seg2) & p(X3421, rwestbranchoysterriver))) )).
+fof(sos3430,axiom,~ (( ? [X3431] : (p(X3431, stateroute5seg2) & p(X3431, eastbranchoysterriver))) )).
+fof(sos3440,axiom,~ (( ? [X3441] : (p(X3441, stateroute5seg2) & p(X3441, millriver))) )).
+fof(sos3450,axiom,~ (( ? [X3451] : (p(X3451, rusroute1seg4) & p(X3451, rusroute1seg7))) )).
+fof(sos3460,axiom,~ (( ? [X3461] : (p(X3461, rusroute1seg4) & p(X3461, rusroute2seg1))) )).
+fof(sos3470,axiom,~ (( ? [X3471] : (p(X3471, rusroute1seg4) & p(X3471, rusroute2seg2))) )).
+fof(sos3480,axiom,~ (( ? [X3481] : (p(X3481, rusroute1seg4) & p(X3481, rusroute2seg5))) )).
+fof(sos3490,axiom,~ (( ? [X3491] : (p(X3491, rusroute1seg4) & p(X3491, dennysriver))) )).
+fof(sos3500,axiom,~ (( ? [X3501] : (p(X3501, rusroute1seg4) & p(X3501, lakeleonard))) )).
+fof(sos3510,axiom,~ (( ? [X3511] : (p(X3511, rusroute1seg4) & p(X3511, stgeorgeriver))) )).
+fof(sos3520,axiom,~ (( ? [X3521] : (p(X3521, rusroute1seg4) & p(X3521, rwestbranchoysterriver))) )).
+fof(sos3530,axiom,~ (( ? [X3531] : (p(X3531, rusroute1seg4) & p(X3531, eastbranchoysterriver))) )).
+fof(sos3540,axiom,~ (( ? [X3541] : (p(X3541, rusroute1seg4) & p(X3541, millriver))) )).
+fof(sos3550,axiom,~ (( ? [X3551] : (p(X3551, rusroute1seg7) & p(X3551, rusroute2seg1))) )).
+fof(sos3560,axiom,~ (( ? [X3561] : (p(X3561, rusroute1seg7) & p(X3561, rusroute2seg2))) )).
+fof(sos3570,axiom,~ (( ? [X3571] : (p(X3571, rusroute1seg7) & p(X3571, rusroute2seg5))) )).
+fof(sos3580,axiom,~ (( ? [X3581] : (p(X3581, rusroute1seg7) & p(X3581, dennysriver))) )).
+fof(sos3590,axiom,~ (( ? [X3591] : (p(X3591, rusroute1seg7) & p(X3591, lakeleonard))) )).
+fof(sos3600,axiom,~ (( ? [X3601] : (p(X3601, rusroute1seg7) & p(X3601, stgeorgeriver))) )).
+fof(sos3610,axiom,~ (( ? [X3611] : (p(X3611, rusroute1seg7) & p(X3611, rwestbranchoysterriver))) )).
+fof(sos3620,axiom,~ (( ? [X3621] : (p(X3621, rusroute1seg7) & p(X3621, eastbranchoysterriver))) )).
+fof(sos3630,axiom,~ (( ? [X3631] : (p(X3631, rusroute1seg7) & p(X3631, millriver))) )).
+fof(sos3640,axiom,~ (( ? [X3641] : (p(X3641, rusroute2seg1) & p(X3641, rusroute2seg2))) )).
+fof(sos3650,axiom,~ (( ? [X3651] : (p(X3651, rusroute2seg1) & p(X3651, rusroute2seg5))) )).
+fof(sos3660,axiom,~ (( ? [X3661] : (p(X3661, rusroute2seg1) & p(X3661, dennysriver))) )).
+fof(sos3670,axiom,~ (( ? [X3671] : (p(X3671, rusroute2seg1) & p(X3671, lakeleonard))) )).
+fof(sos3680,axiom,~ (( ? [X3681] : (p(X3681, rusroute2seg1) & p(X3681, stgeorgeriver))) )).
+fof(sos3690,axiom,~ (( ? [X3691] : (p(X3691, rusroute2seg1) & p(X3691, rwestbranchoysterriver))) )).
+fof(sos3700,axiom,~ (( ? [X3701] : (p(X3701, rusroute2seg1) & p(X3701, eastbranchoysterriver))) )).
+fof(sos3710,axiom,~ (( ? [X3711] : (p(X3711, rusroute2seg1) & p(X3711, millriver))) )).
+fof(sos3720,axiom,~ (( ? [X3721] : (p(X3721, rusroute2seg2) & p(X3721, rusroute2seg5))) )).
+fof(sos3730,axiom,~ (( ? [X3731] : (p(X3731, rusroute2seg2) & p(X3731, dennysriver))) )).
+fof(sos3740,axiom,~ (( ? [X3741] : (p(X3741, rusroute2seg2) & p(X3741, lakeleonard))) )).
+fof(sos3750,axiom,~ (( ? [X3751] : (p(X3751, rusroute2seg2) & p(X3751, stgeorgeriver))) )).
+fof(sos3760,axiom,~ (( ? [X3761] : (p(X3761, rusroute2seg2) & p(X3761, rwestbranchoysterriver))) )).
+fof(sos3770,axiom,~ (( ? [X3771] : (p(X3771, rusroute2seg2) & p(X3771, eastbranchoysterriver))) )).
+fof(sos3780,axiom,~ (( ? [X3781] : (p(X3781, rusroute2seg2) & p(X3781, millriver))) )).
+fof(sos3790,axiom,~ (( ? [X3791] : (p(X3791, rusroute2seg5) & p(X3791, dennysriver))) )).
+fof(sos3800,axiom,~ (( ? [X3801] : (p(X3801, rusroute2seg5) & p(X3801, lakeleonard))) )).
+fof(sos3810,axiom,~ (( ? [X3811] : (p(X3811, rusroute2seg5) & p(X3811, stgeorgeriver))) )).
+fof(sos3820,axiom,~ (( ? [X3821] : (p(X3821, rusroute2seg5) & p(X3821, rwestbranchoysterriver))) )).
+fof(sos3830,axiom,~ (( ? [X3831] : (p(X3831, rusroute2seg5) & p(X3831, eastbranchoysterriver))) )).
+fof(sos3840,axiom,~ (( ? [X3841] : (p(X3841, rusroute2seg5) & p(X3841, millriver))) )).
+fof(sos3850,axiom,~ (( ? [X3851] : (p(X3851, dennysriver) & p(X3851, lakeleonard))) )).
+fof(sos3860,axiom,~ (( ? [X3861] : (p(X3861, dennysriver) & p(X3861, stgeorgeriver))) )).
+fof(sos3870,axiom,~ (( ? [X3871] : (p(X3871, dennysriver) & p(X3871, rwestbranchoysterriver))) )).
+fof(sos3880,axiom,~ (( ? [X3881] : (p(X3881, dennysriver) & p(X3881, eastbranchoysterriver))) )).
+fof(sos3890,axiom,~ (( ? [X3891] : (p(X3891, dennysriver) & p(X3891, millriver))) )).
+fof(sos3900,axiom,~ (( ? [X3901] : (p(X3901, lakeleonard) & p(X3901, stgeorgeriver))) )).
+fof(sos3910,axiom,~ (( ? [X3911] : (p(X3911, lakeleonard) & p(X3911, rwestbranchoysterriver))) )).
+fof(sos3920,axiom,~ (( ? [X3921] : (p(X3921, lakeleonard) & p(X3921, eastbranchoysterriver))) )).
+fof(sos3930,axiom,~ (( ? [X3931] : (p(X3931, lakeleonard) & p(X3931, millriver))) )).
+fof(sos3940,axiom,~ (( ? [X3941] : (p(X3941, rwestbranchoysterriver) & p(X3941, eastbranchoysterriver))) )).
+fof(sos3950,axiom,~ (( ? [X3951] : (p(X3951, rwestbranchoysterriver) & p(X3951, millriver))) )).
+fof(sos3960,axiom,~ (( ? [X3961] : (p(X3961, eastbranchoysterriver) & p(X3961, millriver))) )).
+fof(sos3970,axiom,~ (c(mooselookmegunticlake, rockwood))).
+fof(sos3980,axiom,~ (c(mooselookmegunticlake, lynx2))).
+fof(sos3990,axiom,~ (c(mooselookmegunticlake, machiasbay))).
+fof(sos4000,axiom,~ (c(mooselookmegunticlake, hampden))).
+fof(sos4010,axiom,~ (c(mooselookmegunticlake, bucksport))).
+fof(sos4020,axiom,~ (c(mooselookmegunticlake, arundel))).
+fof(sos4030,axiom,~ (c(mooselookmegunticlake, orrington))).
+fof(sos4040,axiom,~ (c(mooselookmegunticlake, dayton))).
+fof(sos4050,axiom,~ (c(rockwood, lynx2))).
+fof(sos4060,axiom,~ (c(rockwood, machiasbay))).
+fof(sos4070,axiom,~ (c(rockwood, hampden))).
+fof(sos4080,axiom,~ (c(rockwood, bucksport))).
+fof(sos4090,axiom,~ (c(rockwood, arundel))).
+fof(sos4100,axiom,~ (c(rockwood, orrington))).
+fof(sos4110,axiom,~ (c(rockwood, dayton))).
+fof(sos4120,axiom,~ (c(lynx2, machiasbay))).
+fof(sos4130,axiom,~ (c(lynx2, hampden))).
+fof(sos4140,axiom,~ (c(lynx2, bucksport))).
+fof(sos4150,axiom,~ (c(lynx2, arundel))).
+fof(sos4160,axiom,~ (c(lynx2, orrington))).
+fof(sos4170,axiom,~ (c(lynx2, dayton))).
+fof(sos4180,axiom,~ (c(machiasbay, hampden))).
+fof(sos4190,axiom,~ (c(machiasbay, bucksport))).
+fof(sos4200,axiom,~ (c(machiasbay, arundel))).
+fof(sos4210,axiom,~ (c(machiasbay, orrington))).
+fof(sos4220,axiom,~ (c(machiasbay, dayton))).
+fof(sos4230,axiom,~ (c(hampden, bucksport))).
+fof(sos4240,axiom,~ (c(hampden, arundel))).
+fof(sos4250,axiom,~ (c(hampden, orrington))).
+fof(sos4260,axiom,~ (c(hampden, dayton))).
+fof(sos4270,axiom,~ (c(bucksport, arundel))).
+fof(sos4280,axiom,~ (c(bucksport, orrington))).
+fof(sos4290,axiom,~ (c(bucksport, dayton))).
+fof(sos4300,axiom,~ (c(arundel, orrington))).
+fof(sos4310,axiom,~ (c(arundel, dayton))).
+fof(sos4320,axiom,~ (c(orrington, dayton))).
+fof(sos4330,axiom,~ ((androscoggincounty=i495seg1))).
+fof(sos4340,axiom,~ ((androscoggincounty=machias))).
+fof(sos4350,axiom,~ ((androscoggincounty=cumberlandcounty))).
+fof(sos4360,axiom,~ ((androscoggincounty=adamspond1))).
+fof(sos4370,axiom,~ ((androscoggincounty=bucksport))).
+fof(sos4380,axiom,~ ((androscoggincounty=millriver))).
+fof(sos4390,axiom,~ ((androscoggincounty=lakeleonard))).
+fof(sos4400,axiom,~ ((androscoggincounty=statehighway1seg4))).
+fof(sos4410,axiom,~ ((androscoggincounty=damariscottariver))).
+fof(sos4420,axiom,~ ((androscoggincounty=androscogginriver2))).
+fof(sos4430,axiom,~ ((androscoggincounty=bethel))).
+fof(sos4440,axiom,~ ((androscoggincounty=cwaldocounty))).
+fof(sos4450,axiom,~ ((androscoggincounty=southberwick))).
+fof(sos4460,axiom,~ ((androscoggincounty=statehighway6seg2))).
+fof(sos4470,axiom,~ ((androscoggincounty=statehighway6))).
+fof(sos4480,axiom,~ ((androscoggincounty=penobscotcounty))).
+fof(sos4490,axiom,~ ((androscoggincounty=sagadahoccounty))).
+fof(sos4500,axiom,~ ((androscoggincounty=oxfordcounty))).
+fof(sos4510,axiom,~ ((androscoggincounty=alagashpond))).
+fof(sos4520,axiom,~ ((androscoggincounty=portland))).
+fof(sos4530,axiom,~ ((androscoggincounty=cwashingtoncounty))).
+fof(sos4540,axiom,~ ((androscoggincounty=rusroute2seg2))).
+fof(sos4550,axiom,~ ((androscoggincounty=mattawamkeag))).
+fof(sos4560,axiom,~ ((androscoggincounty=rusroute2seg1))).
+fof(sos4570,axiom,~ ((androscoggincounty=lynx2))).
+fof(sos4580,axiom,~ ((androscoggincounty=dennysriver))).
+fof(sos4590,axiom,~ ((androscoggincounty=orrington))).
+fof(sos4600,axiom,~ ((androscoggincounty=kennebeccounty))).
+fof(sos4610,axiom,~ ((androscoggincounty=rusroute1seg7))).
+fof(sos4620,axiom,~ ((androscoggincounty=i295))).
+fof(sos4630,axiom,~ ((androscoggincounty=stateroute5))).
+fof(sos4640,axiom,~ ((androscoggincounty=i95))).
+fof(sos4650,axiom,~ ((androscoggincounty=androscogginriverseg1))).
+fof(sos4660,axiom,~ ((androscoggincounty=dayton))).
+fof(sos4670,axiom,~ ((androscoggincounty=stateroute5seg2))).
+fof(sos4680,axiom,~ ((androscoggincounty=mooselookmegunticlake))).
+fof(sos4690,axiom,~ ((androscoggincounty=eastbranchoysterriver))).
+fof(sos4700,axiom,~ ((androscoggincounty=rusroute1))).
+fof(sos4710,axiom,~ ((androscoggincounty=meduxnekeagriver))).
+fof(sos4720,axiom,~ ((androscoggincounty=arundel))).
+fof(sos4730,axiom,~ ((androscoggincounty=knoxcounty))).
+fof(sos4740,axiom,~ ((androscoggincounty=rockwood))).
+fof(sos4750,axiom,~ ((androscoggincounty=passagassawakeagriver))).
+fof(sos4760,axiom,~ ((androscoggincounty=franklincounty))).
+fof(sos4770,axiom,~ ((androscoggincounty=mattawamkeagriverseg1))).
+fof(sos4780,axiom,~ ((androscoggincounty=grahamlake))).
+fof(sos4790,axiom,~ ((androscoggincounty=i95seg1))).
+fof(sos4800,axiom,~ ((androscoggincounty=hampden))).
+fof(sos4810,axiom,~ ((androscoggincounty=i95seg3))).
+fof(sos4820,axiom,~ ((androscoggincounty=stateroute9seg8))).
+fof(sos4830,axiom,~ ((androscoggincounty=houlton))).
+fof(sos4840,axiom,~ ((androscoggincounty=lynxobservations))).
+fof(sos4850,axiom,~ ((androscoggincounty=martinpointbridge))).
+fof(sos4860,axiom,~ ((androscoggincounty=passagassawakeagriverseg1))).
+fof(sos4870,axiom,~ ((androscoggincounty=rusroute2seg5))).
+fof(sos4880,axiom,~ ((androscoggincounty=machiasbay))).
+fof(sos4890,axiom,~ ((androscoggincounty=rusroute1seg4))).
+fof(sos4900,axiom,~ ((androscoggincounty=rwestbranchoysterriver))).
+fof(sos4910,axiom,~ ((androscoggincounty=stgeorgeriver))).
+fof(sos4920,axiom,~ ((i495seg1=machias))).
+fof(sos4930,axiom,~ ((i495seg1=cumberlandcounty))).
+fof(sos4940,axiom,~ ((i495seg1=adamspond1))).
+fof(sos4950,axiom,~ ((i495seg1=bucksport))).
+fof(sos4960,axiom,~ ((i495seg1=millriver))).
+fof(sos4970,axiom,~ ((i495seg1=lakeleonard))).
+fof(sos4980,axiom,~ ((i495seg1=statehighway1seg4))).
+fof(sos4990,axiom,~ ((i495seg1=damariscottariver))).
+fof(sos5000,axiom,~ ((i495seg1=androscogginriver2))).
+fof(sos5010,axiom,~ ((i495seg1=bethel))).
+fof(sos5020,axiom,~ ((i495seg1=cwaldocounty))).
+fof(sos5030,axiom,~ ((i495seg1=southberwick))).
+fof(sos5040,axiom,~ ((i495seg1=statehighway6seg2))).
+fof(sos5050,axiom,~ ((i495seg1=statehighway6))).
+fof(sos5060,axiom,~ ((i495seg1=penobscotcounty))).
+fof(sos5070,axiom,~ ((i495seg1=sagadahoccounty))).
+fof(sos5080,axiom,~ ((i495seg1=oxfordcounty))).
+fof(sos5090,axiom,~ ((i495seg1=alagashpond))).
+fof(sos5100,axiom,~ ((i495seg1=portland))).
+fof(sos5110,axiom,~ ((i495seg1=cwashingtoncounty))).
+fof(sos5120,axiom,~ ((i495seg1=rusroute2seg2))).
+fof(sos5130,axiom,~ ((i495seg1=mattawamkeag))).
+fof(sos5140,axiom,~ ((i495seg1=rusroute2seg1))).
+fof(sos5150,axiom,~ ((i495seg1=lynx2))).
+fof(sos5160,axiom,~ ((i495seg1=dennysriver))).
+fof(sos5170,axiom,~ ((i495seg1=orrington))).
+fof(sos5180,axiom,~ ((i495seg1=kennebeccounty))).
+fof(sos5190,axiom,~ ((i495seg1=rusroute1seg7))).
+fof(sos5200,axiom,~ ((i495seg1=i295))).
+fof(sos5210,axiom,~ ((i495seg1=stateroute5))).
+fof(sos5220,axiom,~ ((i495seg1=i95))).
+fof(sos5230,axiom,~ ((i495seg1=androscogginriverseg1))).
+fof(sos5240,axiom,~ ((i495seg1=dayton))).
+fof(sos5250,axiom,~ ((i495seg1=stateroute5seg2))).
+fof(sos5260,axiom,~ ((i495seg1=mooselookmegunticlake))).
+fof(sos5270,axiom,~ ((i495seg1=eastbranchoysterriver))).
+fof(sos5280,axiom,~ ((i495seg1=rusroute1))).
+fof(sos5290,axiom,~ ((i495seg1=meduxnekeagriver))).
+fof(sos5300,axiom,~ ((i495seg1=arundel))).
+fof(sos5310,axiom,~ ((i495seg1=knoxcounty))).
+fof(sos5320,axiom,~ ((i495seg1=rockwood))).
+fof(sos5330,axiom,~ ((i495seg1=passagassawakeagriver))).
+fof(sos5340,axiom,~ ((i495seg1=franklincounty))).
+fof(sos5350,axiom,~ ((i495seg1=mattawamkeagriverseg1))).
+fof(sos5360,axiom,~ ((i495seg1=grahamlake))).
+fof(sos5370,axiom,~ ((i495seg1=i95seg1))).
+fof(sos5380,axiom,~ ((i495seg1=hampden))).
+fof(sos5390,axiom,~ ((i495seg1=i95seg3))).
+fof(sos5400,axiom,~ ((i495seg1=stateroute9seg8))).
+fof(sos5410,axiom,~ ((i495seg1=houlton))).
+fof(sos5420,axiom,~ ((i495seg1=lynxobservations))).
+fof(sos5430,axiom,~ ((i495seg1=martinpointbridge))).
+fof(sos5440,axiom,~ ((i495seg1=passagassawakeagriverseg1))).
+fof(sos5450,axiom,~ ((i495seg1=rusroute2seg5))).
+fof(sos5460,axiom,~ ((i495seg1=machiasbay))).
+fof(sos5470,axiom,~ ((i495seg1=rusroute1seg4))).
+fof(sos5480,axiom,~ ((i495seg1=rwestbranchoysterriver))).
+fof(sos5490,axiom,~ ((i495seg1=stgeorgeriver))).
+fof(sos5500,axiom,~ ((machias=cumberlandcounty))).
+fof(sos5510,axiom,~ ((machias=adamspond1))).
+fof(sos5520,axiom,~ ((machias=bucksport))).
+fof(sos5530,axiom,~ ((machias=millriver))).
+fof(sos5540,axiom,~ ((machias=lakeleonard))).
+fof(sos5550,axiom,~ ((machias=statehighway1seg4))).
+fof(sos5560,axiom,~ ((machias=damariscottariver))).
+fof(sos5570,axiom,~ ((machias=androscogginriver2))).
+fof(sos5580,axiom,~ ((machias=bethel))).
+fof(sos5590,axiom,~ ((machias=cwaldocounty))).
+fof(sos5600,axiom,~ ((machias=southberwick))).
+fof(sos5610,axiom,~ ((machias=statehighway6seg2))).
+fof(sos5620,axiom,~ ((machias=statehighway6))).
+fof(sos5630,axiom,~ ((machias=penobscotcounty))).
+fof(sos5640,axiom,~ ((machias=sagadahoccounty))).
+fof(sos5650,axiom,~ ((machias=oxfordcounty))).
+fof(sos5660,axiom,~ ((machias=alagashpond))).
+fof(sos5670,axiom,~ ((machias=portland))).
+fof(sos5680,axiom,~ ((machias=cwashingtoncounty))).
+fof(sos5690,axiom,~ ((machias=rusroute2seg2))).
+fof(sos5700,axiom,~ ((machias=mattawamkeag))).
+fof(sos5710,axiom,~ ((machias=rusroute2seg1))).
+fof(sos5720,axiom,~ ((machias=lynx2))).
+fof(sos5730,axiom,~ ((machias=dennysriver))).
+fof(sos5740,axiom,~ ((machias=orrington))).
+fof(sos5750,axiom,~ ((machias=kennebeccounty))).
+fof(sos5760,axiom,~ ((machias=rusroute1seg7))).
+fof(sos5770,axiom,~ ((machias=i295))).
+fof(sos5780,axiom,~ ((machias=stateroute5))).
+fof(sos5790,axiom,~ ((machias=i95))).
+fof(sos5800,axiom,~ ((machias=androscogginriverseg1))).
+fof(sos5810,axiom,~ ((machias=dayton))).
+fof(sos5820,axiom,~ ((machias=stateroute5seg2))).
+fof(sos5830,axiom,~ ((machias=mooselookmegunticlake))).
+fof(sos5840,axiom,~ ((machias=eastbranchoysterriver))).
+fof(sos5850,axiom,~ ((machias=rusroute1))).
+fof(sos5860,axiom,~ ((machias=meduxnekeagriver))).
+fof(sos5870,axiom,~ ((machias=arundel))).
+fof(sos5880,axiom,~ ((machias=knoxcounty))).
+fof(sos5890,axiom,~ ((machias=rockwood))).
+fof(sos5900,axiom,~ ((machias=passagassawakeagriver))).
+fof(sos5910,axiom,~ ((machias=franklincounty))).
+fof(sos5920,axiom,~ ((machias=mattawamkeagriverseg1))).
+fof(sos5930,axiom,~ ((machias=grahamlake))).
+fof(sos5940,axiom,~ ((machias=i95seg1))).
+fof(sos5950,axiom,~ ((machias=hampden))).
+fof(sos5960,axiom,~ ((machias=i95seg3))).
+fof(sos5970,axiom,~ ((machias=stateroute9seg8))).
+fof(sos5980,axiom,~ ((machias=houlton))).
+fof(sos5990,axiom,~ ((machias=lynxobservations))).
+fof(sos6000,axiom,~ ((machias=martinpointbridge))).
+fof(sos6010,axiom,~ ((machias=passagassawakeagriverseg1))).
+fof(sos6020,axiom,~ ((machias=rusroute2seg5))).
+fof(sos6030,axiom,~ ((machias=machiasbay))).
+fof(sos6040,axiom,~ ((machias=rusroute1seg4))).
+fof(sos6050,axiom,~ ((machias=rwestbranchoysterriver))).
+fof(sos6060,axiom,~ ((machias=stgeorgeriver))).
+fof(sos6070,axiom,~ ((cumberlandcounty=adamspond1))).
+fof(sos6080,axiom,~ ((cumberlandcounty=bucksport))).
+fof(sos6090,axiom,~ ((cumberlandcounty=millriver))).
+fof(sos6100,axiom,~ ((cumberlandcounty=lakeleonard))).
+fof(sos6110,axiom,~ ((cumberlandcounty=statehighway1seg4))).
+fof(sos6120,axiom,~ ((cumberlandcounty=damariscottariver))).
+fof(sos6130,axiom,~ ((cumberlandcounty=androscogginriver2))).
+fof(sos6140,axiom,~ ((cumberlandcounty=bethel))).
+fof(sos6150,axiom,~ ((cumberlandcounty=cwaldocounty))).
+fof(sos6160,axiom,~ ((cumberlandcounty=southberwick))).
+fof(sos6170,axiom,~ ((cumberlandcounty=statehighway6seg2))).
+fof(sos6180,axiom,~ ((cumberlandcounty=statehighway6))).
+fof(sos6190,axiom,~ ((cumberlandcounty=penobscotcounty))).
+fof(sos6200,axiom,~ ((cumberlandcounty=sagadahoccounty))).
+fof(sos6210,axiom,~ ((cumberlandcounty=oxfordcounty))).
+fof(sos6220,axiom,~ ((cumberlandcounty=alagashpond))).
+fof(sos6230,axiom,~ ((cumberlandcounty=portland))).
+fof(sos6240,axiom,~ ((cumberlandcounty=cwashingtoncounty))).
+fof(sos6250,axiom,~ ((cumberlandcounty=rusroute2seg2))).
+fof(sos6260,axiom,~ ((cumberlandcounty=mattawamkeag))).
+fof(sos6270,axiom,~ ((cumberlandcounty=rusroute2seg1))).
+fof(sos6280,axiom,~ ((cumberlandcounty=lynx2))).
+fof(sos6290,axiom,~ ((cumberlandcounty=dennysriver))).
+fof(sos6300,axiom,~ ((cumberlandcounty=orrington))).
+fof(sos6310,axiom,~ ((cumberlandcounty=kennebeccounty))).
+fof(sos6320,axiom,~ ((cumberlandcounty=rusroute1seg7))).
+fof(sos6330,axiom,~ ((cumberlandcounty=i295))).
+fof(sos6340,axiom,~ ((cumberlandcounty=stateroute5))).
+fof(sos6350,axiom,~ ((cumberlandcounty=i95))).
+fof(sos6360,axiom,~ ((cumberlandcounty=androscogginriverseg1))).
+fof(sos6370,axiom,~ ((cumberlandcounty=dayton))).
+fof(sos6380,axiom,~ ((cumberlandcounty=stateroute5seg2))).
+fof(sos6390,axiom,~ ((cumberlandcounty=mooselookmegunticlake))).
+fof(sos6400,axiom,~ ((cumberlandcounty=eastbranchoysterriver))).
+fof(sos6410,axiom,~ ((cumberlandcounty=rusroute1))).
+fof(sos6420,axiom,~ ((cumberlandcounty=meduxnekeagriver))).
+fof(sos6430,axiom,~ ((cumberlandcounty=arundel))).
+fof(sos6440,axiom,~ ((cumberlandcounty=knoxcounty))).
+fof(sos6450,axiom,~ ((cumberlandcounty=rockwood))).
+fof(sos6460,axiom,~ ((cumberlandcounty=passagassawakeagriver))).
+fof(sos6470,axiom,~ ((cumberlandcounty=franklincounty))).
+fof(sos6480,axiom,~ ((cumberlandcounty=mattawamkeagriverseg1))).
+fof(sos6490,axiom,~ ((cumberlandcounty=grahamlake))).
+fof(sos6500,axiom,~ ((cumberlandcounty=i95seg1))).
+fof(sos6510,axiom,~ ((cumberlandcounty=hampden))).
+fof(sos6520,axiom,~ ((cumberlandcounty=i95seg3))).
+fof(sos6530,axiom,~ ((cumberlandcounty=stateroute9seg8))).
+fof(sos6540,axiom,~ ((cumberlandcounty=houlton))).
+fof(sos6550,axiom,~ ((cumberlandcounty=lynxobservations))).
+fof(sos6560,axiom,~ ((cumberlandcounty=martinpointbridge))).
+fof(sos6570,axiom,~ ((cumberlandcounty=passagassawakeagriverseg1))).
+fof(sos6580,axiom,~ ((cumberlandcounty=rusroute2seg5))).
+fof(sos6590,axiom,~ ((cumberlandcounty=machiasbay))).
+fof(sos6600,axiom,~ ((cumberlandcounty=rusroute1seg4))).
+fof(sos6610,axiom,~ ((cumberlandcounty=rwestbranchoysterriver))).
+fof(sos6620,axiom,~ ((cumberlandcounty=stgeorgeriver))).
+fof(sos6630,axiom,~ ((adamspond1=bucksport))).
+fof(sos6640,axiom,~ ((adamspond1=millriver))).
+fof(sos6650,axiom,~ ((adamspond1=lakeleonard))).
+fof(sos6660,axiom,~ ((adamspond1=statehighway1seg4))).
+fof(sos6670,axiom,~ ((adamspond1=damariscottariver))).
+fof(sos6680,axiom,~ ((adamspond1=androscogginriver2))).
+fof(sos6690,axiom,~ ((adamspond1=bethel))).
+fof(sos6700,axiom,~ ((adamspond1=cwaldocounty))).
+fof(sos6710,axiom,~ ((adamspond1=southberwick))).
+fof(sos6720,axiom,~ ((adamspond1=statehighway6seg2))).
+fof(sos6730,axiom,~ ((adamspond1=statehighway6))).
+fof(sos6740,axiom,~ ((adamspond1=penobscotcounty))).
+fof(sos6750,axiom,~ ((adamspond1=sagadahoccounty))).
+fof(sos6760,axiom,~ ((adamspond1=oxfordcounty))).
+fof(sos6770,axiom,~ ((adamspond1=alagashpond))).
+fof(sos6780,axiom,~ ((adamspond1=portland))).
+fof(sos6790,axiom,~ ((adamspond1=cwashingtoncounty))).
+fof(sos6800,axiom,~ ((adamspond1=rusroute2seg2))).
+fof(sos6810,axiom,~ ((adamspond1=mattawamkeag))).
+fof(sos6820,axiom,~ ((adamspond1=rusroute2seg1))).
+fof(sos6830,axiom,~ ((adamspond1=lynx2))).
+fof(sos6840,axiom,~ ((adamspond1=dennysriver))).
+fof(sos6850,axiom,~ ((adamspond1=orrington))).
+fof(sos6860,axiom,~ ((adamspond1=kennebeccounty))).
+fof(sos6870,axiom,~ ((adamspond1=rusroute1seg7))).
+fof(sos6880,axiom,~ ((adamspond1=i295))).
+fof(sos6890,axiom,~ ((adamspond1=stateroute5))).
+fof(sos6900,axiom,~ ((adamspond1=i95))).
+fof(sos6910,axiom,~ ((adamspond1=androscogginriverseg1))).
+fof(sos6920,axiom,~ ((adamspond1=dayton))).
+fof(sos6930,axiom,~ ((adamspond1=stateroute5seg2))).
+fof(sos6940,axiom,~ ((adamspond1=mooselookmegunticlake))).
+fof(sos6950,axiom,~ ((adamspond1=eastbranchoysterriver))).
+fof(sos6960,axiom,~ ((adamspond1=rusroute1))).
+fof(sos6970,axiom,~ ((adamspond1=meduxnekeagriver))).
+fof(sos6980,axiom,~ ((adamspond1=arundel))).
+fof(sos6990,axiom,~ ((adamspond1=knoxcounty))).
+fof(sos7000,axiom,~ ((adamspond1=rockwood))).
+fof(sos7010,axiom,~ ((adamspond1=passagassawakeagriver))).
+fof(sos7020,axiom,~ ((adamspond1=franklincounty))).
+fof(sos7030,axiom,~ ((adamspond1=mattawamkeagriverseg1))).
+fof(sos7040,axiom,~ ((adamspond1=grahamlake))).
+fof(sos7050,axiom,~ ((adamspond1=i95seg1))).
+fof(sos7060,axiom,~ ((adamspond1=hampden))).
+fof(sos7070,axiom,~ ((adamspond1=i95seg3))).
+fof(sos7080,axiom,~ ((adamspond1=stateroute9seg8))).
+fof(sos7090,axiom,~ ((adamspond1=houlton))).
+fof(sos7100,axiom,~ ((adamspond1=lynxobservations))).
+fof(sos7110,axiom,~ ((adamspond1=martinpointbridge))).
+fof(sos7120,axiom,~ ((adamspond1=passagassawakeagriverseg1))).
+fof(sos7130,axiom,~ ((adamspond1=rusroute2seg5))).
+fof(sos7140,axiom,~ ((adamspond1=machiasbay))).
+fof(sos7150,axiom,~ ((adamspond1=rusroute1seg4))).
+fof(sos7160,axiom,~ ((adamspond1=rwestbranchoysterriver))).
+fof(sos7170,axiom,~ ((adamspond1=stgeorgeriver))).
+fof(sos7180,axiom,~ ((bucksport=millriver))).
+fof(sos7190,axiom,~ ((bucksport=lakeleonard))).
+fof(sos7200,axiom,~ ((bucksport=statehighway1seg4))).
+fof(sos7210,axiom,~ ((bucksport=damariscottariver))).
+fof(sos7220,axiom,~ ((bucksport=androscogginriver2))).
+fof(sos7230,axiom,~ ((bucksport=bethel))).
+fof(sos7240,axiom,~ ((bucksport=cwaldocounty))).
+fof(sos7250,axiom,~ ((bucksport=southberwick))).
+fof(sos7260,axiom,~ ((bucksport=statehighway6seg2))).
+fof(sos7270,axiom,~ ((bucksport=statehighway6))).
+fof(sos7280,axiom,~ ((bucksport=penobscotcounty))).
+fof(sos7290,axiom,~ ((bucksport=sagadahoccounty))).
+fof(sos7300,axiom,~ ((bucksport=oxfordcounty))).
+fof(sos7310,axiom,~ ((bucksport=alagashpond))).
+fof(sos7320,axiom,~ ((bucksport=portland))).
+fof(sos7330,axiom,~ ((bucksport=cwashingtoncounty))).
+fof(sos7340,axiom,~ ((bucksport=rusroute2seg2))).
+fof(sos7350,axiom,~ ((bucksport=mattawamkeag))).
+fof(sos7360,axiom,~ ((bucksport=rusroute2seg1))).
+fof(sos7370,axiom,~ ((bucksport=lynx2))).
+fof(sos7380,axiom,~ ((bucksport=dennysriver))).
+fof(sos7390,axiom,~ ((bucksport=orrington))).
+fof(sos7400,axiom,~ ((bucksport=kennebeccounty))).
+fof(sos7410,axiom,~ ((bucksport=rusroute1seg7))).
+fof(sos7420,axiom,~ ((bucksport=i295))).
+fof(sos7430,axiom,~ ((bucksport=stateroute5))).
+fof(sos7440,axiom,~ ((bucksport=i95))).
+fof(sos7450,axiom,~ ((bucksport=androscogginriverseg1))).
+fof(sos7460,axiom,~ ((bucksport=dayton))).
+fof(sos7470,axiom,~ ((bucksport=stateroute5seg2))).
+fof(sos7480,axiom,~ ((bucksport=mooselookmegunticlake))).
+fof(sos7490,axiom,~ ((bucksport=eastbranchoysterriver))).
+fof(sos7500,axiom,~ ((bucksport=rusroute1))).
+fof(sos7510,axiom,~ ((bucksport=meduxnekeagriver))).
+fof(sos7520,axiom,~ ((bucksport=arundel))).
+fof(sos7530,axiom,~ ((bucksport=knoxcounty))).
+fof(sos7540,axiom,~ ((bucksport=rockwood))).
+fof(sos7550,axiom,~ ((bucksport=passagassawakeagriver))).
+fof(sos7560,axiom,~ ((bucksport=franklincounty))).
+fof(sos7570,axiom,~ ((bucksport=mattawamkeagriverseg1))).
+fof(sos7580,axiom,~ ((bucksport=grahamlake))).
+fof(sos7590,axiom,~ ((bucksport=i95seg1))).
+fof(sos7600,axiom,~ ((bucksport=hampden))).
+fof(sos7610,axiom,~ ((bucksport=i95seg3))).
+fof(sos7620,axiom,~ ((bucksport=stateroute9seg8))).
+fof(sos7630,axiom,~ ((bucksport=houlton))).
+fof(sos7640,axiom,~ ((bucksport=lynxobservations))).
+fof(sos7650,axiom,~ ((bucksport=martinpointbridge))).
+fof(sos7660,axiom,~ ((bucksport=passagassawakeagriverseg1))).
+fof(sos7670,axiom,~ ((bucksport=rusroute2seg5))).
+fof(sos7680,axiom,~ ((bucksport=machiasbay))).
+fof(sos7690,axiom,~ ((bucksport=rusroute1seg4))).
+fof(sos7700,axiom,~ ((bucksport=rwestbranchoysterriver))).
+fof(sos7710,axiom,~ ((bucksport=stgeorgeriver))).
+fof(sos7720,axiom,~ ((millriver=lakeleonard))).
+fof(sos7730,axiom,~ ((millriver=statehighway1seg4))).
+fof(sos7740,axiom,~ ((millriver=damariscottariver))).
+fof(sos7750,axiom,~ ((millriver=androscogginriver2))).
+fof(sos7760,axiom,~ ((millriver=bethel))).
+fof(sos7770,axiom,~ ((millriver=cwaldocounty))).
+fof(sos7780,axiom,~ ((millriver=southberwick))).
+fof(sos7790,axiom,~ ((millriver=statehighway6seg2))).
+fof(sos7800,axiom,~ ((millriver=statehighway6))).
+fof(sos7810,axiom,~ ((millriver=penobscotcounty))).
+fof(sos7820,axiom,~ ((millriver=sagadahoccounty))).
+fof(sos7830,axiom,~ ((millriver=oxfordcounty))).
+fof(sos7840,axiom,~ ((millriver=alagashpond))).
+fof(sos7850,axiom,~ ((millriver=portland))).
+fof(sos7860,axiom,~ ((millriver=cwashingtoncounty))).
+fof(sos7870,axiom,~ ((millriver=rusroute2seg2))).
+fof(sos7880,axiom,~ ((millriver=mattawamkeag))).
+fof(sos7890,axiom,~ ((millriver=rusroute2seg1))).
+fof(sos7900,axiom,~ ((millriver=lynx2))).
+fof(sos7910,axiom,~ ((millriver=dennysriver))).
+fof(sos7920,axiom,~ ((millriver=orrington))).
+fof(sos7930,axiom,~ ((millriver=kennebeccounty))).
+fof(sos7940,axiom,~ ((millriver=rusroute1seg7))).
+fof(sos7950,axiom,~ ((millriver=i295))).
+fof(sos7960,axiom,~ ((millriver=stateroute5))).
+fof(sos7970,axiom,~ ((millriver=i95))).
+fof(sos7980,axiom,~ ((millriver=androscogginriverseg1))).
+fof(sos7990,axiom,~ ((millriver=dayton))).
+fof(sos8000,axiom,~ ((millriver=stateroute5seg2))).
+fof(sos8010,axiom,~ ((millriver=mooselookmegunticlake))).
+fof(sos8020,axiom,~ ((millriver=eastbranchoysterriver))).
+fof(sos8030,axiom,~ ((millriver=rusroute1))).
+fof(sos8040,axiom,~ ((millriver=meduxnekeagriver))).
+fof(sos8050,axiom,~ ((millriver=arundel))).
+fof(sos8060,axiom,~ ((millriver=knoxcounty))).
+fof(sos8070,axiom,~ ((millriver=rockwood))).
+fof(sos8080,axiom,~ ((millriver=passagassawakeagriver))).
+fof(sos8090,axiom,~ ((millriver=franklincounty))).
+fof(sos8100,axiom,~ ((millriver=mattawamkeagriverseg1))).
+fof(sos8110,axiom,~ ((millriver=grahamlake))).
+fof(sos8120,axiom,~ ((millriver=i95seg1))).
+fof(sos8130,axiom,~ ((millriver=hampden))).
+fof(sos8140,axiom,~ ((millriver=i95seg3))).
+fof(sos8150,axiom,~ ((millriver=stateroute9seg8))).
+fof(sos8160,axiom,~ ((millriver=houlton))).
+fof(sos8170,axiom,~ ((millriver=lynxobservations))).
+fof(sos8180,axiom,~ ((millriver=martinpointbridge))).
+fof(sos8190,axiom,~ ((millriver=passagassawakeagriverseg1))).
+fof(sos8200,axiom,~ ((millriver=rusroute2seg5))).
+fof(sos8210,axiom,~ ((millriver=machiasbay))).
+fof(sos8220,axiom,~ ((millriver=rusroute1seg4))).
+fof(sos8230,axiom,~ ((millriver=rwestbranchoysterriver))).
+fof(sos8240,axiom,~ ((millriver=stgeorgeriver))).
+fof(sos8250,axiom,~ ((lakeleonard=statehighway1seg4))).
+fof(sos8260,axiom,~ ((lakeleonard=damariscottariver))).
+fof(sos8270,axiom,~ ((lakeleonard=androscogginriver2))).
+fof(sos8280,axiom,~ ((lakeleonard=bethel))).
+fof(sos8290,axiom,~ ((lakeleonard=cwaldocounty))).
+fof(sos8300,axiom,~ ((lakeleonard=southberwick))).
+fof(sos8310,axiom,~ ((lakeleonard=statehighway6seg2))).
+fof(sos8320,axiom,~ ((lakeleonard=statehighway6))).
+fof(sos8330,axiom,~ ((lakeleonard=penobscotcounty))).
+fof(sos8340,axiom,~ ((lakeleonard=sagadahoccounty))).
+fof(sos8350,axiom,~ ((lakeleonard=oxfordcounty))).
+fof(sos8360,axiom,~ ((lakeleonard=alagashpond))).
+fof(sos8370,axiom,~ ((lakeleonard=portland))).
+fof(sos8380,axiom,~ ((lakeleonard=cwashingtoncounty))).
+fof(sos8390,axiom,~ ((lakeleonard=rusroute2seg2))).
+fof(sos8400,axiom,~ ((lakeleonard=mattawamkeag))).
+fof(sos8410,axiom,~ ((lakeleonard=rusroute2seg1))).
+fof(sos8420,axiom,~ ((lakeleonard=lynx2))).
+fof(sos8430,axiom,~ ((lakeleonard=dennysriver))).
+fof(sos8440,axiom,~ ((lakeleonard=orrington))).
+fof(sos8450,axiom,~ ((lakeleonard=kennebeccounty))).
+fof(sos8460,axiom,~ ((lakeleonard=rusroute1seg7))).
+fof(sos8470,axiom,~ ((lakeleonard=i295))).
+fof(sos8480,axiom,~ ((lakeleonard=stateroute5))).
+fof(sos8490,axiom,~ ((lakeleonard=i95))).
+fof(sos8500,axiom,~ ((lakeleonard=androscogginriverseg1))).
+fof(sos8510,axiom,~ ((lakeleonard=dayton))).
+fof(sos8520,axiom,~ ((lakeleonard=stateroute5seg2))).
+fof(sos8530,axiom,~ ((lakeleonard=mooselookmegunticlake))).
+fof(sos8540,axiom,~ ((lakeleonard=eastbranchoysterriver))).
+fof(sos8550,axiom,~ ((lakeleonard=rusroute1))).
+fof(sos8560,axiom,~ ((lakeleonard=meduxnekeagriver))).
+fof(sos8570,axiom,~ ((lakeleonard=arundel))).
+fof(sos8580,axiom,~ ((lakeleonard=knoxcounty))).
+fof(sos8590,axiom,~ ((lakeleonard=rockwood))).
+fof(sos8600,axiom,~ ((lakeleonard=passagassawakeagriver))).
+fof(sos8610,axiom,~ ((lakeleonard=franklincounty))).
+fof(sos8620,axiom,~ ((lakeleonard=mattawamkeagriverseg1))).
+fof(sos8630,axiom,~ ((lakeleonard=grahamlake))).
+fof(sos8640,axiom,~ ((lakeleonard=i95seg1))).
+fof(sos8650,axiom,~ ((lakeleonard=hampden))).
+fof(sos8660,axiom,~ ((lakeleonard=i95seg3))).
+fof(sos8670,axiom,~ ((lakeleonard=stateroute9seg8))).
+fof(sos8680,axiom,~ ((lakeleonard=houlton))).
+fof(sos8690,axiom,~ ((lakeleonard=lynxobservations))).
+fof(sos8700,axiom,~ ((lakeleonard=martinpointbridge))).
+fof(sos8710,axiom,~ ((lakeleonard=passagassawakeagriverseg1))).
+fof(sos8720,axiom,~ ((lakeleonard=rusroute2seg5))).
+fof(sos8730,axiom,~ ((lakeleonard=machiasbay))).
+fof(sos8740,axiom,~ ((lakeleonard=rusroute1seg4))).
+fof(sos8750,axiom,~ ((lakeleonard=rwestbranchoysterriver))).
+fof(sos8760,axiom,~ ((lakeleonard=stgeorgeriver))).
+fof(sos8770,axiom,~ ((statehighway1seg4=damariscottariver))).
+fof(sos8780,axiom,~ ((statehighway1seg4=androscogginriver2))).
+fof(sos8790,axiom,~ ((statehighway1seg4=bethel))).
+fof(sos8800,axiom,~ ((statehighway1seg4=cwaldocounty))).
+fof(sos8810,axiom,~ ((statehighway1seg4=southberwick))).
+fof(sos8820,axiom,~ ((statehighway1seg4=statehighway6seg2))).
+fof(sos8830,axiom,~ ((statehighway1seg4=statehighway6))).
+fof(sos8840,axiom,~ ((statehighway1seg4=penobscotcounty))).
+fof(sos8850,axiom,~ ((statehighway1seg4=sagadahoccounty))).
+fof(sos8860,axiom,~ ((statehighway1seg4=oxfordcounty))).
+fof(sos8870,axiom,~ ((statehighway1seg4=alagashpond))).
+fof(sos8880,axiom,~ ((statehighway1seg4=portland))).
+fof(sos8890,axiom,~ ((statehighway1seg4=cwashingtoncounty))).
+fof(sos8900,axiom,~ ((statehighway1seg4=rusroute2seg2))).
+fof(sos8910,axiom,~ ((statehighway1seg4=mattawamkeag))).
+fof(sos8920,axiom,~ ((statehighway1seg4=rusroute2seg1))).
+fof(sos8930,axiom,~ ((statehighway1seg4=lynx2))).
+fof(sos8940,axiom,~ ((statehighway1seg4=dennysriver))).
+fof(sos8950,axiom,~ ((statehighway1seg4=orrington))).
+fof(sos8960,axiom,~ ((statehighway1seg4=kennebeccounty))).
+fof(sos8970,axiom,~ ((statehighway1seg4=rusroute1seg7))).
+fof(sos8980,axiom,~ ((statehighway1seg4=i295))).
+fof(sos8990,axiom,~ ((statehighway1seg4=stateroute5))).
+fof(sos9000,axiom,~ ((statehighway1seg4=i95))).
+fof(sos9010,axiom,~ ((statehighway1seg4=androscogginriverseg1))).
+fof(sos9020,axiom,~ ((statehighway1seg4=dayton))).
+fof(sos9030,axiom,~ ((statehighway1seg4=stateroute5seg2))).
+fof(sos9040,axiom,~ ((statehighway1seg4=mooselookmegunticlake))).
+fof(sos9050,axiom,~ ((statehighway1seg4=eastbranchoysterriver))).
+fof(sos9060,axiom,~ ((statehighway1seg4=rusroute1))).
+fof(sos9070,axiom,~ ((statehighway1seg4=meduxnekeagriver))).
+fof(sos9080,axiom,~ ((statehighway1seg4=arundel))).
+fof(sos9090,axiom,~ ((statehighway1seg4=knoxcounty))).
+fof(sos9100,axiom,~ ((statehighway1seg4=rockwood))).
+fof(sos9110,axiom,~ ((statehighway1seg4=passagassawakeagriver))).
+fof(sos9120,axiom,~ ((statehighway1seg4=franklincounty))).
+fof(sos9130,axiom,~ ((statehighway1seg4=mattawamkeagriverseg1))).
+fof(sos9140,axiom,~ ((statehighway1seg4=grahamlake))).
+fof(sos9150,axiom,~ ((statehighway1seg4=i95seg1))).
+fof(sos9160,axiom,~ ((statehighway1seg4=hampden))).
+fof(sos9170,axiom,~ ((statehighway1seg4=i95seg3))).
+fof(sos9180,axiom,~ ((statehighway1seg4=stateroute9seg8))).
+fof(sos9190,axiom,~ ((statehighway1seg4=houlton))).
+fof(sos9200,axiom,~ ((statehighway1seg4=lynxobservations))).
+fof(sos9210,axiom,~ ((statehighway1seg4=martinpointbridge))).
+fof(sos9220,axiom,~ ((statehighway1seg4=passagassawakeagriverseg1))).
+fof(sos9230,axiom,~ ((statehighway1seg4=rusroute2seg5))).
+fof(sos9240,axiom,~ ((statehighway1seg4=machiasbay))).
+fof(sos9250,axiom,~ ((statehighway1seg4=rusroute1seg4))).
+fof(sos9260,axiom,~ ((statehighway1seg4=rwestbranchoysterriver))).
+fof(sos9270,axiom,~ ((statehighway1seg4=stgeorgeriver))).
+fof(sos9280,axiom,~ ((damariscottariver=androscogginriver2))).
+fof(sos9290,axiom,~ ((damariscottariver=bethel))).
+fof(sos9300,axiom,~ ((damariscottariver=cwaldocounty))).
+fof(sos9310,axiom,~ ((damariscottariver=southberwick))).
+fof(sos9320,axiom,~ ((damariscottariver=statehighway6seg2))).
+fof(sos9330,axiom,~ ((damariscottariver=statehighway6))).
+fof(sos9340,axiom,~ ((damariscottariver=penobscotcounty))).
+fof(sos9350,axiom,~ ((damariscottariver=sagadahoccounty))).
+fof(sos9360,axiom,~ ((damariscottariver=oxfordcounty))).
+fof(sos9370,axiom,~ ((damariscottariver=alagashpond))).
+fof(sos9380,axiom,~ ((damariscottariver=portland))).
+fof(sos9390,axiom,~ ((damariscottariver=cwashingtoncounty))).
+fof(sos9400,axiom,~ ((damariscottariver=rusroute2seg2))).
+fof(sos9410,axiom,~ ((damariscottariver=mattawamkeag))).
+fof(sos9420,axiom,~ ((damariscottariver=rusroute2seg1))).
+fof(sos9430,axiom,~ ((damariscottariver=lynx2))).
+fof(sos9440,axiom,~ ((damariscottariver=dennysriver))).
+fof(sos9450,axiom,~ ((damariscottariver=orrington))).
+fof(sos9460,axiom,~ ((damariscottariver=kennebeccounty))).
+fof(sos9470,axiom,~ ((damariscottariver=rusroute1seg7))).
+fof(sos9480,axiom,~ ((damariscottariver=i295))).
+fof(sos9490,axiom,~ ((damariscottariver=stateroute5))).
+fof(sos9500,axiom,~ ((damariscottariver=i95))).
+fof(sos9510,axiom,~ ((damariscottariver=androscogginriverseg1))).
+fof(sos9520,axiom,~ ((damariscottariver=dayton))).
+fof(sos9530,axiom,~ ((damariscottariver=stateroute5seg2))).
+fof(sos9540,axiom,~ ((damariscottariver=mooselookmegunticlake))).
+fof(sos9550,axiom,~ ((damariscottariver=eastbranchoysterriver))).
+fof(sos9560,axiom,~ ((damariscottariver=rusroute1))).
+fof(sos9570,axiom,~ ((damariscottariver=meduxnekeagriver))).
+fof(sos9580,axiom,~ ((damariscottariver=arundel))).
+fof(sos9590,axiom,~ ((damariscottariver=knoxcounty))).
+fof(sos9600,axiom,~ ((damariscottariver=rockwood))).
+fof(sos9610,axiom,~ ((damariscottariver=passagassawakeagriver))).
+fof(sos9620,axiom,~ ((damariscottariver=franklincounty))).
+fof(sos9630,axiom,~ ((damariscottariver=mattawamkeagriverseg1))).
+fof(sos9640,axiom,~ ((damariscottariver=grahamlake))).
+fof(sos9650,axiom,~ ((damariscottariver=i95seg1))).
+fof(sos9660,axiom,~ ((damariscottariver=hampden))).
+fof(sos9670,axiom,~ ((damariscottariver=i95seg3))).
+fof(sos9680,axiom,~ ((damariscottariver=stateroute9seg8))).
+fof(sos9690,axiom,~ ((damariscottariver=houlton))).
+fof(sos9700,axiom,~ ((damariscottariver=lynxobservations))).
+fof(sos9710,axiom,~ ((damariscottariver=martinpointbridge))).
+fof(sos9720,axiom,~ ((damariscottariver=passagassawakeagriverseg1))).
+fof(sos9730,axiom,~ ((damariscottariver=rusroute2seg5))).
+fof(sos9740,axiom,~ ((damariscottariver=machiasbay))).
+fof(sos9750,axiom,~ ((damariscottariver=rusroute1seg4))).
+fof(sos9760,axiom,~ ((damariscottariver=rwestbranchoysterriver))).
+fof(sos9770,axiom,~ ((damariscottariver=stgeorgeriver))).
+fof(sos9780,axiom,~ ((androscogginriver2=bethel))).
+fof(sos9790,axiom,~ ((androscogginriver2=cwaldocounty))).
+fof(sos9800,axiom,~ ((androscogginriver2=southberwick))).
+fof(sos9810,axiom,~ ((androscogginriver2=statehighway6seg2))).
+fof(sos9820,axiom,~ ((androscogginriver2=statehighway6))).
+fof(sos9830,axiom,~ ((androscogginriver2=penobscotcounty))).
+fof(sos9840,axiom,~ ((androscogginriver2=sagadahoccounty))).
+fof(sos9850,axiom,~ ((androscogginriver2=oxfordcounty))).
+fof(sos9860,axiom,~ ((androscogginriver2=alagashpond))).
+fof(sos9870,axiom,~ ((androscogginriver2=portland))).
+fof(sos9880,axiom,~ ((androscogginriver2=cwashingtoncounty))).
+fof(sos9890,axiom,~ ((androscogginriver2=rusroute2seg2))).
+fof(sos9900,axiom,~ ((androscogginriver2=mattawamkeag))).
+fof(sos9910,axiom,~ ((androscogginriver2=rusroute2seg1))).
+fof(sos9920,axiom,~ ((androscogginriver2=lynx2))).
+fof(sos9930,axiom,~ ((androscogginriver2=dennysriver))).
+fof(sos9940,axiom,~ ((androscogginriver2=orrington))).
+fof(sos9950,axiom,~ ((androscogginriver2=kennebeccounty))).
+fof(sos9960,axiom,~ ((androscogginriver2=rusroute1seg7))).
+fof(sos9970,axiom,~ ((androscogginriver2=i295))).
+fof(sos9980,axiom,~ ((androscogginriver2=stateroute5))).
+fof(sos9990,axiom,~ ((androscogginriver2=i95))).
+fof(sos10000,axiom,~ ((androscogginriver2=androscogginriverseg1))).
+fof(sos10010,axiom,~ ((androscogginriver2=dayton))).
+fof(sos10020,axiom,~ ((androscogginriver2=stateroute5seg2))).
+fof(sos10030,axiom,~ ((androscogginriver2=mooselookmegunticlake))).
+fof(sos10040,axiom,~ ((androscogginriver2=eastbranchoysterriver))).
+fof(sos10050,axiom,~ ((androscogginriver2=rusroute1))).
+fof(sos10060,axiom,~ ((androscogginriver2=meduxnekeagriver))).
+fof(sos10070,axiom,~ ((androscogginriver2=arundel))).
+fof(sos10080,axiom,~ ((androscogginriver2=knoxcounty))).
+fof(sos10090,axiom,~ ((androscogginriver2=rockwood))).
+fof(sos10100,axiom,~ ((androscogginriver2=passagassawakeagriver))).
+fof(sos10110,axiom,~ ((androscogginriver2=franklincounty))).
+fof(sos10120,axiom,~ ((androscogginriver2=mattawamkeagriverseg1))).
+fof(sos10130,axiom,~ ((androscogginriver2=grahamlake))).
+fof(sos10140,axiom,~ ((androscogginriver2=i95seg1))).
+fof(sos10150,axiom,~ ((androscogginriver2=hampden))).
+fof(sos10160,axiom,~ ((androscogginriver2=i95seg3))).
+fof(sos10170,axiom,~ ((androscogginriver2=stateroute9seg8))).
+fof(sos10180,axiom,~ ((androscogginriver2=houlton))).
+fof(sos10190,axiom,~ ((androscogginriver2=lynxobservations))).
+fof(sos10200,axiom,~ ((androscogginriver2=martinpointbridge))).
+fof(sos10210,axiom,~ ((androscogginriver2=passagassawakeagriverseg1))).
+fof(sos10220,axiom,~ ((androscogginriver2=rusroute2seg5))).
+fof(sos10230,axiom,~ ((androscogginriver2=machiasbay))).
+fof(sos10240,axiom,~ ((androscogginriver2=rusroute1seg4))).
+fof(sos10250,axiom,~ ((androscogginriver2=rwestbranchoysterriver))).
+fof(sos10260,axiom,~ ((androscogginriver2=stgeorgeriver))).
+fof(sos10270,axiom,~ ((bethel=cwaldocounty))).
+fof(sos10280,axiom,~ ((bethel=southberwick))).
+fof(sos10290,axiom,~ ((bethel=statehighway6seg2))).
+fof(sos10300,axiom,~ ((bethel=statehighway6))).
+fof(sos10310,axiom,~ ((bethel=penobscotcounty))).
+fof(sos10320,axiom,~ ((bethel=sagadahoccounty))).
+fof(sos10330,axiom,~ ((bethel=oxfordcounty))).
+fof(sos10340,axiom,~ ((bethel=alagashpond))).
+fof(sos10350,axiom,~ ((bethel=portland))).
+fof(sos10360,axiom,~ ((bethel=cwashingtoncounty))).
+fof(sos10370,axiom,~ ((bethel=rusroute2seg2))).
+fof(sos10380,axiom,~ ((bethel=mattawamkeag))).
+fof(sos10390,axiom,~ ((bethel=rusroute2seg1))).
+fof(sos10400,axiom,~ ((bethel=lynx2))).
+fof(sos10410,axiom,~ ((bethel=dennysriver))).
+fof(sos10420,axiom,~ ((bethel=orrington))).
+fof(sos10430,axiom,~ ((bethel=kennebeccounty))).
+fof(sos10440,axiom,~ ((bethel=rusroute1seg7))).
+fof(sos10450,axiom,~ ((bethel=i295))).
+fof(sos10460,axiom,~ ((bethel=stateroute5))).
+fof(sos10470,axiom,~ ((bethel=i95))).
+fof(sos10480,axiom,~ ((bethel=androscogginriverseg1))).
+fof(sos10490,axiom,~ ((bethel=dayton))).
+fof(sos10500,axiom,~ ((bethel=stateroute5seg2))).
+fof(sos10510,axiom,~ ((bethel=mooselookmegunticlake))).
+fof(sos10520,axiom,~ ((bethel=eastbranchoysterriver))).
+fof(sos10530,axiom,~ ((bethel=rusroute1))).
+fof(sos10540,axiom,~ ((bethel=meduxnekeagriver))).
+fof(sos10550,axiom,~ ((bethel=arundel))).
+fof(sos10560,axiom,~ ((bethel=knoxcounty))).
+fof(sos10570,axiom,~ ((bethel=rockwood))).
+fof(sos10580,axiom,~ ((bethel=passagassawakeagriver))).
+fof(sos10590,axiom,~ ((bethel=franklincounty))).
+fof(sos10600,axiom,~ ((bethel=mattawamkeagriverseg1))).
+fof(sos10610,axiom,~ ((bethel=grahamlake))).
+fof(sos10620,axiom,~ ((bethel=i95seg1))).
+fof(sos10630,axiom,~ ((bethel=hampden))).
+fof(sos10640,axiom,~ ((bethel=i95seg3))).
+fof(sos10650,axiom,~ ((bethel=stateroute9seg8))).
+fof(sos10660,axiom,~ ((bethel=houlton))).
+fof(sos10670,axiom,~ ((bethel=lynxobservations))).
+fof(sos10680,axiom,~ ((bethel=martinpointbridge))).
+fof(sos10690,axiom,~ ((bethel=passagassawakeagriverseg1))).
+fof(sos10700,axiom,~ ((bethel=rusroute2seg5))).
+fof(sos10710,axiom,~ ((bethel=machiasbay))).
+fof(sos10720,axiom,~ ((bethel=rusroute1seg4))).
+fof(sos10730,axiom,~ ((bethel=rwestbranchoysterriver))).
+fof(sos10740,axiom,~ ((bethel=stgeorgeriver))).
+fof(sos10750,axiom,~ ((cwaldocounty=southberwick))).
+fof(sos10760,axiom,~ ((cwaldocounty=statehighway6seg2))).
+fof(sos10770,axiom,~ ((cwaldocounty=statehighway6))).
+fof(sos10780,axiom,~ ((cwaldocounty=penobscotcounty))).
+fof(sos10790,axiom,~ ((cwaldocounty=sagadahoccounty))).
+fof(sos10800,axiom,~ ((cwaldocounty=oxfordcounty))).
+fof(sos10810,axiom,~ ((cwaldocounty=alagashpond))).
+fof(sos10820,axiom,~ ((cwaldocounty=portland))).
+fof(sos10830,axiom,~ ((cwaldocounty=cwashingtoncounty))).
+fof(sos10840,axiom,~ ((cwaldocounty=rusroute2seg2))).
+fof(sos10850,axiom,~ ((cwaldocounty=mattawamkeag))).
+fof(sos10860,axiom,~ ((cwaldocounty=rusroute2seg1))).
+fof(sos10870,axiom,~ ((cwaldocounty=lynx2))).
+fof(sos10880,axiom,~ ((cwaldocounty=dennysriver))).
+fof(sos10890,axiom,~ ((cwaldocounty=orrington))).
+fof(sos10900,axiom,~ ((cwaldocounty=kennebeccounty))).
+fof(sos10910,axiom,~ ((cwaldocounty=rusroute1seg7))).
+fof(sos10920,axiom,~ ((cwaldocounty=i295))).
+fof(sos10930,axiom,~ ((cwaldocounty=stateroute5))).
+fof(sos10940,axiom,~ ((cwaldocounty=i95))).
+fof(sos10950,axiom,~ ((cwaldocounty=androscogginriverseg1))).
+fof(sos10960,axiom,~ ((cwaldocounty=dayton))).
+fof(sos10970,axiom,~ ((cwaldocounty=stateroute5seg2))).
+fof(sos10980,axiom,~ ((cwaldocounty=mooselookmegunticlake))).
+fof(sos10990,axiom,~ ((cwaldocounty=eastbranchoysterriver))).
+fof(sos11000,axiom,~ ((cwaldocounty=rusroute1))).
+fof(sos11010,axiom,~ ((cwaldocounty=meduxnekeagriver))).
+fof(sos11020,axiom,~ ((cwaldocounty=arundel))).
+fof(sos11030,axiom,~ ((cwaldocounty=knoxcounty))).
+fof(sos11040,axiom,~ ((cwaldocounty=rockwood))).
+fof(sos11050,axiom,~ ((cwaldocounty=passagassawakeagriver))).
+fof(sos11060,axiom,~ ((cwaldocounty=franklincounty))).
+fof(sos11070,axiom,~ ((cwaldocounty=mattawamkeagriverseg1))).
+fof(sos11080,axiom,~ ((cwaldocounty=grahamlake))).
+fof(sos11090,axiom,~ ((cwaldocounty=i95seg1))).
+fof(sos11100,axiom,~ ((cwaldocounty=hampden))).
+fof(sos11110,axiom,~ ((cwaldocounty=i95seg3))).
+fof(sos11120,axiom,~ ((cwaldocounty=stateroute9seg8))).
+fof(sos11130,axiom,~ ((cwaldocounty=houlton))).
+fof(sos11140,axiom,~ ((cwaldocounty=lynxobservations))).
+fof(sos11150,axiom,~ ((cwaldocounty=martinpointbridge))).
+fof(sos11160,axiom,~ ((cwaldocounty=passagassawakeagriverseg1))).
+fof(sos11170,axiom,~ ((cwaldocounty=rusroute2seg5))).
+fof(sos11180,axiom,~ ((cwaldocounty=machiasbay))).
+fof(sos11190,axiom,~ ((cwaldocounty=rusroute1seg4))).
+fof(sos11200,axiom,~ ((cwaldocounty=rwestbranchoysterriver))).
+fof(sos11210,axiom,~ ((cwaldocounty=stgeorgeriver))).
+fof(sos11220,axiom,~ ((southberwick=statehighway6seg2))).
+fof(sos11230,axiom,~ ((southberwick=statehighway6))).
+fof(sos11240,axiom,~ ((southberwick=penobscotcounty))).
+fof(sos11250,axiom,~ ((southberwick=sagadahoccounty))).
+fof(sos11260,axiom,~ ((southberwick=oxfordcounty))).
+fof(sos11270,axiom,~ ((southberwick=alagashpond))).
+fof(sos11280,axiom,~ ((southberwick=portland))).
+fof(sos11290,axiom,~ ((southberwick=cwashingtoncounty))).
+fof(sos11300,axiom,~ ((southberwick=rusroute2seg2))).
+fof(sos11310,axiom,~ ((southberwick=mattawamkeag))).
+fof(sos11320,axiom,~ ((southberwick=rusroute2seg1))).
+fof(sos11330,axiom,~ ((southberwick=lynx2))).
+fof(sos11340,axiom,~ ((southberwick=dennysriver))).
+fof(sos11350,axiom,~ ((southberwick=orrington))).
+fof(sos11360,axiom,~ ((southberwick=kennebeccounty))).
+fof(sos11370,axiom,~ ((southberwick=rusroute1seg7))).
+fof(sos11380,axiom,~ ((southberwick=i295))).
+fof(sos11390,axiom,~ ((southberwick=stateroute5))).
+fof(sos11400,axiom,~ ((southberwick=i95))).
+fof(sos11410,axiom,~ ((southberwick=androscogginriverseg1))).
+fof(sos11420,axiom,~ ((southberwick=dayton))).
+fof(sos11430,axiom,~ ((southberwick=stateroute5seg2))).
+fof(sos11440,axiom,~ ((southberwick=mooselookmegunticlake))).
+fof(sos11450,axiom,~ ((southberwick=eastbranchoysterriver))).
+fof(sos11460,axiom,~ ((southberwick=rusroute1))).
+fof(sos11470,axiom,~ ((southberwick=meduxnekeagriver))).
+fof(sos11480,axiom,~ ((southberwick=arundel))).
+fof(sos11490,axiom,~ ((southberwick=knoxcounty))).
+fof(sos11500,axiom,~ ((southberwick=rockwood))).
+fof(sos11510,axiom,~ ((southberwick=passagassawakeagriver))).
+fof(sos11520,axiom,~ ((southberwick=franklincounty))).
+fof(sos11530,axiom,~ ((southberwick=mattawamkeagriverseg1))).
+fof(sos11540,axiom,~ ((southberwick=grahamlake))).
+fof(sos11550,axiom,~ ((southberwick=i95seg1))).
+fof(sos11560,axiom,~ ((southberwick=hampden))).
+fof(sos11570,axiom,~ ((southberwick=i95seg3))).
+fof(sos11580,axiom,~ ((southberwick=stateroute9seg8))).
+fof(sos11590,axiom,~ ((southberwick=houlton))).
+fof(sos11600,axiom,~ ((southberwick=lynxobservations))).
+fof(sos11610,axiom,~ ((southberwick=martinpointbridge))).
+fof(sos11620,axiom,~ ((southberwick=passagassawakeagriverseg1))).
+fof(sos11630,axiom,~ ((southberwick=rusroute2seg5))).
+fof(sos11640,axiom,~ ((southberwick=machiasbay))).
+fof(sos11650,axiom,~ ((southberwick=rusroute1seg4))).
+fof(sos11660,axiom,~ ((southberwick=rwestbranchoysterriver))).
+fof(sos11670,axiom,~ ((southberwick=stgeorgeriver))).
+fof(sos11680,axiom,~ ((statehighway6seg2=statehighway6))).
+fof(sos11690,axiom,~ ((statehighway6seg2=penobscotcounty))).
+fof(sos11700,axiom,~ ((statehighway6seg2=sagadahoccounty))).
+fof(sos11710,axiom,~ ((statehighway6seg2=oxfordcounty))).
+fof(sos11720,axiom,~ ((statehighway6seg2=alagashpond))).
+fof(sos11730,axiom,~ ((statehighway6seg2=portland))).
+fof(sos11740,axiom,~ ((statehighway6seg2=cwashingtoncounty))).
+fof(sos11750,axiom,~ ((statehighway6seg2=rusroute2seg2))).
+fof(sos11760,axiom,~ ((statehighway6seg2=mattawamkeag))).
+fof(sos11770,axiom,~ ((statehighway6seg2=rusroute2seg1))).
+fof(sos11780,axiom,~ ((statehighway6seg2=lynx2))).
+fof(sos11790,axiom,~ ((statehighway6seg2=dennysriver))).
+fof(sos11800,axiom,~ ((statehighway6seg2=orrington))).
+fof(sos11810,axiom,~ ((statehighway6seg2=kennebeccounty))).
+fof(sos11820,axiom,~ ((statehighway6seg2=rusroute1seg7))).
+fof(sos11830,axiom,~ ((statehighway6seg2=i295))).
+fof(sos11840,axiom,~ ((statehighway6seg2=stateroute5))).
+fof(sos11850,axiom,~ ((statehighway6seg2=i95))).
+fof(sos11860,axiom,~ ((statehighway6seg2=androscogginriverseg1))).
+fof(sos11870,axiom,~ ((statehighway6seg2=dayton))).
+fof(sos11880,axiom,~ ((statehighway6seg2=stateroute5seg2))).
+fof(sos11890,axiom,~ ((statehighway6seg2=mooselookmegunticlake))).
+fof(sos11900,axiom,~ ((statehighway6seg2=eastbranchoysterriver))).
+fof(sos11910,axiom,~ ((statehighway6seg2=rusroute1))).
+fof(sos11920,axiom,~ ((statehighway6seg2=meduxnekeagriver))).
+fof(sos11930,axiom,~ ((statehighway6seg2=arundel))).
+fof(sos11940,axiom,~ ((statehighway6seg2=knoxcounty))).
+fof(sos11950,axiom,~ ((statehighway6seg2=rockwood))).
+fof(sos11960,axiom,~ ((statehighway6seg2=passagassawakeagriver))).
+fof(sos11970,axiom,~ ((statehighway6seg2=franklincounty))).
+fof(sos11980,axiom,~ ((statehighway6seg2=mattawamkeagriverseg1))).
+fof(sos11990,axiom,~ ((statehighway6seg2=grahamlake))).
+fof(sos12000,axiom,~ ((statehighway6seg2=i95seg1))).
+fof(sos12010,axiom,~ ((statehighway6seg2=hampden))).
+fof(sos12020,axiom,~ ((statehighway6seg2=i95seg3))).
+fof(sos12030,axiom,~ ((statehighway6seg2=stateroute9seg8))).
+fof(sos12040,axiom,~ ((statehighway6seg2=houlton))).
+fof(sos12050,axiom,~ ((statehighway6seg2=lynxobservations))).
+fof(sos12060,axiom,~ ((statehighway6seg2=martinpointbridge))).
+fof(sos12070,axiom,~ ((statehighway6seg2=passagassawakeagriverseg1))).
+fof(sos12080,axiom,~ ((statehighway6seg2=rusroute2seg5))).
+fof(sos12090,axiom,~ ((statehighway6seg2=machiasbay))).
+fof(sos12100,axiom,~ ((statehighway6seg2=rusroute1seg4))).
+fof(sos12110,axiom,~ ((statehighway6seg2=rwestbranchoysterriver))).
+fof(sos12120,axiom,~ ((statehighway6seg2=stgeorgeriver))).
+fof(sos12130,axiom,~ ((statehighway6=penobscotcounty))).
+fof(sos12140,axiom,~ ((statehighway6=sagadahoccounty))).
+fof(sos12150,axiom,~ ((statehighway6=oxfordcounty))).
+fof(sos12160,axiom,~ ((statehighway6=alagashpond))).
+fof(sos12170,axiom,~ ((statehighway6=portland))).
+fof(sos12180,axiom,~ ((statehighway6=cwashingtoncounty))).
+fof(sos12190,axiom,~ ((statehighway6=rusroute2seg2))).
+fof(sos12200,axiom,~ ((statehighway6=mattawamkeag))).
+fof(sos12210,axiom,~ ((statehighway6=rusroute2seg1))).
+fof(sos12220,axiom,~ ((statehighway6=lynx2))).
+fof(sos12230,axiom,~ ((statehighway6=dennysriver))).
+fof(sos12240,axiom,~ ((statehighway6=orrington))).
+fof(sos12250,axiom,~ ((statehighway6=kennebeccounty))).
+fof(sos12260,axiom,~ ((statehighway6=rusroute1seg7))).
+fof(sos12270,axiom,~ ((statehighway6=i295))).
+fof(sos12280,axiom,~ ((statehighway6=stateroute5))).
+fof(sos12290,axiom,~ ((statehighway6=i95))).
+fof(sos12300,axiom,~ ((statehighway6=androscogginriverseg1))).
+fof(sos12310,axiom,~ ((statehighway6=dayton))).
+fof(sos12320,axiom,~ ((statehighway6=stateroute5seg2))).
+fof(sos12330,axiom,~ ((statehighway6=mooselookmegunticlake))).
+fof(sos12340,axiom,~ ((statehighway6=eastbranchoysterriver))).
+fof(sos12350,axiom,~ ((statehighway6=rusroute1))).
+fof(sos12360,axiom,~ ((statehighway6=meduxnekeagriver))).
+fof(sos12370,axiom,~ ((statehighway6=arundel))).
+fof(sos12380,axiom,~ ((statehighway6=knoxcounty))).
+fof(sos12390,axiom,~ ((statehighway6=rockwood))).
+fof(sos12400,axiom,~ ((statehighway6=passagassawakeagriver))).
+fof(sos12410,axiom,~ ((statehighway6=franklincounty))).
+fof(sos12420,axiom,~ ((statehighway6=mattawamkeagriverseg1))).
+fof(sos12430,axiom,~ ((statehighway6=grahamlake))).
+fof(sos12440,axiom,~ ((statehighway6=i95seg1))).
+fof(sos12450,axiom,~ ((statehighway6=hampden))).
+fof(sos12460,axiom,~ ((statehighway6=i95seg3))).
+fof(sos12470,axiom,~ ((statehighway6=stateroute9seg8))).
+fof(sos12480,axiom,~ ((statehighway6=houlton))).
+fof(sos12490,axiom,~ ((statehighway6=lynxobservations))).
+fof(sos12500,axiom,~ ((statehighway6=martinpointbridge))).
+fof(sos12510,axiom,~ ((statehighway6=passagassawakeagriverseg1))).
+fof(sos12520,axiom,~ ((statehighway6=rusroute2seg5))).
+fof(sos12530,axiom,~ ((statehighway6=machiasbay))).
+fof(sos12540,axiom,~ ((statehighway6=rusroute1seg4))).
+fof(sos12550,axiom,~ ((statehighway6=rwestbranchoysterriver))).
+fof(sos12560,axiom,~ ((statehighway6=stgeorgeriver))).
+fof(sos12570,axiom,~ ((penobscotcounty=sagadahoccounty))).
+fof(sos12580,axiom,~ ((penobscotcounty=oxfordcounty))).
+fof(sos12590,axiom,~ ((penobscotcounty=alagashpond))).
+fof(sos12600,axiom,~ ((penobscotcounty=portland))).
+fof(sos12610,axiom,~ ((penobscotcounty=cwashingtoncounty))).
+fof(sos12620,axiom,~ ((penobscotcounty=rusroute2seg2))).
+fof(sos12630,axiom,~ ((penobscotcounty=mattawamkeag))).
+fof(sos12640,axiom,~ ((penobscotcounty=rusroute2seg1))).
+fof(sos12650,axiom,~ ((penobscotcounty=lynx2))).
+fof(sos12660,axiom,~ ((penobscotcounty=dennysriver))).
+fof(sos12670,axiom,~ ((penobscotcounty=orrington))).
+fof(sos12680,axiom,~ ((penobscotcounty=kennebeccounty))).
+fof(sos12690,axiom,~ ((penobscotcounty=rusroute1seg7))).
+fof(sos12700,axiom,~ ((penobscotcounty=i295))).
+fof(sos12710,axiom,~ ((penobscotcounty=stateroute5))).
+fof(sos12720,axiom,~ ((penobscotcounty=i95))).
+fof(sos12730,axiom,~ ((penobscotcounty=androscogginriverseg1))).
+fof(sos12740,axiom,~ ((penobscotcounty=dayton))).
+fof(sos12750,axiom,~ ((penobscotcounty=stateroute5seg2))).
+fof(sos12760,axiom,~ ((penobscotcounty=mooselookmegunticlake))).
+fof(sos12770,axiom,~ ((penobscotcounty=eastbranchoysterriver))).
+fof(sos12780,axiom,~ ((penobscotcounty=rusroute1))).
+fof(sos12790,axiom,~ ((penobscotcounty=meduxnekeagriver))).
+fof(sos12800,axiom,~ ((penobscotcounty=arundel))).
+fof(sos12810,axiom,~ ((penobscotcounty=knoxcounty))).
+fof(sos12820,axiom,~ ((penobscotcounty=rockwood))).
+fof(sos12830,axiom,~ ((penobscotcounty=passagassawakeagriver))).
+fof(sos12840,axiom,~ ((penobscotcounty=franklincounty))).
+fof(sos12850,axiom,~ ((penobscotcounty=mattawamkeagriverseg1))).
+fof(sos12860,axiom,~ ((penobscotcounty=grahamlake))).
+fof(sos12870,axiom,~ ((penobscotcounty=i95seg1))).
+fof(sos12880,axiom,~ ((penobscotcounty=hampden))).
+fof(sos12890,axiom,~ ((penobscotcounty=i95seg3))).
+fof(sos12900,axiom,~ ((penobscotcounty=stateroute9seg8))).
+fof(sos12910,axiom,~ ((penobscotcounty=houlton))).
+fof(sos12920,axiom,~ ((penobscotcounty=lynxobservations))).
+fof(sos12930,axiom,~ ((penobscotcounty=martinpointbridge))).
+fof(sos12940,axiom,~ ((penobscotcounty=passagassawakeagriverseg1))).
+fof(sos12950,axiom,~ ((penobscotcounty=rusroute2seg5))).
+fof(sos12960,axiom,~ ((penobscotcounty=machiasbay))).
+fof(sos12970,axiom,~ ((penobscotcounty=rusroute1seg4))).
+fof(sos12980,axiom,~ ((penobscotcounty=rwestbranchoysterriver))).
+fof(sos12990,axiom,~ ((penobscotcounty=stgeorgeriver))).
+fof(sos13000,axiom,~ ((sagadahoccounty=oxfordcounty))).
+fof(sos13010,axiom,~ ((sagadahoccounty=alagashpond))).
+fof(sos13020,axiom,~ ((sagadahoccounty=portland))).
+fof(sos13030,axiom,~ ((sagadahoccounty=cwashingtoncounty))).
+fof(sos13040,axiom,~ ((sagadahoccounty=rusroute2seg2))).
+fof(sos13050,axiom,~ ((sagadahoccounty=mattawamkeag))).
+fof(sos13060,axiom,~ ((sagadahoccounty=rusroute2seg1))).
+fof(sos13070,axiom,~ ((sagadahoccounty=lynx2))).
+fof(sos13080,axiom,~ ((sagadahoccounty=dennysriver))).
+fof(sos13090,axiom,~ ((sagadahoccounty=orrington))).
+fof(sos13100,axiom,~ ((sagadahoccounty=kennebeccounty))).
+fof(sos13110,axiom,~ ((sagadahoccounty=rusroute1seg7))).
+fof(sos13120,axiom,~ ((sagadahoccounty=i295))).
+fof(sos13130,axiom,~ ((sagadahoccounty=stateroute5))).
+fof(sos13140,axiom,~ ((sagadahoccounty=i95))).
+fof(sos13150,axiom,~ ((sagadahoccounty=androscogginriverseg1))).
+fof(sos13160,axiom,~ ((sagadahoccounty=dayton))).
+fof(sos13170,axiom,~ ((sagadahoccounty=stateroute5seg2))).
+fof(sos13180,axiom,~ ((sagadahoccounty=mooselookmegunticlake))).
+fof(sos13190,axiom,~ ((sagadahoccounty=eastbranchoysterriver))).
+fof(sos13200,axiom,~ ((sagadahoccounty=rusroute1))).
+fof(sos13210,axiom,~ ((sagadahoccounty=meduxnekeagriver))).
+fof(sos13220,axiom,~ ((sagadahoccounty=arundel))).
+fof(sos13230,axiom,~ ((sagadahoccounty=knoxcounty))).
+fof(sos13240,axiom,~ ((sagadahoccounty=rockwood))).
+fof(sos13250,axiom,~ ((sagadahoccounty=passagassawakeagriver))).
+fof(sos13260,axiom,~ ((sagadahoccounty=franklincounty))).
+fof(sos13270,axiom,~ ((sagadahoccounty=mattawamkeagriverseg1))).
+fof(sos13280,axiom,~ ((sagadahoccounty=grahamlake))).
+fof(sos13290,axiom,~ ((sagadahoccounty=i95seg1))).
+fof(sos13300,axiom,~ ((sagadahoccounty=hampden))).
+fof(sos13310,axiom,~ ((sagadahoccounty=i95seg3))).
+fof(sos13320,axiom,~ ((sagadahoccounty=stateroute9seg8))).
+fof(sos13330,axiom,~ ((sagadahoccounty=houlton))).
+fof(sos13340,axiom,~ ((sagadahoccounty=lynxobservations))).
+fof(sos13350,axiom,~ ((sagadahoccounty=martinpointbridge))).
+fof(sos13360,axiom,~ ((sagadahoccounty=passagassawakeagriverseg1))).
+fof(sos13370,axiom,~ ((sagadahoccounty=rusroute2seg5))).
+fof(sos13380,axiom,~ ((sagadahoccounty=machiasbay))).
+fof(sos13390,axiom,~ ((sagadahoccounty=rusroute1seg4))).
+fof(sos13400,axiom,~ ((sagadahoccounty=rwestbranchoysterriver))).
+fof(sos13410,axiom,~ ((sagadahoccounty=stgeorgeriver))).
+fof(sos13420,axiom,~ ((oxfordcounty=alagashpond))).
+fof(sos13430,axiom,~ ((oxfordcounty=portland))).
+fof(sos13440,axiom,~ ((oxfordcounty=cwashingtoncounty))).
+fof(sos13450,axiom,~ ((oxfordcounty=rusroute2seg2))).
+fof(sos13460,axiom,~ ((oxfordcounty=mattawamkeag))).
+fof(sos13470,axiom,~ ((oxfordcounty=rusroute2seg1))).
+fof(sos13480,axiom,~ ((oxfordcounty=lynx2))).
+fof(sos13490,axiom,~ ((oxfordcounty=dennysriver))).
+fof(sos13500,axiom,~ ((oxfordcounty=orrington))).
+fof(sos13510,axiom,~ ((oxfordcounty=kennebeccounty))).
+fof(sos13520,axiom,~ ((oxfordcounty=rusroute1seg7))).
+fof(sos13530,axiom,~ ((oxfordcounty=i295))).
+fof(sos13540,axiom,~ ((oxfordcounty=stateroute5))).
+fof(sos13550,axiom,~ ((oxfordcounty=i95))).
+fof(sos13560,axiom,~ ((oxfordcounty=androscogginriverseg1))).
+fof(sos13570,axiom,~ ((oxfordcounty=dayton))).
+fof(sos13580,axiom,~ ((oxfordcounty=stateroute5seg2))).
+fof(sos13590,axiom,~ ((oxfordcounty=mooselookmegunticlake))).
+fof(sos13600,axiom,~ ((oxfordcounty=eastbranchoysterriver))).
+fof(sos13610,axiom,~ ((oxfordcounty=rusroute1))).
+fof(sos13620,axiom,~ ((oxfordcounty=meduxnekeagriver))).
+fof(sos13630,axiom,~ ((oxfordcounty=arundel))).
+fof(sos13640,axiom,~ ((oxfordcounty=knoxcounty))).
+fof(sos13650,axiom,~ ((oxfordcounty=rockwood))).
+fof(sos13660,axiom,~ ((oxfordcounty=passagassawakeagriver))).
+fof(sos13670,axiom,~ ((oxfordcounty=franklincounty))).
+fof(sos13680,axiom,~ ((oxfordcounty=mattawamkeagriverseg1))).
+fof(sos13690,axiom,~ ((oxfordcounty=grahamlake))).
+fof(sos13700,axiom,~ ((oxfordcounty=i95seg1))).
+fof(sos13710,axiom,~ ((oxfordcounty=hampden))).
+fof(sos13720,axiom,~ ((oxfordcounty=i95seg3))).
+fof(sos13730,axiom,~ ((oxfordcounty=stateroute9seg8))).
+fof(sos13740,axiom,~ ((oxfordcounty=houlton))).
+fof(sos13750,axiom,~ ((oxfordcounty=lynxobservations))).
+fof(sos13760,axiom,~ ((oxfordcounty=martinpointbridge))).
+fof(sos13770,axiom,~ ((oxfordcounty=passagassawakeagriverseg1))).
+fof(sos13780,axiom,~ ((oxfordcounty=rusroute2seg5))).
+fof(sos13790,axiom,~ ((oxfordcounty=machiasbay))).
+fof(sos13800,axiom,~ ((oxfordcounty=rusroute1seg4))).
+fof(sos13810,axiom,~ ((oxfordcounty=rwestbranchoysterriver))).
+fof(sos13820,axiom,~ ((oxfordcounty=stgeorgeriver))).
+fof(sos13830,axiom,~ ((alagashpond=portland))).
+fof(sos13840,axiom,~ ((alagashpond=cwashingtoncounty))).
+fof(sos13850,axiom,~ ((alagashpond=rusroute2seg2))).
+fof(sos13860,axiom,~ ((alagashpond=mattawamkeag))).
+fof(sos13870,axiom,~ ((alagashpond=rusroute2seg1))).
+fof(sos13880,axiom,~ ((alagashpond=lynx2))).
+fof(sos13890,axiom,~ ((alagashpond=dennysriver))).
+fof(sos13900,axiom,~ ((alagashpond=orrington))).
+fof(sos13910,axiom,~ ((alagashpond=kennebeccounty))).
+fof(sos13920,axiom,~ ((alagashpond=rusroute1seg7))).
+fof(sos13930,axiom,~ ((alagashpond=i295))).
+fof(sos13940,axiom,~ ((alagashpond=stateroute5))).
+fof(sos13950,axiom,~ ((alagashpond=i95))).
+fof(sos13960,axiom,~ ((alagashpond=androscogginriverseg1))).
+fof(sos13970,axiom,~ ((alagashpond=dayton))).
+fof(sos13980,axiom,~ ((alagashpond=stateroute5seg2))).
+fof(sos13990,axiom,~ ((alagashpond=mooselookmegunticlake))).
+fof(sos14000,axiom,~ ((alagashpond=eastbranchoysterriver))).
+fof(sos14010,axiom,~ ((alagashpond=rusroute1))).
+fof(sos14020,axiom,~ ((alagashpond=meduxnekeagriver))).
+fof(sos14030,axiom,~ ((alagashpond=arundel))).
+fof(sos14040,axiom,~ ((alagashpond=knoxcounty))).
+fof(sos14050,axiom,~ ((alagashpond=rockwood))).
+fof(sos14060,axiom,~ ((alagashpond=passagassawakeagriver))).
+fof(sos14070,axiom,~ ((alagashpond=franklincounty))).
+fof(sos14080,axiom,~ ((alagashpond=mattawamkeagriverseg1))).
+fof(sos14090,axiom,~ ((alagashpond=grahamlake))).
+fof(sos14100,axiom,~ ((alagashpond=i95seg1))).
+fof(sos14110,axiom,~ ((alagashpond=hampden))).
+fof(sos14120,axiom,~ ((alagashpond=i95seg3))).
+fof(sos14130,axiom,~ ((alagashpond=stateroute9seg8))).
+fof(sos14140,axiom,~ ((alagashpond=houlton))).
+fof(sos14150,axiom,~ ((alagashpond=lynxobservations))).
+fof(sos14160,axiom,~ ((alagashpond=martinpointbridge))).
+fof(sos14170,axiom,~ ((alagashpond=passagassawakeagriverseg1))).
+fof(sos14180,axiom,~ ((alagashpond=rusroute2seg5))).
+fof(sos14190,axiom,~ ((alagashpond=machiasbay))).
+fof(sos14200,axiom,~ ((alagashpond=rusroute1seg4))).
+fof(sos14210,axiom,~ ((alagashpond=rwestbranchoysterriver))).
+fof(sos14220,axiom,~ ((alagashpond=stgeorgeriver))).
+fof(sos14230,axiom,~ ((portland=cwashingtoncounty))).
+fof(sos14240,axiom,~ ((portland=rusroute2seg2))).
+fof(sos14250,axiom,~ ((portland=mattawamkeag))).
+fof(sos14260,axiom,~ ((portland=rusroute2seg1))).
+fof(sos14270,axiom,~ ((portland=lynx2))).
+fof(sos14280,axiom,~ ((portland=dennysriver))).
+fof(sos14290,axiom,~ ((portland=orrington))).
+fof(sos14300,axiom,~ ((portland=kennebeccounty))).
+fof(sos14310,axiom,~ ((portland=rusroute1seg7))).
+fof(sos14320,axiom,~ ((portland=i295))).
+fof(sos14330,axiom,~ ((portland=stateroute5))).
+fof(sos14340,axiom,~ ((portland=i95))).
+fof(sos14350,axiom,~ ((portland=androscogginriverseg1))).
+fof(sos14360,axiom,~ ((portland=dayton))).
+fof(sos14370,axiom,~ ((portland=stateroute5seg2))).
+fof(sos14380,axiom,~ ((portland=mooselookmegunticlake))).
+fof(sos14390,axiom,~ ((portland=eastbranchoysterriver))).
+fof(sos14400,axiom,~ ((portland=rusroute1))).
+fof(sos14410,axiom,~ ((portland=meduxnekeagriver))).
+fof(sos14420,axiom,~ ((portland=arundel))).
+fof(sos14430,axiom,~ ((portland=knoxcounty))).
+fof(sos14440,axiom,~ ((portland=rockwood))).
+fof(sos14450,axiom,~ ((portland=passagassawakeagriver))).
+fof(sos14460,axiom,~ ((portland=franklincounty))).
+fof(sos14470,axiom,~ ((portland=mattawamkeagriverseg1))).
+fof(sos14480,axiom,~ ((portland=grahamlake))).
+fof(sos14490,axiom,~ ((portland=i95seg1))).
+fof(sos14500,axiom,~ ((portland=hampden))).
+fof(sos14510,axiom,~ ((portland=i95seg3))).
+fof(sos14520,axiom,~ ((portland=stateroute9seg8))).
+fof(sos14530,axiom,~ ((portland=houlton))).
+fof(sos14540,axiom,~ ((portland=lynxobservations))).
+fof(sos14550,axiom,~ ((portland=martinpointbridge))).
+fof(sos14560,axiom,~ ((portland=passagassawakeagriverseg1))).
+fof(sos14570,axiom,~ ((portland=rusroute2seg5))).
+fof(sos14580,axiom,~ ((portland=machiasbay))).
+fof(sos14590,axiom,~ ((portland=rusroute1seg4))).
+fof(sos14600,axiom,~ ((portland=rwestbranchoysterriver))).
+fof(sos14610,axiom,~ ((portland=stgeorgeriver))).
+fof(sos14620,axiom,~ ((cwashingtoncounty=rusroute2seg2))).
+fof(sos14630,axiom,~ ((cwashingtoncounty=mattawamkeag))).
+fof(sos14640,axiom,~ ((cwashingtoncounty=rusroute2seg1))).
+fof(sos14650,axiom,~ ((cwashingtoncounty=lynx2))).
+fof(sos14660,axiom,~ ((cwashingtoncounty=dennysriver))).
+fof(sos14670,axiom,~ ((cwashingtoncounty=orrington))).
+fof(sos14680,axiom,~ ((cwashingtoncounty=kennebeccounty))).
+fof(sos14690,axiom,~ ((cwashingtoncounty=rusroute1seg7))).
+fof(sos14700,axiom,~ ((cwashingtoncounty=i295))).
+fof(sos14710,axiom,~ ((cwashingtoncounty=stateroute5))).
+fof(sos14720,axiom,~ ((cwashingtoncounty=i95))).
+fof(sos14730,axiom,~ ((cwashingtoncounty=androscogginriverseg1))).
+fof(sos14740,axiom,~ ((cwashingtoncounty=dayton))).
+fof(sos14750,axiom,~ ((cwashingtoncounty=stateroute5seg2))).
+fof(sos14760,axiom,~ ((cwashingtoncounty=mooselookmegunticlake))).
+fof(sos14770,axiom,~ ((cwashingtoncounty=eastbranchoysterriver))).
+fof(sos14780,axiom,~ ((cwashingtoncounty=rusroute1))).
+fof(sos14790,axiom,~ ((cwashingtoncounty=meduxnekeagriver))).
+fof(sos14800,axiom,~ ((cwashingtoncounty=arundel))).
+fof(sos14810,axiom,~ ((cwashingtoncounty=knoxcounty))).
+fof(sos14820,axiom,~ ((cwashingtoncounty=rockwood))).
+fof(sos14830,axiom,~ ((cwashingtoncounty=passagassawakeagriver))).
+fof(sos14840,axiom,~ ((cwashingtoncounty=franklincounty))).
+fof(sos14850,axiom,~ ((cwashingtoncounty=mattawamkeagriverseg1))).
+fof(sos14860,axiom,~ ((cwashingtoncounty=grahamlake))).
+fof(sos14870,axiom,~ ((cwashingtoncounty=i95seg1))).
+fof(sos14880,axiom,~ ((cwashingtoncounty=hampden))).
+fof(sos14890,axiom,~ ((cwashingtoncounty=i95seg3))).
+fof(sos14900,axiom,~ ((cwashingtoncounty=stateroute9seg8))).
+fof(sos14910,axiom,~ ((cwashingtoncounty=houlton))).
+fof(sos14920,axiom,~ ((cwashingtoncounty=lynxobservations))).
+fof(sos14930,axiom,~ ((cwashingtoncounty=martinpointbridge))).
+fof(sos14940,axiom,~ ((cwashingtoncounty=passagassawakeagriverseg1))).
+fof(sos14950,axiom,~ ((cwashingtoncounty=rusroute2seg5))).
+fof(sos14960,axiom,~ ((cwashingtoncounty=machiasbay))).
+fof(sos14970,axiom,~ ((cwashingtoncounty=rusroute1seg4))).
+fof(sos14980,axiom,~ ((cwashingtoncounty=rwestbranchoysterriver))).
+fof(sos14990,axiom,~ ((cwashingtoncounty=stgeorgeriver))).
+fof(sos15000,axiom,~ ((rusroute2seg2=mattawamkeag))).
+fof(sos15010,axiom,~ ((rusroute2seg2=rusroute2seg1))).
+fof(sos15020,axiom,~ ((rusroute2seg2=lynx2))).
+fof(sos15030,axiom,~ ((rusroute2seg2=dennysriver))).
+fof(sos15040,axiom,~ ((rusroute2seg2=orrington))).
+fof(sos15050,axiom,~ ((rusroute2seg2=kennebeccounty))).
+fof(sos15060,axiom,~ ((rusroute2seg2=rusroute1seg7))).
+fof(sos15070,axiom,~ ((rusroute2seg2=i295))).
+fof(sos15080,axiom,~ ((rusroute2seg2=stateroute5))).
+fof(sos15090,axiom,~ ((rusroute2seg2=i95))).
+fof(sos15100,axiom,~ ((rusroute2seg2=androscogginriverseg1))).
+fof(sos15110,axiom,~ ((rusroute2seg2=dayton))).
+fof(sos15120,axiom,~ ((rusroute2seg2=stateroute5seg2))).
+fof(sos15130,axiom,~ ((rusroute2seg2=mooselookmegunticlake))).
+fof(sos15140,axiom,~ ((rusroute2seg2=eastbranchoysterriver))).
+fof(sos15150,axiom,~ ((rusroute2seg2=rusroute1))).
+fof(sos15160,axiom,~ ((rusroute2seg2=meduxnekeagriver))).
+fof(sos15170,axiom,~ ((rusroute2seg2=arundel))).
+fof(sos15180,axiom,~ ((rusroute2seg2=knoxcounty))).
+fof(sos15190,axiom,~ ((rusroute2seg2=rockwood))).
+fof(sos15200,axiom,~ ((rusroute2seg2=passagassawakeagriver))).
+fof(sos15210,axiom,~ ((rusroute2seg2=franklincounty))).
+fof(sos15220,axiom,~ ((rusroute2seg2=mattawamkeagriverseg1))).
+fof(sos15230,axiom,~ ((rusroute2seg2=grahamlake))).
+fof(sos15240,axiom,~ ((rusroute2seg2=i95seg1))).
+fof(sos15250,axiom,~ ((rusroute2seg2=hampden))).
+fof(sos15260,axiom,~ ((rusroute2seg2=i95seg3))).
+fof(sos15270,axiom,~ ((rusroute2seg2=stateroute9seg8))).
+fof(sos15280,axiom,~ ((rusroute2seg2=houlton))).
+fof(sos15290,axiom,~ ((rusroute2seg2=lynxobservations))).
+fof(sos15300,axiom,~ ((rusroute2seg2=martinpointbridge))).
+fof(sos15310,axiom,~ ((rusroute2seg2=passagassawakeagriverseg1))).
+fof(sos15320,axiom,~ ((rusroute2seg2=rusroute2seg5))).
+fof(sos15330,axiom,~ ((rusroute2seg2=machiasbay))).
+fof(sos15340,axiom,~ ((rusroute2seg2=rusroute1seg4))).
+fof(sos15350,axiom,~ ((rusroute2seg2=rwestbranchoysterriver))).
+fof(sos15360,axiom,~ ((rusroute2seg2=stgeorgeriver))).
+fof(sos15370,axiom,~ ((mattawamkeag=rusroute2seg1))).
+fof(sos15380,axiom,~ ((mattawamkeag=lynx2))).
+fof(sos15390,axiom,~ ((mattawamkeag=dennysriver))).
+fof(sos15400,axiom,~ ((mattawamkeag=orrington))).
+fof(sos15410,axiom,~ ((mattawamkeag=kennebeccounty))).
+fof(sos15420,axiom,~ ((mattawamkeag=rusroute1seg7))).
+fof(sos15430,axiom,~ ((mattawamkeag=i295))).
+fof(sos15440,axiom,~ ((mattawamkeag=stateroute5))).
+fof(sos15450,axiom,~ ((mattawamkeag=i95))).
+fof(sos15460,axiom,~ ((mattawamkeag=androscogginriverseg1))).
+fof(sos15470,axiom,~ ((mattawamkeag=dayton))).
+fof(sos15480,axiom,~ ((mattawamkeag=stateroute5seg2))).
+fof(sos15490,axiom,~ ((mattawamkeag=mooselookmegunticlake))).
+fof(sos15500,axiom,~ ((mattawamkeag=eastbranchoysterriver))).
+fof(sos15510,axiom,~ ((mattawamkeag=rusroute1))).
+fof(sos15520,axiom,~ ((mattawamkeag=meduxnekeagriver))).
+fof(sos15530,axiom,~ ((mattawamkeag=arundel))).
+fof(sos15540,axiom,~ ((mattawamkeag=knoxcounty))).
+fof(sos15550,axiom,~ ((mattawamkeag=rockwood))).
+fof(sos15560,axiom,~ ((mattawamkeag=passagassawakeagriver))).
+fof(sos15570,axiom,~ ((mattawamkeag=franklincounty))).
+fof(sos15580,axiom,~ ((mattawamkeag=mattawamkeagriverseg1))).
+fof(sos15590,axiom,~ ((mattawamkeag=grahamlake))).
+fof(sos15600,axiom,~ ((mattawamkeag=i95seg1))).
+fof(sos15610,axiom,~ ((mattawamkeag=hampden))).
+fof(sos15620,axiom,~ ((mattawamkeag=i95seg3))).
+fof(sos15630,axiom,~ ((mattawamkeag=stateroute9seg8))).
+fof(sos15640,axiom,~ ((mattawamkeag=houlton))).
+fof(sos15650,axiom,~ ((mattawamkeag=lynxobservations))).
+fof(sos15660,axiom,~ ((mattawamkeag=martinpointbridge))).
+fof(sos15670,axiom,~ ((mattawamkeag=passagassawakeagriverseg1))).
+fof(sos15680,axiom,~ ((mattawamkeag=rusroute2seg5))).
+fof(sos15690,axiom,~ ((mattawamkeag=machiasbay))).
+fof(sos15700,axiom,~ ((mattawamkeag=rusroute1seg4))).
+fof(sos15710,axiom,~ ((mattawamkeag=rwestbranchoysterriver))).
+fof(sos15720,axiom,~ ((mattawamkeag=stgeorgeriver))).
+fof(sos15730,axiom,~ ((rusroute2seg1=lynx2))).
+fof(sos15740,axiom,~ ((rusroute2seg1=dennysriver))).
+fof(sos15750,axiom,~ ((rusroute2seg1=orrington))).
+fof(sos15760,axiom,~ ((rusroute2seg1=kennebeccounty))).
+fof(sos15770,axiom,~ ((rusroute2seg1=rusroute1seg7))).
+fof(sos15780,axiom,~ ((rusroute2seg1=i295))).
+fof(sos15790,axiom,~ ((rusroute2seg1=stateroute5))).
+fof(sos15800,axiom,~ ((rusroute2seg1=i95))).
+fof(sos15810,axiom,~ ((rusroute2seg1=androscogginriverseg1))).
+fof(sos15820,axiom,~ ((rusroute2seg1=dayton))).
+fof(sos15830,axiom,~ ((rusroute2seg1=stateroute5seg2))).
+fof(sos15840,axiom,~ ((rusroute2seg1=mooselookmegunticlake))).
+fof(sos15850,axiom,~ ((rusroute2seg1=eastbranchoysterriver))).
+fof(sos15860,axiom,~ ((rusroute2seg1=rusroute1))).
+fof(sos15870,axiom,~ ((rusroute2seg1=meduxnekeagriver))).
+fof(sos15880,axiom,~ ((rusroute2seg1=arundel))).
+fof(sos15890,axiom,~ ((rusroute2seg1=knoxcounty))).
+fof(sos15900,axiom,~ ((rusroute2seg1=rockwood))).
+fof(sos15910,axiom,~ ((rusroute2seg1=passagassawakeagriver))).
+fof(sos15920,axiom,~ ((rusroute2seg1=franklincounty))).
+fof(sos15930,axiom,~ ((rusroute2seg1=mattawamkeagriverseg1))).
+fof(sos15940,axiom,~ ((rusroute2seg1=grahamlake))).
+fof(sos15950,axiom,~ ((rusroute2seg1=i95seg1))).
+fof(sos15960,axiom,~ ((rusroute2seg1=hampden))).
+fof(sos15970,axiom,~ ((rusroute2seg1=i95seg3))).
+fof(sos15980,axiom,~ ((rusroute2seg1=stateroute9seg8))).
+fof(sos15990,axiom,~ ((rusroute2seg1=houlton))).
+fof(sos16000,axiom,~ ((rusroute2seg1=lynxobservations))).
+fof(sos16010,axiom,~ ((rusroute2seg1=martinpointbridge))).
+fof(sos16020,axiom,~ ((rusroute2seg1=passagassawakeagriverseg1))).
+fof(sos16030,axiom,~ ((rusroute2seg1=rusroute2seg5))).
+fof(sos16040,axiom,~ ((rusroute2seg1=machiasbay))).
+fof(sos16050,axiom,~ ((rusroute2seg1=rusroute1seg4))).
+fof(sos16060,axiom,~ ((rusroute2seg1=rwestbranchoysterriver))).
+fof(sos16070,axiom,~ ((rusroute2seg1=stgeorgeriver))).
+fof(sos16080,axiom,~ ((lynx2=dennysriver))).
+fof(sos16090,axiom,~ ((lynx2=orrington))).
+fof(sos16100,axiom,~ ((lynx2=kennebeccounty))).
+fof(sos16110,axiom,~ ((lynx2=rusroute1seg7))).
+fof(sos16120,axiom,~ ((lynx2=i295))).
+fof(sos16130,axiom,~ ((lynx2=stateroute5))).
+fof(sos16140,axiom,~ ((lynx2=i95))).
+fof(sos16150,axiom,~ ((lynx2=androscogginriverseg1))).
+fof(sos16160,axiom,~ ((lynx2=dayton))).
+fof(sos16170,axiom,~ ((lynx2=stateroute5seg2))).
+fof(sos16180,axiom,~ ((lynx2=mooselookmegunticlake))).
+fof(sos16190,axiom,~ ((lynx2=eastbranchoysterriver))).
+fof(sos16200,axiom,~ ((lynx2=rusroute1))).
+fof(sos16210,axiom,~ ((lynx2=meduxnekeagriver))).
+fof(sos16220,axiom,~ ((lynx2=arundel))).
+fof(sos16230,axiom,~ ((lynx2=knoxcounty))).
+fof(sos16240,axiom,~ ((lynx2=rockwood))).
+fof(sos16250,axiom,~ ((lynx2=passagassawakeagriver))).
+fof(sos16260,axiom,~ ((lynx2=franklincounty))).
+fof(sos16270,axiom,~ ((lynx2=mattawamkeagriverseg1))).
+fof(sos16280,axiom,~ ((lynx2=grahamlake))).
+fof(sos16290,axiom,~ ((lynx2=i95seg1))).
+fof(sos16300,axiom,~ ((lynx2=hampden))).
+fof(sos16310,axiom,~ ((lynx2=i95seg3))).
+fof(sos16320,axiom,~ ((lynx2=stateroute9seg8))).
+fof(sos16330,axiom,~ ((lynx2=houlton))).
+fof(sos16340,axiom,~ ((lynx2=lynxobservations))).
+fof(sos16350,axiom,~ ((lynx2=martinpointbridge))).
+fof(sos16360,axiom,~ ((lynx2=passagassawakeagriverseg1))).
+fof(sos16370,axiom,~ ((lynx2=rusroute2seg5))).
+fof(sos16380,axiom,~ ((lynx2=machiasbay))).
+fof(sos16390,axiom,~ ((lynx2=rusroute1seg4))).
+fof(sos16400,axiom,~ ((lynx2=rwestbranchoysterriver))).
+fof(sos16410,axiom,~ ((lynx2=stgeorgeriver))).
+fof(sos16420,axiom,~ ((dennysriver=orrington))).
+fof(sos16430,axiom,~ ((dennysriver=kennebeccounty))).
+fof(sos16440,axiom,~ ((dennysriver=rusroute1seg7))).
+fof(sos16450,axiom,~ ((dennysriver=i295))).
+fof(sos16460,axiom,~ ((dennysriver=stateroute5))).
+fof(sos16470,axiom,~ ((dennysriver=i95))).
+fof(sos16480,axiom,~ ((dennysriver=androscogginriverseg1))).
+fof(sos16490,axiom,~ ((dennysriver=dayton))).
+fof(sos16500,axiom,~ ((dennysriver=stateroute5seg2))).
+fof(sos16510,axiom,~ ((dennysriver=mooselookmegunticlake))).
+fof(sos16520,axiom,~ ((dennysriver=eastbranchoysterriver))).
+fof(sos16530,axiom,~ ((dennysriver=rusroute1))).
+fof(sos16540,axiom,~ ((dennysriver=meduxnekeagriver))).
+fof(sos16550,axiom,~ ((dennysriver=arundel))).
+fof(sos16560,axiom,~ ((dennysriver=knoxcounty))).
+fof(sos16570,axiom,~ ((dennysriver=rockwood))).
+fof(sos16580,axiom,~ ((dennysriver=passagassawakeagriver))).
+fof(sos16590,axiom,~ ((dennysriver=franklincounty))).
+fof(sos16600,axiom,~ ((dennysriver=mattawamkeagriverseg1))).
+fof(sos16610,axiom,~ ((dennysriver=grahamlake))).
+fof(sos16620,axiom,~ ((dennysriver=i95seg1))).
+fof(sos16630,axiom,~ ((dennysriver=hampden))).
+fof(sos16640,axiom,~ ((dennysriver=i95seg3))).
+fof(sos16650,axiom,~ ((dennysriver=stateroute9seg8))).
+fof(sos16660,axiom,~ ((dennysriver=houlton))).
+fof(sos16670,axiom,~ ((dennysriver=lynxobservations))).
+fof(sos16680,axiom,~ ((dennysriver=martinpointbridge))).
+fof(sos16690,axiom,~ ((dennysriver=passagassawakeagriverseg1))).
+fof(sos16700,axiom,~ ((dennysriver=rusroute2seg5))).
+fof(sos16710,axiom,~ ((dennysriver=machiasbay))).
+fof(sos16720,axiom,~ ((dennysriver=rusroute1seg4))).
+fof(sos16730,axiom,~ ((dennysriver=rwestbranchoysterriver))).
+fof(sos16740,axiom,~ ((dennysriver=stgeorgeriver))).
+fof(sos16750,axiom,~ ((orrington=kennebeccounty))).
+fof(sos16760,axiom,~ ((orrington=rusroute1seg7))).
+fof(sos16770,axiom,~ ((orrington=i295))).
+fof(sos16780,axiom,~ ((orrington=stateroute5))).
+fof(sos16790,axiom,~ ((orrington=i95))).
+fof(sos16800,axiom,~ ((orrington=androscogginriverseg1))).
+fof(sos16810,axiom,~ ((orrington=dayton))).
+fof(sos16820,axiom,~ ((orrington=stateroute5seg2))).
+fof(sos16830,axiom,~ ((orrington=mooselookmegunticlake))).
+fof(sos16840,axiom,~ ((orrington=eastbranchoysterriver))).
+fof(sos16850,axiom,~ ((orrington=rusroute1))).
+fof(sos16860,axiom,~ ((orrington=meduxnekeagriver))).
+fof(sos16870,axiom,~ ((orrington=arundel))).
+fof(sos16880,axiom,~ ((orrington=knoxcounty))).
+fof(sos16890,axiom,~ ((orrington=rockwood))).
+fof(sos16900,axiom,~ ((orrington=passagassawakeagriver))).
+fof(sos16910,axiom,~ ((orrington=franklincounty))).
+fof(sos16920,axiom,~ ((orrington=mattawamkeagriverseg1))).
+fof(sos16930,axiom,~ ((orrington=grahamlake))).
+fof(sos16940,axiom,~ ((orrington=i95seg1))).
+fof(sos16950,axiom,~ ((orrington=hampden))).
+fof(sos16960,axiom,~ ((orrington=i95seg3))).
+fof(sos16970,axiom,~ ((orrington=stateroute9seg8))).
+fof(sos16980,axiom,~ ((orrington=houlton))).
+fof(sos16990,axiom,~ ((orrington=lynxobservations))).
+fof(sos17000,axiom,~ ((orrington=martinpointbridge))).
+fof(sos17010,axiom,~ ((orrington=passagassawakeagriverseg1))).
+fof(sos17020,axiom,~ ((orrington=rusroute2seg5))).
+fof(sos17030,axiom,~ ((orrington=machiasbay))).
+fof(sos17040,axiom,~ ((orrington=rusroute1seg4))).
+fof(sos17050,axiom,~ ((orrington=rwestbranchoysterriver))).
+fof(sos17060,axiom,~ ((orrington=stgeorgeriver))).
+fof(sos17070,axiom,~ ((kennebeccounty=rusroute1seg7))).
+fof(sos17080,axiom,~ ((kennebeccounty=i295))).
+fof(sos17090,axiom,~ ((kennebeccounty=stateroute5))).
+fof(sos17100,axiom,~ ((kennebeccounty=i95))).
+fof(sos17110,axiom,~ ((kennebeccounty=androscogginriverseg1))).
+fof(sos17120,axiom,~ ((kennebeccounty=dayton))).
+fof(sos17130,axiom,~ ((kennebeccounty=stateroute5seg2))).
+fof(sos17140,axiom,~ ((kennebeccounty=mooselookmegunticlake))).
+fof(sos17150,axiom,~ ((kennebeccounty=eastbranchoysterriver))).
+fof(sos17160,axiom,~ ((kennebeccounty=rusroute1))).
+fof(sos17170,axiom,~ ((kennebeccounty=meduxnekeagriver))).
+fof(sos17180,axiom,~ ((kennebeccounty=arundel))).
+fof(sos17190,axiom,~ ((kennebeccounty=knoxcounty))).
+fof(sos17200,axiom,~ ((kennebeccounty=rockwood))).
+fof(sos17210,axiom,~ ((kennebeccounty=passagassawakeagriver))).
+fof(sos17220,axiom,~ ((kennebeccounty=franklincounty))).
+fof(sos17230,axiom,~ ((kennebeccounty=mattawamkeagriverseg1))).
+fof(sos17240,axiom,~ ((kennebeccounty=grahamlake))).
+fof(sos17250,axiom,~ ((kennebeccounty=i95seg1))).
+fof(sos17260,axiom,~ ((kennebeccounty=hampden))).
+fof(sos17270,axiom,~ ((kennebeccounty=i95seg3))).
+fof(sos17280,axiom,~ ((kennebeccounty=stateroute9seg8))).
+fof(sos17290,axiom,~ ((kennebeccounty=houlton))).
+fof(sos17300,axiom,~ ((kennebeccounty=lynxobservations))).
+fof(sos17310,axiom,~ ((kennebeccounty=martinpointbridge))).
+fof(sos17320,axiom,~ ((kennebeccounty=passagassawakeagriverseg1))).
+fof(sos17330,axiom,~ ((kennebeccounty=rusroute2seg5))).
+fof(sos17340,axiom,~ ((kennebeccounty=machiasbay))).
+fof(sos17350,axiom,~ ((kennebeccounty=rusroute1seg4))).
+fof(sos17360,axiom,~ ((kennebeccounty=rwestbranchoysterriver))).
+fof(sos17370,axiom,~ ((kennebeccounty=stgeorgeriver))).
+fof(sos17380,axiom,~ ((rusroute1seg7=i295))).
+fof(sos17390,axiom,~ ((rusroute1seg7=stateroute5))).
+fof(sos17400,axiom,~ ((rusroute1seg7=i95))).
+fof(sos17410,axiom,~ ((rusroute1seg7=androscogginriverseg1))).
+fof(sos17420,axiom,~ ((rusroute1seg7=dayton))).
+fof(sos17430,axiom,~ ((rusroute1seg7=stateroute5seg2))).
+fof(sos17440,axiom,~ ((rusroute1seg7=mooselookmegunticlake))).
+fof(sos17450,axiom,~ ((rusroute1seg7=eastbranchoysterriver))).
+fof(sos17460,axiom,~ ((rusroute1seg7=rusroute1))).
+fof(sos17470,axiom,~ ((rusroute1seg7=meduxnekeagriver))).
+fof(sos17480,axiom,~ ((rusroute1seg7=arundel))).
+fof(sos17490,axiom,~ ((rusroute1seg7=knoxcounty))).
+fof(sos17500,axiom,~ ((rusroute1seg7=rockwood))).
+fof(sos17510,axiom,~ ((rusroute1seg7=passagassawakeagriver))).
+fof(sos17520,axiom,~ ((rusroute1seg7=franklincounty))).
+fof(sos17530,axiom,~ ((rusroute1seg7=mattawamkeagriverseg1))).
+fof(sos17540,axiom,~ ((rusroute1seg7=grahamlake))).
+fof(sos17550,axiom,~ ((rusroute1seg7=i95seg1))).
+fof(sos17560,axiom,~ ((rusroute1seg7=hampden))).
+fof(sos17570,axiom,~ ((rusroute1seg7=i95seg3))).
+fof(sos17580,axiom,~ ((rusroute1seg7=stateroute9seg8))).
+fof(sos17590,axiom,~ ((rusroute1seg7=houlton))).
+fof(sos17600,axiom,~ ((rusroute1seg7=lynxobservations))).
+fof(sos17610,axiom,~ ((rusroute1seg7=martinpointbridge))).
+fof(sos17620,axiom,~ ((rusroute1seg7=passagassawakeagriverseg1))).
+fof(sos17630,axiom,~ ((rusroute1seg7=rusroute2seg5))).
+fof(sos17640,axiom,~ ((rusroute1seg7=machiasbay))).
+fof(sos17650,axiom,~ ((rusroute1seg7=rusroute1seg4))).
+fof(sos17660,axiom,~ ((rusroute1seg7=rwestbranchoysterriver))).
+fof(sos17670,axiom,~ ((rusroute1seg7=stgeorgeriver))).
+fof(sos17680,axiom,~ ((i295=stateroute5))).
+fof(sos17690,axiom,~ ((i295=i95))).
+fof(sos17700,axiom,~ ((i295=androscogginriverseg1))).
+fof(sos17710,axiom,~ ((i295=dayton))).
+fof(sos17720,axiom,~ ((i295=stateroute5seg2))).
+fof(sos17730,axiom,~ ((i295=mooselookmegunticlake))).
+fof(sos17740,axiom,~ ((i295=eastbranchoysterriver))).
+fof(sos17750,axiom,~ ((i295=rusroute1))).
+fof(sos17760,axiom,~ ((i295=meduxnekeagriver))).
+fof(sos17770,axiom,~ ((i295=arundel))).
+fof(sos17780,axiom,~ ((i295=knoxcounty))).
+fof(sos17790,axiom,~ ((i295=rockwood))).
+fof(sos17800,axiom,~ ((i295=passagassawakeagriver))).
+fof(sos17810,axiom,~ ((i295=franklincounty))).
+fof(sos17820,axiom,~ ((i295=mattawamkeagriverseg1))).
+fof(sos17830,axiom,~ ((i295=grahamlake))).
+fof(sos17840,axiom,~ ((i295=i95seg1))).
+fof(sos17850,axiom,~ ((i295=hampden))).
+fof(sos17860,axiom,~ ((i295=i95seg3))).
+fof(sos17870,axiom,~ ((i295=stateroute9seg8))).
+fof(sos17880,axiom,~ ((i295=houlton))).
+fof(sos17890,axiom,~ ((i295=lynxobservations))).
+fof(sos17900,axiom,~ ((i295=martinpointbridge))).
+fof(sos17910,axiom,~ ((i295=passagassawakeagriverseg1))).
+fof(sos17920,axiom,~ ((i295=rusroute2seg5))).
+fof(sos17930,axiom,~ ((i295=machiasbay))).
+fof(sos17940,axiom,~ ((i295=rusroute1seg4))).
+fof(sos17950,axiom,~ ((i295=rwestbranchoysterriver))).
+fof(sos17960,axiom,~ ((i295=stgeorgeriver))).
+fof(sos17970,axiom,~ ((stateroute5=i95))).
+fof(sos17980,axiom,~ ((stateroute5=androscogginriverseg1))).
+fof(sos17990,axiom,~ ((stateroute5=dayton))).
+fof(sos18000,axiom,~ ((stateroute5=stateroute5seg2))).
+fof(sos18010,axiom,~ ((stateroute5=mooselookmegunticlake))).
+fof(sos18020,axiom,~ ((stateroute5=eastbranchoysterriver))).
+fof(sos18030,axiom,~ ((stateroute5=rusroute1))).
+fof(sos18040,axiom,~ ((stateroute5=meduxnekeagriver))).
+fof(sos18050,axiom,~ ((stateroute5=arundel))).
+fof(sos18060,axiom,~ ((stateroute5=knoxcounty))).
+fof(sos18070,axiom,~ ((stateroute5=rockwood))).
+fof(sos18080,axiom,~ ((stateroute5=passagassawakeagriver))).
+fof(sos18090,axiom,~ ((stateroute5=franklincounty))).
+fof(sos18100,axiom,~ ((stateroute5=mattawamkeagriverseg1))).
+fof(sos18110,axiom,~ ((stateroute5=grahamlake))).
+fof(sos18120,axiom,~ ((stateroute5=i95seg1))).
+fof(sos18130,axiom,~ ((stateroute5=hampden))).
+fof(sos18140,axiom,~ ((stateroute5=i95seg3))).
+fof(sos18150,axiom,~ ((stateroute5=stateroute9seg8))).
+fof(sos18160,axiom,~ ((stateroute5=houlton))).
+fof(sos18170,axiom,~ ((stateroute5=lynxobservations))).
+fof(sos18180,axiom,~ ((stateroute5=martinpointbridge))).
+fof(sos18190,axiom,~ ((stateroute5=passagassawakeagriverseg1))).
+fof(sos18200,axiom,~ ((stateroute5=rusroute2seg5))).
+fof(sos18210,axiom,~ ((stateroute5=machiasbay))).
+fof(sos18220,axiom,~ ((stateroute5=rusroute1seg4))).
+fof(sos18230,axiom,~ ((stateroute5=rwestbranchoysterriver))).
+fof(sos18240,axiom,~ ((stateroute5=stgeorgeriver))).
+fof(sos18250,axiom,~ ((i95=androscogginriverseg1))).
+fof(sos18260,axiom,~ ((i95=dayton))).
+fof(sos18270,axiom,~ ((i95=stateroute5seg2))).
+fof(sos18280,axiom,~ ((i95=mooselookmegunticlake))).
+fof(sos18290,axiom,~ ((i95=eastbranchoysterriver))).
+fof(sos18300,axiom,~ ((i95=rusroute1))).
+fof(sos18310,axiom,~ ((i95=meduxnekeagriver))).
+fof(sos18320,axiom,~ ((i95=arundel))).
+fof(sos18330,axiom,~ ((i95=knoxcounty))).
+fof(sos18340,axiom,~ ((i95=rockwood))).
+fof(sos18350,axiom,~ ((i95=passagassawakeagriver))).
+fof(sos18360,axiom,~ ((i95=franklincounty))).
+fof(sos18370,axiom,~ ((i95=mattawamkeagriverseg1))).
+fof(sos18380,axiom,~ ((i95=grahamlake))).
+fof(sos18390,axiom,~ ((i95=i95seg1))).
+fof(sos18400,axiom,~ ((i95=hampden))).
+fof(sos18410,axiom,~ ((i95=i95seg3))).
+fof(sos18420,axiom,~ ((i95=stateroute9seg8))).
+fof(sos18430,axiom,~ ((i95=houlton))).
+fof(sos18440,axiom,~ ((i95=lynxobservations))).
+fof(sos18450,axiom,~ ((i95=martinpointbridge))).
+fof(sos18460,axiom,~ ((i95=passagassawakeagriverseg1))).
+fof(sos18470,axiom,~ ((i95=rusroute2seg5))).
+fof(sos18480,axiom,~ ((i95=machiasbay))).
+fof(sos18490,axiom,~ ((i95=rusroute1seg4))).
+fof(sos18500,axiom,~ ((i95=rwestbranchoysterriver))).
+fof(sos18510,axiom,~ ((i95=stgeorgeriver))).
+fof(sos18520,axiom,~ ((androscogginriverseg1=dayton))).
+fof(sos18530,axiom,~ ((androscogginriverseg1=stateroute5seg2))).
+fof(sos18540,axiom,~ ((androscogginriverseg1=mooselookmegunticlake))).
+fof(sos18550,axiom,~ ((androscogginriverseg1=eastbranchoysterriver))).
+fof(sos18560,axiom,~ ((androscogginriverseg1=rusroute1))).
+fof(sos18570,axiom,~ ((androscogginriverseg1=meduxnekeagriver))).
+fof(sos18580,axiom,~ ((androscogginriverseg1=arundel))).
+fof(sos18590,axiom,~ ((androscogginriverseg1=knoxcounty))).
+fof(sos18600,axiom,~ ((androscogginriverseg1=rockwood))).
+fof(sos18610,axiom,~ ((androscogginriverseg1=passagassawakeagriver))).
+fof(sos18620,axiom,~ ((androscogginriverseg1=franklincounty))).
+fof(sos18630,axiom,~ ((androscogginriverseg1=mattawamkeagriverseg1))).
+fof(sos18640,axiom,~ ((androscogginriverseg1=grahamlake))).
+fof(sos18650,axiom,~ ((androscogginriverseg1=i95seg1))).
+fof(sos18660,axiom,~ ((androscogginriverseg1=hampden))).
+fof(sos18670,axiom,~ ((androscogginriverseg1=i95seg3))).
+fof(sos18680,axiom,~ ((androscogginriverseg1=stateroute9seg8))).
+fof(sos18690,axiom,~ ((androscogginriverseg1=houlton))).
+fof(sos18700,axiom,~ ((androscogginriverseg1=lynxobservations))).
+fof(sos18710,axiom,~ ((androscogginriverseg1=martinpointbridge))).
+fof(sos18720,axiom,~ ((androscogginriverseg1=passagassawakeagriverseg1))).
+fof(sos18730,axiom,~ ((androscogginriverseg1=rusroute2seg5))).
+fof(sos18740,axiom,~ ((androscogginriverseg1=machiasbay))).
+fof(sos18750,axiom,~ ((androscogginriverseg1=rusroute1seg4))).
+fof(sos18760,axiom,~ ((androscogginriverseg1=rwestbranchoysterriver))).
+fof(sos18770,axiom,~ ((androscogginriverseg1=stgeorgeriver))).
+fof(sos18780,axiom,~ ((dayton=stateroute5seg2))).
+fof(sos18790,axiom,~ ((dayton=mooselookmegunticlake))).
+fof(sos18800,axiom,~ ((dayton=eastbranchoysterriver))).
+fof(sos18810,axiom,~ ((dayton=rusroute1))).
+fof(sos18820,axiom,~ ((dayton=meduxnekeagriver))).
+fof(sos18830,axiom,~ ((dayton=arundel))).
+fof(sos18840,axiom,~ ((dayton=knoxcounty))).
+fof(sos18850,axiom,~ ((dayton=rockwood))).
+fof(sos18860,axiom,~ ((dayton=passagassawakeagriver))).
+fof(sos18870,axiom,~ ((dayton=franklincounty))).
+fof(sos18880,axiom,~ ((dayton=mattawamkeagriverseg1))).
+fof(sos18890,axiom,~ ((dayton=grahamlake))).
+fof(sos18900,axiom,~ ((dayton=i95seg1))).
+fof(sos18910,axiom,~ ((dayton=hampden))).
+fof(sos18920,axiom,~ ((dayton=i95seg3))).
+fof(sos18930,axiom,~ ((dayton=stateroute9seg8))).
+fof(sos18940,axiom,~ ((dayton=houlton))).
+fof(sos18950,axiom,~ ((dayton=lynxobservations))).
+fof(sos18960,axiom,~ ((dayton=martinpointbridge))).
+fof(sos18970,axiom,~ ((dayton=passagassawakeagriverseg1))).
+fof(sos18980,axiom,~ ((dayton=rusroute2seg5))).
+fof(sos18990,axiom,~ ((dayton=machiasbay))).
+fof(sos19000,axiom,~ ((dayton=rusroute1seg4))).
+fof(sos19010,axiom,~ ((dayton=rwestbranchoysterriver))).
+fof(sos19020,axiom,~ ((dayton=stgeorgeriver))).
+fof(sos19030,axiom,~ ((stateroute5seg2=mooselookmegunticlake))).
+fof(sos19040,axiom,~ ((stateroute5seg2=eastbranchoysterriver))).
+fof(sos19050,axiom,~ ((stateroute5seg2=rusroute1))).
+fof(sos19060,axiom,~ ((stateroute5seg2=meduxnekeagriver))).
+fof(sos19070,axiom,~ ((stateroute5seg2=arundel))).
+fof(sos19080,axiom,~ ((stateroute5seg2=knoxcounty))).
+fof(sos19090,axiom,~ ((stateroute5seg2=rockwood))).
+fof(sos19100,axiom,~ ((stateroute5seg2=passagassawakeagriver))).
+fof(sos19110,axiom,~ ((stateroute5seg2=franklincounty))).
+fof(sos19120,axiom,~ ((stateroute5seg2=mattawamkeagriverseg1))).
+fof(sos19130,axiom,~ ((stateroute5seg2=grahamlake))).
+fof(sos19140,axiom,~ ((stateroute5seg2=i95seg1))).
+fof(sos19150,axiom,~ ((stateroute5seg2=hampden))).
+fof(sos19160,axiom,~ ((stateroute5seg2=i95seg3))).
+fof(sos19170,axiom,~ ((stateroute5seg2=stateroute9seg8))).
+fof(sos19180,axiom,~ ((stateroute5seg2=houlton))).
+fof(sos19190,axiom,~ ((stateroute5seg2=lynxobservations))).
+fof(sos19200,axiom,~ ((stateroute5seg2=martinpointbridge))).
+fof(sos19210,axiom,~ ((stateroute5seg2=passagassawakeagriverseg1))).
+fof(sos19220,axiom,~ ((stateroute5seg2=rusroute2seg5))).
+fof(sos19230,axiom,~ ((stateroute5seg2=machiasbay))).
+fof(sos19240,axiom,~ ((stateroute5seg2=rusroute1seg4))).
+fof(sos19250,axiom,~ ((stateroute5seg2=rwestbranchoysterriver))).
+fof(sos19260,axiom,~ ((stateroute5seg2=stgeorgeriver))).
+fof(sos19270,axiom,~ ((mooselookmegunticlake=eastbranchoysterriver))).
+fof(sos19280,axiom,~ ((mooselookmegunticlake=rusroute1))).
+fof(sos19290,axiom,~ ((mooselookmegunticlake=meduxnekeagriver))).
+fof(sos19300,axiom,~ ((mooselookmegunticlake=arundel))).
+fof(sos19310,axiom,~ ((mooselookmegunticlake=knoxcounty))).
+fof(sos19320,axiom,~ ((mooselookmegunticlake=rockwood))).
+fof(sos19330,axiom,~ ((mooselookmegunticlake=passagassawakeagriver))).
+fof(sos19340,axiom,~ ((mooselookmegunticlake=franklincounty))).
+fof(sos19350,axiom,~ ((mooselookmegunticlake=mattawamkeagriverseg1))).
+fof(sos19360,axiom,~ ((mooselookmegunticlake=grahamlake))).
+fof(sos19370,axiom,~ ((mooselookmegunticlake=i95seg1))).
+fof(sos19380,axiom,~ ((mooselookmegunticlake=hampden))).
+fof(sos19390,axiom,~ ((mooselookmegunticlake=i95seg3))).
+fof(sos19400,axiom,~ ((mooselookmegunticlake=stateroute9seg8))).
+fof(sos19410,axiom,~ ((mooselookmegunticlake=houlton))).
+fof(sos19420,axiom,~ ((mooselookmegunticlake=lynxobservations))).
+fof(sos19430,axiom,~ ((mooselookmegunticlake=martinpointbridge))).
+fof(sos19440,axiom,~ ((mooselookmegunticlake=passagassawakeagriverseg1))).
+fof(sos19450,axiom,~ ((mooselookmegunticlake=rusroute2seg5))).
+fof(sos19460,axiom,~ ((mooselookmegunticlake=machiasbay))).
+fof(sos19470,axiom,~ ((mooselookmegunticlake=rusroute1seg4))).
+fof(sos19480,axiom,~ ((mooselookmegunticlake=rwestbranchoysterriver))).
+fof(sos19490,axiom,~ ((mooselookmegunticlake=stgeorgeriver))).
+fof(sos19500,axiom,~ ((eastbranchoysterriver=rusroute1))).
+fof(sos19510,axiom,~ ((eastbranchoysterriver=meduxnekeagriver))).
+fof(sos19520,axiom,~ ((eastbranchoysterriver=arundel))).
+fof(sos19530,axiom,~ ((eastbranchoysterriver=knoxcounty))).
+fof(sos19540,axiom,~ ((eastbranchoysterriver=rockwood))).
+fof(sos19550,axiom,~ ((eastbranchoysterriver=passagassawakeagriver))).
+fof(sos19560,axiom,~ ((eastbranchoysterriver=franklincounty))).
+fof(sos19570,axiom,~ ((eastbranchoysterriver=mattawamkeagriverseg1))).
+fof(sos19580,axiom,~ ((eastbranchoysterriver=grahamlake))).
+fof(sos19590,axiom,~ ((eastbranchoysterriver=i95seg1))).
+fof(sos19600,axiom,~ ((eastbranchoysterriver=hampden))).
+fof(sos19610,axiom,~ ((eastbranchoysterriver=i95seg3))).
+fof(sos19620,axiom,~ ((eastbranchoysterriver=stateroute9seg8))).
+fof(sos19630,axiom,~ ((eastbranchoysterriver=houlton))).
+fof(sos19640,axiom,~ ((eastbranchoysterriver=lynxobservations))).
+fof(sos19650,axiom,~ ((eastbranchoysterriver=martinpointbridge))).
+fof(sos19660,axiom,~ ((eastbranchoysterriver=passagassawakeagriverseg1))).
+fof(sos19670,axiom,~ ((eastbranchoysterriver=rusroute2seg5))).
+fof(sos19680,axiom,~ ((eastbranchoysterriver=machiasbay))).
+fof(sos19690,axiom,~ ((eastbranchoysterriver=rusroute1seg4))).
+fof(sos19700,axiom,~ ((eastbranchoysterriver=rwestbranchoysterriver))).
+fof(sos19710,axiom,~ ((eastbranchoysterriver=stgeorgeriver))).
+fof(sos19720,axiom,~ ((rusroute1=meduxnekeagriver))).
+fof(sos19730,axiom,~ ((rusroute1=arundel))).
+fof(sos19740,axiom,~ ((rusroute1=knoxcounty))).
+fof(sos19750,axiom,~ ((rusroute1=rockwood))).
+fof(sos19760,axiom,~ ((rusroute1=passagassawakeagriver))).
+fof(sos19770,axiom,~ ((rusroute1=franklincounty))).
+fof(sos19780,axiom,~ ((rusroute1=mattawamkeagriverseg1))).
+fof(sos19790,axiom,~ ((rusroute1=grahamlake))).
+fof(sos19800,axiom,~ ((rusroute1=i95seg1))).
+fof(sos19810,axiom,~ ((rusroute1=hampden))).
+fof(sos19820,axiom,~ ((rusroute1=i95seg3))).
+fof(sos19830,axiom,~ ((rusroute1=stateroute9seg8))).
+fof(sos19840,axiom,~ ((rusroute1=houlton))).
+fof(sos19850,axiom,~ ((rusroute1=lynxobservations))).
+fof(sos19860,axiom,~ ((rusroute1=martinpointbridge))).
+fof(sos19870,axiom,~ ((rusroute1=passagassawakeagriverseg1))).
+fof(sos19880,axiom,~ ((rusroute1=rusroute2seg5))).
+fof(sos19890,axiom,~ ((rusroute1=machiasbay))).
+fof(sos19900,axiom,~ ((rusroute1=rusroute1seg4))).
+fof(sos19910,axiom,~ ((rusroute1=rwestbranchoysterriver))).
+fof(sos19920,axiom,~ ((rusroute1=stgeorgeriver))).
+fof(sos19930,axiom,~ ((meduxnekeagriver=arundel))).
+fof(sos19940,axiom,~ ((meduxnekeagriver=knoxcounty))).
+fof(sos19950,axiom,~ ((meduxnekeagriver=rockwood))).
+fof(sos19960,axiom,~ ((meduxnekeagriver=passagassawakeagriver))).
+fof(sos19970,axiom,~ ((meduxnekeagriver=franklincounty))).
+fof(sos19980,axiom,~ ((meduxnekeagriver=mattawamkeagriverseg1))).
+fof(sos19990,axiom,~ ((meduxnekeagriver=grahamlake))).
+fof(sos20000,axiom,~ ((meduxnekeagriver=i95seg1))).
+fof(sos20010,axiom,~ ((meduxnekeagriver=hampden))).
+fof(sos20020,axiom,~ ((meduxnekeagriver=i95seg3))).
+fof(sos20030,axiom,~ ((meduxnekeagriver=stateroute9seg8))).
+fof(sos20040,axiom,~ ((meduxnekeagriver=houlton))).
+fof(sos20050,axiom,~ ((meduxnekeagriver=lynxobservations))).
+fof(sos20060,axiom,~ ((meduxnekeagriver=martinpointbridge))).
+fof(sos20070,axiom,~ ((meduxnekeagriver=passagassawakeagriverseg1))).
+fof(sos20080,axiom,~ ((meduxnekeagriver=rusroute2seg5))).
+fof(sos20090,axiom,~ ((meduxnekeagriver=machiasbay))).
+fof(sos20100,axiom,~ ((meduxnekeagriver=rusroute1seg4))).
+fof(sos20110,axiom,~ ((meduxnekeagriver=rwestbranchoysterriver))).
+fof(sos20120,axiom,~ ((meduxnekeagriver=stgeorgeriver))).
+fof(sos20130,axiom,~ ((arundel=knoxcounty))).
+fof(sos20140,axiom,~ ((arundel=rockwood))).
+fof(sos20150,axiom,~ ((arundel=passagassawakeagriver))).
+fof(sos20160,axiom,~ ((arundel=franklincounty))).
+fof(sos20170,axiom,~ ((arundel=mattawamkeagriverseg1))).
+fof(sos20180,axiom,~ ((arundel=grahamlake))).
+fof(sos20190,axiom,~ ((arundel=i95seg1))).
+fof(sos20200,axiom,~ ((arundel=hampden))).
+fof(sos20210,axiom,~ ((arundel=i95seg3))).
+fof(sos20220,axiom,~ ((arundel=stateroute9seg8))).
+fof(sos20230,axiom,~ ((arundel=houlton))).
+fof(sos20240,axiom,~ ((arundel=lynxobservations))).
+fof(sos20250,axiom,~ ((arundel=martinpointbridge))).
+fof(sos20260,axiom,~ ((arundel=passagassawakeagriverseg1))).
+fof(sos20270,axiom,~ ((arundel=rusroute2seg5))).
+fof(sos20280,axiom,~ ((arundel=machiasbay))).
+fof(sos20290,axiom,~ ((arundel=rusroute1seg4))).
+fof(sos20300,axiom,~ ((arundel=rwestbranchoysterriver))).
+fof(sos20310,axiom,~ ((arundel=stgeorgeriver))).
+fof(sos20320,axiom,~ ((knoxcounty=rockwood))).
+fof(sos20330,axiom,~ ((knoxcounty=passagassawakeagriver))).
+fof(sos20340,axiom,~ ((knoxcounty=franklincounty))).
+fof(sos20350,axiom,~ ((knoxcounty=mattawamkeagriverseg1))).
+fof(sos20360,axiom,~ ((knoxcounty=grahamlake))).
+fof(sos20370,axiom,~ ((knoxcounty=i95seg1))).
+fof(sos20380,axiom,~ ((knoxcounty=hampden))).
+fof(sos20390,axiom,~ ((knoxcounty=i95seg3))).
+fof(sos20400,axiom,~ ((knoxcounty=stateroute9seg8))).
+fof(sos20410,axiom,~ ((knoxcounty=houlton))).
+fof(sos20420,axiom,~ ((knoxcounty=lynxobservations))).
+fof(sos20430,axiom,~ ((knoxcounty=martinpointbridge))).
+fof(sos20440,axiom,~ ((knoxcounty=passagassawakeagriverseg1))).
+fof(sos20450,axiom,~ ((knoxcounty=rusroute2seg5))).
+fof(sos20460,axiom,~ ((knoxcounty=machiasbay))).
+fof(sos20470,axiom,~ ((knoxcounty=rusroute1seg4))).
+fof(sos20480,axiom,~ ((knoxcounty=rwestbranchoysterriver))).
+fof(sos20490,axiom,~ ((knoxcounty=stgeorgeriver))).
+fof(sos20500,axiom,~ ((rockwood=passagassawakeagriver))).
+fof(sos20510,axiom,~ ((rockwood=franklincounty))).
+fof(sos20520,axiom,~ ((rockwood=mattawamkeagriverseg1))).
+fof(sos20530,axiom,~ ((rockwood=grahamlake))).
+fof(sos20540,axiom,~ ((rockwood=i95seg1))).
+fof(sos20550,axiom,~ ((rockwood=hampden))).
+fof(sos20560,axiom,~ ((rockwood=i95seg3))).
+fof(sos20570,axiom,~ ((rockwood=stateroute9seg8))).
+fof(sos20580,axiom,~ ((rockwood=houlton))).
+fof(sos20590,axiom,~ ((rockwood=lynxobservations))).
+fof(sos20600,axiom,~ ((rockwood=martinpointbridge))).
+fof(sos20610,axiom,~ ((rockwood=passagassawakeagriverseg1))).
+fof(sos20620,axiom,~ ((rockwood=rusroute2seg5))).
+fof(sos20630,axiom,~ ((rockwood=machiasbay))).
+fof(sos20640,axiom,~ ((rockwood=rusroute1seg4))).
+fof(sos20650,axiom,~ ((rockwood=rwestbranchoysterriver))).
+fof(sos20660,axiom,~ ((rockwood=stgeorgeriver))).
+fof(sos20670,axiom,~ ((passagassawakeagriver=franklincounty))).
+fof(sos20680,axiom,~ ((passagassawakeagriver=mattawamkeagriverseg1))).
+fof(sos20690,axiom,~ ((passagassawakeagriver=grahamlake))).
+fof(sos20700,axiom,~ ((passagassawakeagriver=i95seg1))).
+fof(sos20710,axiom,~ ((passagassawakeagriver=hampden))).
+fof(sos20720,axiom,~ ((passagassawakeagriver=i95seg3))).
+fof(sos20730,axiom,~ ((passagassawakeagriver=stateroute9seg8))).
+fof(sos20740,axiom,~ ((passagassawakeagriver=houlton))).
+fof(sos20750,axiom,~ ((passagassawakeagriver=lynxobservations))).
+fof(sos20760,axiom,~ ((passagassawakeagriver=martinpointbridge))).
+fof(sos20770,axiom,~ ((passagassawakeagriver=passagassawakeagriverseg1))).
+fof(sos20780,axiom,~ ((passagassawakeagriver=rusroute2seg5))).
+fof(sos20790,axiom,~ ((passagassawakeagriver=machiasbay))).
+fof(sos20800,axiom,~ ((passagassawakeagriver=rusroute1seg4))).
+fof(sos20810,axiom,~ ((passagassawakeagriver=rwestbranchoysterriver))).
+fof(sos20820,axiom,~ ((passagassawakeagriver=stgeorgeriver))).
+fof(sos20830,axiom,~ ((franklincounty=mattawamkeagriverseg1))).
+fof(sos20840,axiom,~ ((franklincounty=grahamlake))).
+fof(sos20850,axiom,~ ((franklincounty=i95seg1))).
+fof(sos20860,axiom,~ ((franklincounty=hampden))).
+fof(sos20870,axiom,~ ((franklincounty=i95seg3))).
+fof(sos20880,axiom,~ ((franklincounty=stateroute9seg8))).
+fof(sos20890,axiom,~ ((franklincounty=houlton))).
+fof(sos20900,axiom,~ ((franklincounty=lynxobservations))).
+fof(sos20910,axiom,~ ((franklincounty=martinpointbridge))).
+fof(sos20920,axiom,~ ((franklincounty=passagassawakeagriverseg1))).
+fof(sos20930,axiom,~ ((franklincounty=rusroute2seg5))).
+fof(sos20940,axiom,~ ((franklincounty=machiasbay))).
+fof(sos20950,axiom,~ ((franklincounty=rusroute1seg4))).
+fof(sos20960,axiom,~ ((franklincounty=rwestbranchoysterriver))).
+fof(sos20970,axiom,~ ((franklincounty=stgeorgeriver))).
+fof(sos20980,axiom,~ ((mattawamkeagriverseg1=grahamlake))).
+fof(sos20990,axiom,~ ((mattawamkeagriverseg1=i95seg1))).
+fof(sos21000,axiom,~ ((mattawamkeagriverseg1=hampden))).
+fof(sos21010,axiom,~ ((mattawamkeagriverseg1=i95seg3))).
+fof(sos21020,axiom,~ ((mattawamkeagriverseg1=stateroute9seg8))).
+fof(sos21030,axiom,~ ((mattawamkeagriverseg1=houlton))).
+fof(sos21040,axiom,~ ((mattawamkeagriverseg1=lynxobservations))).
+fof(sos21050,axiom,~ ((mattawamkeagriverseg1=martinpointbridge))).
+fof(sos21060,axiom,~ ((mattawamkeagriverseg1=passagassawakeagriverseg1))).
+fof(sos21070,axiom,~ ((mattawamkeagriverseg1=rusroute2seg5))).
+fof(sos21080,axiom,~ ((mattawamkeagriverseg1=machiasbay))).
+fof(sos21090,axiom,~ ((mattawamkeagriverseg1=rusroute1seg4))).
+fof(sos21100,axiom,~ ((mattawamkeagriverseg1=rwestbranchoysterriver))).
+fof(sos21110,axiom,~ ((mattawamkeagriverseg1=stgeorgeriver))).
+fof(sos21120,axiom,~ ((grahamlake=i95seg1))).
+fof(sos21130,axiom,~ ((grahamlake=hampden))).
+fof(sos21140,axiom,~ ((grahamlake=i95seg3))).
+fof(sos21150,axiom,~ ((grahamlake=stateroute9seg8))).
+fof(sos21160,axiom,~ ((grahamlake=houlton))).
+fof(sos21170,axiom,~ ((grahamlake=lynxobservations))).
+fof(sos21180,axiom,~ ((grahamlake=martinpointbridge))).
+fof(sos21190,axiom,~ ((grahamlake=passagassawakeagriverseg1))).
+fof(sos21200,axiom,~ ((grahamlake=rusroute2seg5))).
+fof(sos21210,axiom,~ ((grahamlake=machiasbay))).
+fof(sos21220,axiom,~ ((grahamlake=rusroute1seg4))).
+fof(sos21230,axiom,~ ((grahamlake=rwestbranchoysterriver))).
+fof(sos21240,axiom,~ ((grahamlake=stgeorgeriver))).
+fof(sos21250,axiom,~ ((i95seg1=hampden))).
+fof(sos21260,axiom,~ ((i95seg1=i95seg3))).
+fof(sos21270,axiom,~ ((i95seg1=stateroute9seg8))).
+fof(sos21280,axiom,~ ((i95seg1=houlton))).
+fof(sos21290,axiom,~ ((i95seg1=lynxobservations))).
+fof(sos21300,axiom,~ ((i95seg1=martinpointbridge))).
+fof(sos21310,axiom,~ ((i95seg1=passagassawakeagriverseg1))).
+fof(sos21320,axiom,~ ((i95seg1=rusroute2seg5))).
+fof(sos21330,axiom,~ ((i95seg1=machiasbay))).
+fof(sos21340,axiom,~ ((i95seg1=rusroute1seg4))).
+fof(sos21350,axiom,~ ((i95seg1=rwestbranchoysterriver))).
+fof(sos21360,axiom,~ ((i95seg1=stgeorgeriver))).
+fof(sos21370,axiom,~ ((hampden=i95seg3))).
+fof(sos21380,axiom,~ ((hampden=stateroute9seg8))).
+fof(sos21390,axiom,~ ((hampden=houlton))).
+fof(sos21400,axiom,~ ((hampden=lynxobservations))).
+fof(sos21410,axiom,~ ((hampden=martinpointbridge))).
+fof(sos21420,axiom,~ ((hampden=passagassawakeagriverseg1))).
+fof(sos21430,axiom,~ ((hampden=rusroute2seg5))).
+fof(sos21440,axiom,~ ((hampden=machiasbay))).
+fof(sos21450,axiom,~ ((hampden=rusroute1seg4))).
+fof(sos21460,axiom,~ ((hampden=rwestbranchoysterriver))).
+fof(sos21470,axiom,~ ((hampden=stgeorgeriver))).
+fof(sos21480,axiom,~ ((i95seg3=stateroute9seg8))).
+fof(sos21490,axiom,~ ((i95seg3=houlton))).
+fof(sos21500,axiom,~ ((i95seg3=lynxobservations))).
+fof(sos21510,axiom,~ ((i95seg3=martinpointbridge))).
+fof(sos21520,axiom,~ ((i95seg3=passagassawakeagriverseg1))).
+fof(sos21530,axiom,~ ((i95seg3=rusroute2seg5))).
+fof(sos21540,axiom,~ ((i95seg3=machiasbay))).
+fof(sos21550,axiom,~ ((i95seg3=rusroute1seg4))).
+fof(sos21560,axiom,~ ((i95seg3=rwestbranchoysterriver))).
+fof(sos21570,axiom,~ ((i95seg3=stgeorgeriver))).
+fof(sos21580,axiom,~ ((stateroute9seg8=houlton))).
+fof(sos21590,axiom,~ ((stateroute9seg8=lynxobservations))).
+fof(sos21600,axiom,~ ((stateroute9seg8=martinpointbridge))).
+fof(sos21610,axiom,~ ((stateroute9seg8=passagassawakeagriverseg1))).
+fof(sos21620,axiom,~ ((stateroute9seg8=rusroute2seg5))).
+fof(sos21630,axiom,~ ((stateroute9seg8=machiasbay))).
+fof(sos21640,axiom,~ ((stateroute9seg8=rusroute1seg4))).
+fof(sos21650,axiom,~ ((stateroute9seg8=rwestbranchoysterriver))).
+fof(sos21660,axiom,~ ((stateroute9seg8=stgeorgeriver))).
+fof(sos21670,axiom,~ ((houlton=lynxobservations))).
+fof(sos21680,axiom,~ ((houlton=martinpointbridge))).
+fof(sos21690,axiom,~ ((houlton=passagassawakeagriverseg1))).
+fof(sos21700,axiom,~ ((houlton=rusroute2seg5))).
+fof(sos21710,axiom,~ ((houlton=machiasbay))).
+fof(sos21720,axiom,~ ((houlton=rusroute1seg4))).
+fof(sos21730,axiom,~ ((houlton=rwestbranchoysterriver))).
+fof(sos21740,axiom,~ ((houlton=stgeorgeriver))).
+fof(sos21750,axiom,~ ((lynxobservations=martinpointbridge))).
+fof(sos21760,axiom,~ ((lynxobservations=passagassawakeagriverseg1))).
+fof(sos21770,axiom,~ ((lynxobservations=rusroute2seg5))).
+fof(sos21780,axiom,~ ((lynxobservations=machiasbay))).
+fof(sos21790,axiom,~ ((lynxobservations=rusroute1seg4))).
+fof(sos21800,axiom,~ ((lynxobservations=rwestbranchoysterriver))).
+fof(sos21810,axiom,~ ((lynxobservations=stgeorgeriver))).
+fof(sos21820,axiom,~ ((martinpointbridge=passagassawakeagriverseg1))).
+fof(sos21830,axiom,~ ((martinpointbridge=rusroute2seg5))).
+fof(sos21840,axiom,~ ((martinpointbridge=machiasbay))).
+fof(sos21850,axiom,~ ((martinpointbridge=rusroute1seg4))).
+fof(sos21860,axiom,~ ((martinpointbridge=rwestbranchoysterriver))).
+fof(sos21870,axiom,~ ((martinpointbridge=stgeorgeriver))).
+fof(sos21880,axiom,~ ((passagassawakeagriverseg1=rusroute2seg5))).
+fof(sos21890,axiom,~ ((passagassawakeagriverseg1=machiasbay))).
+fof(sos21900,axiom,~ ((passagassawakeagriverseg1=rusroute1seg4))).
+fof(sos21910,axiom,~ ((passagassawakeagriverseg1=rwestbranchoysterriver))).
+fof(sos21920,axiom,~ ((passagassawakeagriverseg1=stgeorgeriver))).
+fof(sos21930,axiom,~ ((rusroute2seg5=machiasbay))).
+fof(sos21940,axiom,~ ((rusroute2seg5=rusroute1seg4))).
+fof(sos21950,axiom,~ ((rusroute2seg5=rwestbranchoysterriver))).
+fof(sos21960,axiom,~ ((rusroute2seg5=stgeorgeriver))).
+fof(sos21970,axiom,~ ((machiasbay=rusroute1seg4))).
+fof(sos21980,axiom,~ ((machiasbay=rwestbranchoysterriver))).
+fof(sos21990,axiom,~ ((machiasbay=stgeorgeriver))).
+fof(sos22000,axiom,~ ((rusroute1seg4=rwestbranchoysterriver))).
+fof(sos22010,axiom,~ ((rusroute1seg4=stgeorgeriver))).
+fof(sos22020,axiom,~ ((rwestbranchoysterriver=stgeorgeriver))).
+% cl-imports multidim_space_cont/cont_basic.clif
+fof(sos22030,axiom,( ! [X22032] : ! [X22031] : ( (c(X22032, X22031)) <=> (( ? [X22033] : (cont(X22033, X22032) & cont(X22033, X22031))) ) )) ).
+% cl-imports multidim_space_codi/codi_basic.clif
+% cl-imports multidim_space_codi/definitions/curve.clif
+% cl-imports multidim_space_dim/definitions/covers.clif
+fof(sos22040,axiom,( ! [X22042] : ( (arealregion(X22042)) <=> ((s(X22042) & ( ! [X22041] : ( (curve(X22041)) => (covers(X22042, X22041)) )) )) )) ).
+% cl-imports multidim_space_codi/codi_basic.clif
+% cl-imports multidim_space_dim/definitions/min_max_dim.clif
+% cl-imports multidim_space_dim/definitions/covers.clif
+fof(sos22050,axiom,( ! [X22052] : ( (curve(X22052)) <=> ((s(X22052) & ~ (mindim(X22052)) & ( ! [X22051] : ( (mindim(X22051)) <=> (covers(X22052, X22051)) )) )) )) ).
+% cl-imports multidim_space_dim/definitions/min_max_dim.clif
+fof(sos22060,axiom,( ! [X22061] : ( (pointregion(X22061)) <=> ((mindim(X22061) & s(X22061))) )) ).
+% cl-imports multidim_space_codi/codi_basic.clif
+fof(sos22070,axiom,( ! [X22072] : ! [X22071] : ( (p(X22072, X22071)) <=> ((cont(X22072, X22071) & eqdim(X22072, X22071))) )) ).
+% cl-imports multidim_space_cont/cont_basic.clif
+% cl-imports multidim_space_dim/dim_prime_linear.clif
+fof(sos22080,axiom,( ! [X22082] : ! [X22081] : ( (cont(X22082, X22081)) => (leq(X22082, X22081)) )) ).
+% cl-imports multidim_space_dim/dim_prime_linear_unbounded.clif
+% cl-imports multidim_space_dim/definitions/dim_basic_defs.clif
+fof(sos22090,axiom,( ! [X22092] : ! [X22091] : ( (covers(X22092, X22091)) <=> ((lt(X22091, X22092) & ( ! [X22093] : ( (s(X22093)) => (~ ((lt(X22091, X22093) & lt(X22093, X22092)))) )) )) )) ).
+% cl-imports multidim_space_dim/dim_prime_linear_unbounded.clif
+fof(sos22100,axiom,( ! [X22102] : ! [X22101] : ( (eqdim(X22102, X22101)) <=> ((leq(X22102, X22101) & leq(X22101, X22102))) )) ).
